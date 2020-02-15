@@ -1,0 +1,293 @@
+\papertitle{Ограниченные и неограниченные числовые множества}{2}{5 сентября}{12}
+\addcontentsline{toc}{section}{2. Ограниченные и неограниченные числовые множества}
+%\section[Листок 2]{}
+\label{list2}
+%\vspace{-3ex}
+
+\vspace{1ex}
+
+Предположим, что $\textbf{X} \subset \mathds{R}$.
+
+\vspace{2ex}
+
+\hspace{-3.5ex}\textbf{\underline{Определение:}} Множество $\textbf{X}$ - \emph{ограничено сверху (снизу)}, если
+\vspace{-2ex}
+
+$$\exists C \in \mathds{R} : \forall x \in \textbf{X} \,\, \Rightarrow x\leqslant C \;\; \big(x\geqslant C\big),$$
+\vspace{-4ex}
+
+\hspace{-3.5ex}где С - \emph{верхняя (нижняя) грань множества}.
+\index{Ограниченное множество}
+
+%Множество $\textbf{\{x\}}$ - \emph{ограничено снизу}, если $\exists C: \forall x \in \textbf{\{x\}} \,\, \Rightarrow x\geqslant C$, где С - \emph{нижняя грань множества}.
+%\index{Ограниченное множество!снизу}
+
+\hspace{-3.5ex}Множество $\textbf{X}$ - \emph{ограничено}, если $\; \exists C: \forall x \in \textbf{X} \,\, \Rightarrow |x|\leqslant C$.
+
+\vspace{2ex}
+
+\hspace{-3.5ex}\textbf{\underline{Утверждение:}} Множество $\textbf{X}$ - ограничено тогда и только тогда, когда $\textbf{X}$ ограничено сверху и снизу.
+
+\vspace{2ex}
+
+\hspace{-3.5ex}\textbf{\underline{Определение:}} $M^*=\sup \textbf{X}$ - \textit{точная верхняя грань множества $\textbf{X}$}, если:
+\begin{wrapfigure}{r}{5pt}
+\vspace{-2ex}
+\hspace{-35ex}
+\includegraphics[width=0.32\textwidth]{List_2_sup.jpg}
+\end{wrapfigure}
+\vspace{-2ex}
+\begin{enumerate}
+\item [1)] $\forall x \in \textbf{X} \;\; \Longrightarrow \;\; x\leqslant M^*$;
+\item [2)] $\forall \varepsilon >0 \,\,\,\, \exists x'\in \textbf{X} : x'>M^*-\varepsilon$.
+\end{enumerate}
+\vspace{0ex}
+\index{Точная грань множества}
+
+Таким образом, $\sup\!\textbf{X}$ есть наименьшая из верхних граней этого множества.
+
+\vspace{2ex}
+
+\hspace{-3.5ex}\textbf{\underline{Определение:}} $M_*=\inf \textbf{X}$ - \textit{точная нижняя грань множества $\textbf{X}$}, если:
+\begin{wrapfigure}{r}{5pt}
+\vspace{-16ex}
+\hspace{-35ex}
+\includegraphics[width=0.32\textwidth]{List_2_inf.jpg}
+\end{wrapfigure}
+\vspace{-2ex}
+\begin{enumerate}
+\item [1)] $\forall x \in \textbf{X} \;\; \Longrightarrow \;\; x\geqslant M_*$;
+\item [2)] $\forall \varepsilon >0 \,\,\,\, \exists x''\in \textbf{X} : x''<M_*+\varepsilon$.
+\end{enumerate}
+\vspace{0ex}
+%\index{Точная грань множества!нижняя}
+
+Таким образом, $\inf\!\textbf{X}$ есть наибольшая из нижних граней этого множества.
+
+\vspace{2ex}
+
+\hspace{-3.5ex}\textbf{\underline{Теорема:}} Если множество вещественных чисел содержит хотя бы один элемент и ограничено сверху (снизу), то у этого множества существует точная верхняя (нижняя) грань.
+
+\vspace{3ex}
+
+\hspace{-3.5ex}\textbf{\underline{Определение:}} Если $\exists \,\, x^*\in \textbf{X}: \forall x \in \textbf{X}$ \, выполнено \, $x \leqslant x^*$, то $x^*$ называется \textit{наибольшим элементом множества}$\textbf{X}$. Обозначение: $x^*=\max\textbf{X}$.
+%\index{Наибольший элемент множества}
+
+\vspace{2ex}
+
+\hspace{-3.5ex}\textbf{\underline{Определение:}} Если $\exists \,\, x_*\in \textbf{X}: \forall x \in \textbf{X}$ \, выполнено \, $x \geqslant x_*$, то $x_*$ называется \textit{наименьшим элементом множества}$\textbf{X}$. Обозначение: $x_*=\min\textbf{X}$.
+%\index{Наименьший элемент множества}
+
+\vspace{2ex}
+
+\hspace{-3.5ex}\textbf{\underline{Замечание:}} (\emph{отличие $\sup$ и $\inf\;$ от $\;\max$ и $\min$}):
+
+Точная верхняя (нижняя) грань $\textbf{X}$ может существовать, но не принадлежать данному множеству. Тогда как $\max\textbf{X}$ и $\min\textbf{X}$, \emph{если они существуют}, напротив, всегда принадлежат множеству $\textbf{X}$. С другой стороны, если $\exists \max\textbf{X}$, то $\sup\!\textbf{X} = \max\textbf{X}$ (если $\exists \min\textbf{X}$, то $\inf\!\textbf{X}~=~\min\textbf{X}$).
+
+\vspace{2ex}
+
+\hspace{-3.5ex}\textbf{\underline{Утверждение}} (\emph{Принцип Дирихле}): Если кролики рассажены в клетки, причём число кроликов больше числа клеток, то хотя бы в одной из клеток находится более одного кролика.
+\index{Принцип!Дирихле}
+
+%\hspace{-3.5ex}\textbf{\underline{Определение:}} Назовем \emph{расширенным множеством действительных чисел} множество $\Big\{\mathds{R} \cup \{-\infty\} \cup \{+\infty\}\Big\}$, состоящее из элементов множества $\mathds{R}$ и двух символов $-\infty$ и $+\infty$ (минус и плюс бесконечность).
+
+\vspace{2ex}
+\hrule
+\vspace{4ex}
+
+\task\dem{17}
+\pnt \cw Пусть $\textbf{X} = \left\{r\in \mathds{Q} \; \big| \; r^2<2\right\}$. Найдите точные верхнюю и нижнюю грани данного множества.
+%$\sup \textbf{\{r\}}, \inf \textbf{\{r\}}$.
+\pnt Покажите, что множество вещественных чисел $\textbf{X} = \big\{x \in \mathds{R} \; \big| \; x > \dfrac{1}{7}\big\}$ не имеет наибольшего элемента. Укажите точную нижнюю грань этого множества.
+\pnt Покажите, что множество рациональных чисел $\textbf{B} = \big\{x \in \mathds{Q} \; \big| \; x^2 < 3\big\}$ не имеет наименьшего элемента.
+
+\task Пусть $\textbf{X}\subset \textbf{Y}$. Докажите, что:
+
+\vspace{2ex}
+\emph{(а)} \, \cw $\sup \textbf{X} \leqslant \sup \textbf{Y}$ \qquad
+\emph{(б)} \, $\inf \textbf{X} \geqslant \inf \textbf{Y}$
+
+\task Пусть $\textbf{A} = \textbf{X}\cup\textbf{Y}, \; \textbf{B} = \textbf{X}\cap\textbf{Y}$. Докажите, что:
+
+\vspace{2ex}
+\emph{(а)} \, \cw $\sup \textbf{A} = \max \big\{\sup \textbf{X} \, ; \, \sup \textbf{Y}\big\}$;\qquad
+\emph{(б)} \, $\sup \textbf{B} \leqslant \min \big\{\sup \textbf{X} \, ; \, \sup \textbf{Y}\big\}$;
+\vspace{1ex}
+
+\emph{(в)} \, $\inf \textbf{A} = \min\big\{\inf \textbf{X} \, ; \, \inf \textbf{Y}\big\}$;\qquad\qquad
+\emph{(г)} \, $\inf  \textbf{B} \geqslant \max\big\{\inf \textbf{X}\, ; \,\inf \textbf{Y}\big\}$.
+
+\task Пусть $\textbf{X}$ - ограниченное множество; $\textbf{-X}$ - множество чисел, противоположных числам $x \in \textbf{X}$.
+
+\vspace{2ex}
+\emph{(а)} \,  \cw Выразите $\inf (\textbf{-X})$ через $\sup \textbf{X}$; \qquad
+\emph{(б)} \,  Выразите $\sup (\textbf{-X})$ через $\inf \textbf{X}$
+
+\task\dem{19} Пусть $(\textbf{X}+\textbf{Y})$ - множество \textit{всех} сумм $x + y$, где $x \in \textbf{X}, \; y \in \textbf{Y}$. Докажите равенства:
+
+\vspace{2ex}
+\emph{(а)} \, \cw $\inf (\textbf{X} + \textbf{Y}) = \inf \textbf{X} + \inf \textbf{Y}$; \qquad
+\emph{(б)} \, $\sup (\textbf{X} + \textbf{Y}) = \sup \textbf{X} + \sup \textbf{Y}$.
+
+\task\dem{20} Пусть $(\textbf{X} \cdot \textbf{Y})$ - множество \textit{всех} произведений $x \cdot y$, где $x \in \textbf{X}, \; y \in \textbf{Y}$, причем $x\geqslant 0, y\geqslant 0$. Докажите равенства:
+
+\vspace{2ex}
+\emph{(а)} \, \cw $\inf (\textbf{X} \cdot \textbf{Y}) = \inf \textbf{X} \cdot \inf \textbf{Y}$; \qquad
+\emph{(б)} \, $\sup (\textbf{X} \cdot \textbf{Y}) = \sup \textbf{X} \cdot \sup \textbf{Y}$.
+
+\task Докажите, что у любых двух различных точек расширенной числовой прямой (т.е. числовой прямой, включающей в себя $\pm \infty$) существуют непересекающиеся окрестности.
+\vspace{0ex}
+
+%\begin{wrapfigure}{r}{50pt}
+%\vspace{-4ex}
+%\hspace{-15ex}
+%\includegraphics[width=0.4\textwidth]{List_2d.jpg}
+%\end{wrapfigure}
+
+%\begin{wrapfigure}{r}{0pt}
+%\end{wrapfigure}
+
+%\hspace{-13ex}
+\vspace{-1ex}
+\begin{flushleft}
+\includegraphics[width=0.8\textwidth]{List_2d.jpg}
+\end{flushleft}
+\vspace{-3ex}
+\begin{flushright}
+\includegraphics[width=0.8\textwidth]{List_2c.jpg}
+\end{flushright}
+
+\newpage
+
+%\hspace{-4ex}
+%\underline{\textbf{\large\textit{Аксиома Архимеда:}}}
+%\index{Аксиома Архимеда}
+
+%\vspace{1ex}
+
+%\emph{Каково бы ни было число} $a$, \emph{можно число 1 повторить слагаемым столько раз, что}
+
+%\emph{сумма превзойдет} $a$.
+
+\vspace{-1ex}
+%\task Докажите, используя аксиому Архимеда, следующие утверждения:
+\task Докажите следующие утверждения:
+\vspace{-2ex}
+
+\pnt \cw \emph{\textbf{теорема Архимеда:}}
+
+Каково бы ни было действительное число $a$, существует такое натуральное число $n$, что $n > a\;$, т.е. $\;\forall a\in \mathds{R}, \, \exists n\in \mathds{N} \, : \, n > a$.
+
+\begin{wrapfigure}{r}{180pt}
+\vspace{0ex}
+\hspace{0ex}
+\includegraphics[width=0.4\textwidth]{List_2b.jpg}
+\end{wrapfigure}
+\vspace{-1ex}
+
+\pnt \emph{\textbf{следствие из теоремы Архимеда:}}
+
+Каковы бы ни были  числа $a$ и $b, \,\,\, 0<a<b$, существует такое натуральное число $k$, \, что \, $(k - 1) a \leqslant b < k a$.
+
+\begin{wrapfigure}{r}{0pt}
+\end{wrapfigure}
+
+\vspace{0ex}
+
+\pnt Пусть $a$ и $b$\; ($a < b$)  - произвольные \textit{действительные} числа. Тогда существует \textit{рациональное} число $c$, заключенное между числами $a$ и $b$.
+
+\task\dem{16} Покажите, что множество $\, \Bigl\{\dfrac{m}{n}\Bigr\} \,$ всех правильных рациональных дробей $\, \dfrac{m}{n}\, $, где $m,n \in \mathds{N}$ и $m<n$, не имеет наименьшего и наибольшего элементов. Найдите точные нижнюю и верхнюю грани этого множества.
+
+\vspace{3ex}
+\hrule
+\vspace{4ex}
+
+\begin{wrapfigure}{r}{180pt}
+\vspace{-4ex}
+\hspace{-10ex}
+\includegraphics[width=0.55\textwidth]{List_2.jpg}
+\end{wrapfigure}
+\hspace{-4ex}
+\underline{\textbf{\large\textit{Принцип вложенных отрезков}}}
+\index{Принцип вложенных отрезков}
+
+\vspace{3ex}
+
+\hspace{-3.5ex}\textbf{\underline{Определение:}} Система числовых отрезков
+$$[a_1,b_1], [a_2,b_2], \ldots, [a_n,b_n], \ldots, \,\,\, a_n\in \mathds{R},b_n\in \mathds{R}, n=1,2,\ldots$$
+
+\hspace{-3.5ex}называется \textit{системой вложенных отрезков}, если $$a_1\leqslant a_2\leqslant \ldots \leqslant a_n\leqslant \ldots \leqslant b_n\leqslant \ldots \leqslant b_2\leqslant b_1,$$ т.е. каждый следующий отрезок $[a_{n+1},b_{n+1}]$ содержится в предыдущем $[a_n,b_n]$:
+\index{Система вложенных отрезков}
+
+%\begin{wrapfigure}{r}{180pt}
+%\vspace{-3ex}
+%\hspace{-10ex}
+%\includegraphics[width=0.5\textwidth]{List_2.jpg}
+%\end{wrapfigure}
+
+\vspace{0ex}
+$$
+[a_1; \, b_1] \, \supset \, [a_2; \, b_2] \, \supset \ldots \supset \, [a_n; \, b_n] \, \supset \ldots .
+$$
+
+\begin{wrapfigure}{r}{0pt}
+\end{wrapfigure}
+
+\vspace{-2ex}
+
+\task \textit{(непрерывность множества действительных чисел в смысле Кантора)}
+\vspace{-2ex}
+
+\pnt Докажите, что для всякой системы вложенных отрезков существует хотя бы одно число, которое принадлежит всем отрезкам данной системы.
+\vspace{-1ex}
+
+\pnt Докажите, что отрезок $[0; 1]$ имеет имеет мощность большую, чем бесконечное множество $\mathds{N}$, используя предыдущее утверждение.
+\vspace{-2ex}
+
+\task Покажите, что для числовых промежутков других типов, нежели отрезки, предыдущее утверждение может уже не иметь места. То есть, найдётся система, например, вложенных интервалов, которая имеет пустое пересечение.
+
+\vspace{2ex}
+
+\hspace{-3.5ex}\underline{\textbf{Замечание:}} Отметим, что существуют и такие системы вложенных интервалов, которые имеют непустое пересечение.
+
+\vspace{1ex}
+
+\hspace{-3.5ex}\textbf{\underline{Определение:}} Пусть задана система отрезков $$[a_n, b_n], \;\; a_n \in \mathds{R}, \;\; b_n\in \mathds{R}, \; n = 1, 2, \ldots.$$ Будем говорить, что  \textit{длина \, $b_n - a_n\,$ отрезков этой системы стремится к нулю}, если
+
+\hspace{-3.5ex}$\text{для} \;\; \forall \varepsilon >0 \;\;\; \exists N(\varepsilon)$ такое, что для $\forall n \geqslant N(\varepsilon)$ выполняется неравенство $b_n - a_n \, < \, \varepsilon$.
+%\vspace{-3ex}
+
+\task \emph{(Лемма Кантора)}
+\index{Лемма Кантора}
+
+Докажите, что для всякой суммы $[a_n,b_n], \; n=1,2,\ldots$ вложенных отрезков с длинами, стремящимися к нулю, существует единственная точка $\xi$, принадлежащая всем отрезкам данной системы, причём $\xi=\sup \{a_n\}=\inf \{b_n\}.$
+%\vspace{-3ex}
+\task Докажите, что из всякого бесконечного множества интервалов, объединение которых покрывает отрезок $[a;\, b]$ (т.е. любая точка этого отрезка содержится хотя бы в одном из интервалов данного объединения), можно выделить конечное подмножество интервалов, объединение которых также покрывает $[a;\, b]$.
+%\vspace{-3ex}
+\task \st \emph{(Теорема Хелли)}
+\index{Теорема!Хелли}
+
+%Докажите, что любая система отрезков, каждые два из которых имеют общую точку, имеют непустое пересечение.
+Пусть $[a_n; b_n], \; n \in \mathds{N} - $ последовательность отрезков на $\mathds{R}$ таких, что каждые два из них имеют, по крайней мере, одну общую точку. Докажите, что существует точка, принадлежащая каждому из отрезков.
+%\vspace{-3ex}
+
+%\task \st Пусть $\alpha - $ положительное иррациональное число, а $\beta = \dfrac{1}{\alpha}.$ Докажите, что между любыми двумя последовательными натуральными числами содержится одно и только одно из чисел вида: $\{k \cdot (1 + \alpha), \; k \in \mathds{N}\}$ или $\{k \cdot (1 + \beta), \; k \in \mathds{N}\}$.
+\task \st Пусть $\alpha$ - иррациональное число. Докажите, что для любых чисел $a < b$ можно выбрать \emph{целые} числа $m$ и $n$, для которых
+$\; a < m \alpha - n < b.\;$ Можно ли выбрать числа $m$ и $n$ \emph{натуральными}?
+%\vspace{-3ex}
+
+\task \st Пусть $G$ --- открытое, не ограниченное сверху множество вещественных чисел. Существует ли такое $\alpha > 0$, что множество $G$ содержит бесконечно много точек вида $n\alpha$, где $n \in \mathbb{N}$?
+
+%\task \st Пусть $b - $ заданное положительное целое число, $m = 1, 2, \ldots $ и $q - $ иррациональное число из отрезка $(0; 1).$ Назовём интервал $(m; m+1)$ \emph{лакуной}, если он не содержит числа, кратного $b + q$. Докажите, что любой набор из $b$ последовательных лакун содержит ровно одно число, кратное $1 + \dfrac{b}{q}.$
+
+%\task \st Докажите, что если по крайней мере одна координата центра окружности иррациональна, то на самой окружности найдётся не более двух точек с рациональными координатами.
+%\vspace{-3ex}
+\task \st Существует ли такой набор $I$ интервалов, лежащих в интервале $(0; 1),$ что каждая рациональная точка интервала $(0; 1)$ принадлежит конечному числу интервалов из $I$, а каждая иррациональная точка этого отрезка - бесконечному числу интервалов из $I.$
+\vspace{2ex}
+
+\hspace{-3.5ex}\textbf{\underline{Замечание:}} Обратим внимание на то, что набора интервалов~$\widetilde{I}$ такого, что каждая рациональная точка интервала~$(0; 1)$ принадлежит бесконечному числу интервалов из~$\widetilde{I}$, а каждая иррациональная точка этого отрезка - конечному числу интервалов из~$\widetilde{I}$, не существует.
+\vspace{-1ex}
+
+\task \st Пусть из каждой точки интервала $(0; 1)$ проведен отрезок положительной длины. Докажите, что сумма длин всех таких отрезков бесконечна.
+
+%\end{document}

@@ -1,0 +1,132 @@
+\documentclass[10pt]{article}
+\pdfoutput=1
+\usepackage{Listo4ki}
+
+
+\begin{document}
+
+\setcounter{footnote}{0}
+
+\setcounter{section}{0}
+
+\setcounter{part}{8}
+	%\maketitle
+	\flushbottom
+	\newpage
+	\pagestyle{fancynotes}
+	\part[Предел функции. Условие его существования]{Предел функции. Условие его существования}
+	\begin{margintable}\vspace{.8in}\footnotesize
+		\begin{tabularx}{\marginparwidth}{|X}
+		Секция~\ref{sec:theory_9}. Теория\\
+		Секция~\ref{sec:problems_9}. Задачи\\
+		%Section~\ref{sec:license}. Margins\\
+		\end{tabularx}
+	\end{margintable}
+	\section[Теория]{Теория}\label{sec:theory_9}
+
+\begin{definition}
+Если каждому значению переменной $x\in\textbf{X}$ ставится в соответствие по известному закону $f$ некоторое (единственное) число $y\in \textbf{Y}$, то говорят, что  \textbf{на множестве $\textbf{X}$ задана функция $y = f(x)$}. В этом случае множество $\textbf{X}$ называется \textbf{областью определения}, а множество $\textbf{\{y\}}$ - \textbf{областью значений} данной функции.
+\end{definition}
+
+\begin{definition}
+$f(x)$ - \textbf{ограничена на множестве} \textbf{X}, если 
+$$\exists M>0 : \forall x\in \textbf{X} \,\,\, |f(x)|<M.$$ (\textbf{ограничена сверху и снизу})
+\end{definition}
+
+\begin{definition} Введём определения \textbf{точных верхней} и \textbf{нижней граней}
+
+\medskip
+
+$M^* \!= \sup\limits_\textbf{X}\!f(x)$, если 
+\emph{1)} $\forall x \in \textbf{X} \, f(x) \leqslant M^*$; \, \emph{2)} $\forall \varepsilon > 0 \; \exists x' \in \textbf{X}: f(x') > M^* - \varepsilon$.
+
+\medskip
+
+$M_*=\inf\limits_\textbf{X}\! f(x)$, если 
+\emph{1)}  $\forall x \in \textbf{X} \, f(x)\geqslant M_*$;
+\, \emph{2)} $\forall \varepsilon > 0 \; \exists x''\in \textbf{X} : f(x'') < M_* + \varepsilon$.
+\end{definition}
+
+\begin{definition}
+$f$ - \textbf{монотонно возрастает} $\Leftrightarrow \forall x_1, x_2\!\in\!\textbf{X}: x_1\!<\!x_2 \Rightarrow f(x_1)\!<\!f(x_2)$;
+
+\medskip
+
+$f$ - \textbf{монотонно не убывает} $\Leftrightarrow \forall x_1, x_2 \in \textbf{X}: x_1<x_2 \Rightarrow f(x_1)\leqslant f(x_2)$;
+\medskip
+
+$f$ - \textbf{монотонно убывает} $\Leftrightarrow \forall x_1, x_2 \in \textbf{X}: x_1<x_2 \Rightarrow f(x_1)> f(x_2)$;
+
+\medskip
+
+$f$ - \textbf{монотонно не возрастает} $\Leftrightarrow \forall x_1, x_2 \in \textbf{X}: x_1<x_2 \Rightarrow f(x_1)\geqslant f(x_2)$.
+\end{definition}
+
+\begin{definition} $b=\lim\limits_{x\rightarrow a} f(x)$ (\textbf{по Коши}), если
+$$\forall \varepsilon > 0 \;\; \exists \, \delta(\varepsilon)>0 : \, \forall x \in \textbf{X}, \;\; 0<|x-a|<\delta \, \Rightarrow \, |f(x) - b| < \varepsilon.$$
+\index{Предел функции!по Коши}
+\end{definition}
+
+\begin{definition} $b=\lim\limits_{x\rightarrow a} f(x)$ (\textbf{по Гейне}), если
+$$\forall \{x_n\}, \; x_n \in \textbf{X}, \; x_n \neq a, \;\; x_n \rightarrow a \;\; f(x_n) \rightarrow b.$$
+\index{Предел функции!по Гейне}
+\end{definition}
+
+\begin{proposition}
+$b=\lim\limits_{x\rightarrow a} f(x)$ (Коши)  $\Longleftrightarrow$ $b=\lim\limits_{x\rightarrow a} f(x)$ (Гейне).
+\end{proposition}
+
+\begin{definition}
+$\lim\limits_{x\rightarrow a} f(x)=+\infty \!\Leftrightarrow\! \forall E>0 \exists \delta(E): \forall x\!\in\!\textbf{X}, 0\!<\!|x-a|\!<\!\delta \Rightarrow f(x)\!>\!E$;
+\medskip
+
+$\lim\limits_{x\rightarrow \infty} f(x)=b \; \Leftrightarrow \; \forall \varepsilon > 0 \; \exists \delta(\varepsilon) \, : \; \forall x \in \textbf{X} \,\,\, |x|>\delta \; \Rightarrow \; |f(x)-b|<\varepsilon.$
+\medskip
+
+$\nexists\lim\limits_{x\rightarrow a} f(x)=b \; \Leftrightarrow \; \exists \varepsilon > 0 \; \forall \delta > 0 \; \exists x \in \textbf{X} \,\,\, 0<|x-a|<\delta \Rightarrow |f(x)-b|\geqslant \varepsilon.$
+\end{definition}
+
+\begin{definition}
+Интервал, содержащий точку $x\in \mathbb{R}$, называется \textbf{окрестностью} этой точки.
+\index{Окрестность точки}
+\end{definition}
+
+\begin{definition}
+Точка $a$ называется \textbf{предельной точкой множества $\textbf{X}$}, если для $\, \forall \delta > 0 \,$ в каждой её окрестности $\textbf{B}_\delta(a)=(a-\delta,\,a+\delta)$ содержатся отличные от $a$ значения $x\in\textbf{X}.$
+\index{Предельная точка множества}
+\end{definition}
+
+\begin{definition}
+Точка множества, не являющаяся предельной, называется \textbf{изолированной точкой множества}.
+\index{Изолированная точка множества}
+\end{definition}
+
+\section[Задачи]{Задачи.}\label{sec:problems_9}
+
+\begin{problem}
+\emph{\textbf{a)}} Докажите, что $x$ является предельной точкой множества $\textbf{X}~\!\subset~\!\mathbb{R}$, тогда и только тогда, когда из этой последовательности можно выделить подпоследовательность, сходящуюся к $x$;
+
+\medskip
+
+\emph{\textbf{б)}} Докажите, что в любой окрестности предельной точки $x$ множества $\textbf{X}$ находится не менее, чем счётное число точек множества, отличных от $x$.
+\end{problem}
+\begin{solution}
+\emph{\textbf{a)}} Пусть
+\marginnote{\footnotesize{{$\Longrightarrow$}}}
+$\forall \mathbf{U}(x)$ $\exists n \in \mathbb{N}$ : $x_n \in \stackrel{\circ}{U}\!\!(x)$. Рассмотрим совокупность окрестностей $\left\{\stackrel{\circ}{U}_{1/n}\!\!(x)\right\}$. В первой окрестности $\stackrel{\circ}{U}_{1}\!\!(x)$ выберем элемент $x_{n_1}$. В  $\stackrel{\circ}{U}_{1/2}\!\!(x)$ -- элемент $x_{n_2}$, так, чтобы выполнялось $n_2 > n_1$. В $\stackrel{\circ}{U}_{1/3}\!\!(x)$ -- $x_{n_3}$, $n_3 > n_2$ и т.д.\footnote{Этот процесс можно продолжать бесконечно, т.к. в любой окрестности найдётся бесконечно много элементов последовательности $x_n$.}. В результате мы получим подпоследовательность $x_{n_k}$, %последовательности $x_{n}$,
+которая сходится к $x$, т.к.~$|x_{n_k}-x|<\frac1k$, $\forall k \in \mathbb{N}$ и $\frac1k \xrightarrow[k \to \infty]{} 0$.
+
+\medskip
+
+Пусть
+\marginnote{\footnotesize{{$\Longleftarrow$}}}
+$\exists x_{n_k} \xrightarrow[k \to \infty]{}x$. Тогда по определению предела числовой последовательности в каждой окрестности $\mathbf{U}(x)$ лежит бесконечно много элементов подпоследовательности $x_{n_k}$ (все, начиная с некоторого номера). Остаётся заметить, что каждый элемент подпоследовательности является элементом последовательности $x_{n}$.
+
+\medskip
+
+\emph{\textbf{б)}} \texttt{От противного}. Пусть этих точек -- конечное число. Тогда уменьшая окрестность точки $x$ конечное число раз, можно получить окрестность \texttt{без} точек данного множества. \texttt{Противоречие с определением предельной точки}.
+\end{solution}
+
+
+
+\end{document}

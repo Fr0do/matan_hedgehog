@@ -1,0 +1,200 @@
+%\vmshbanner
+\papertitle{Локальные экстремумы}{27}{9 февраля}{12}
+\addcontentsline{toc}{section}{27. Локальные экстремумы}
+
+\vspace{3ex}
+
+\hspace{-3.5ex}\underline{\textbf{Определение:}} $x_0$ \emph{точка локального экстремума} функции $f$, если $\exists \delta: \forall x, \; 0<|x-x_0|<\delta$ выполнено $f(x) < f(x_0)$, либо $f(x) > f(x_0)$.
+\index{Локальный экстремум}
+
+\vspace{3ex}
+
+\hspace{-3.5ex}\underline{\textbf{Теорема}} \emph{(необходимое условие экстремума)}:
+
+Пусть $x_0$ - точка локального экстремума функции $f$ и $\exists f^{\prime}(x_0)$ тогда $f'(x_0)=0$.
+
+\vspace{3ex}
+
+\hspace{-3.5ex}\underline{\textbf{Теорема}} \emph{(достаточное условие экстремума)}:
+
+Если $\exists \delta>0,$ что $f$ непрерывна в $\mathbf{B}_{\delta}(x_0), \; \exists f^{\prime}(x)$ при $0 < |x-x_0| < \delta,$ \, а в самой точке $x_0$ производная $f^{\prime}(x_0)$ равна нулю, либо не существует. Тогда, если $f^{\prime}(x_1)\cdot f^{\prime}(x_2) < 0$ для $\forall x_1, x_2: \, x_0 - \delta < x_1 < x_0 < x_2 < x_0 + \delta,$ то $x_0$ - точка локального экстремума.
+
+\vspace{3ex}
+
+\hspace{-3.5ex}\underline{\textbf{Теорема:}} Пусть $\exists f^{\prime}(x)$ при $|x-x_0|<\delta, \,$ $f^{\prime}(x_0)=0, \, f^{\prime \prime}(x_0) < 0 \, (>0) \, \Rightarrow \, x_0$ - локальный максимум (минимум).
+
+\vspace{3ex}
+
+\hspace{-3.5ex}\underline{\textbf{Теорема:}} Пусть $\exists \,\,\, f^{\prime}(x), f^{\prime \prime}(x), \ldots ,f^{(n - 1)}(x)$ при $|x - x_0| < \delta,$ и выполнено:
+
+$f^{\prime}(x_0) = f^{\prime \prime}(x_0) = \, \ldots  \, = f^{(n-1)}(x_0) = 0, \, f^{(n)}(x_0) \neq 0. $ Тогда, если
+\vspace{2ex}
+
+$
+\begin{cases}
+n = 2k, \, \text{то} \, x_0 \,\, \text{является точкой локального экстремума,}\\
+n = 2k+1, \, \text{то} \,  x_0 \,\, \text{не является точкой локального экстремума \emph{(точка перегиба)}.}
+\end{cases}\!\!\!\!\!\!
+$
+
+\vspace{4ex}
+\hrule
+\vspace{3ex}
+
+\task \st Может ли функция $f: \mathds{R}\rightarrow \mathds{R}$ иметь более, чем счётное число точек строгого локального экстремума?
+
+
+%Докажите, что множество точек, в которых функция $f: \mathds{R}\rightarrow \mathds{R}$ имеет строгий локальный экстремум, не более чем счётно.
+
+\task \dem{1417, 1420} Исследуйте на экстремум следующие функции:
+\vspace{4ex}
+
+\emph{(а)} $y = x^m \, (1-x)^n$, \,\,$ m,n \in \mathds{N}$;
+\vspace{4ex}
+
+\begin{wrapfigure}{r}{135pt}
+\vspace{-12ex}
+\hspace{-23ex}
+\includegraphics[width=0.50\textwidth]{ris_27c.jpg}
+\end{wrapfigure}
+
+\emph{(б)}\! \cw \!\! $y=\left(1+x+\dfrac{x^2}{2!}+\ldots +\dfrac{x^n}{n!}\right)\cdot e^{-x}, \; n \in \mathds{N};$
+\vspace{4ex}
+
+\emph{(в)} $y=x^3 \, \sqrt[3]{x^2-1};$
+\vspace{5ex}
+
+\emph{(г)} $y=\ch{x}+\cos{x};$
+\vspace{4ex}
+
+\emph{(д)} $\begin{cases}
+x=\dfrac{t^3}{t^2+1};\\
+
+y=\dfrac{t^3-2t^2}{t^2+1}.
+\end{cases}\!\!\!\!\!\!$
+
+\begin{wrapfigure}{r}{0pt}
+\end{wrapfigure}
+
+\task \dem{1423} Исследуйте на экстремум в точке $x = x_0$ функцию $f(x) = (x - x_0)^n \, \varphi(x)$, где $n \in \mathds{N}$, а функция $\varphi(x)$ непрерывна при $x = x_0$ и $\varphi(x)\neq 0$.
+
+\task \cw Можно ли утверждать, что если всюду дифференцируемая функция $f$ в точке $x=x_0$ имеет максимум, то в некоторой достаточно малой окрестности этой точки слева от точки $x_0$ функция $f$ возрастает, а справа от неё убывает?
+
+\task
+\pnt Постройте пример функции, которая имеет в точке $x = 0$ строгий минимум, но для $\forall n \in \mathds{N}$
+$f^{(n)}(0)=0;$
+\pnt \cw Докажите, что функция $g(x) = \begin{cases}
+x e^{-1/x^2}, \;\; x \neq 0;\\
+
+\qquad 0, \;\;\;\; x = 0
+\end{cases}$
+не имеет в точке $x = 0$ локального экстремума и для $\forall n \in \mathds{N} \,$ $g^{(n)}(0)=0;$
+
+\vspace{4ex}
+\hspace{-4ex}
+\includegraphics[width=1.05\textwidth]{ris_27a.jpg}
+
+\task \dem{1427,1428} Исследуйте на экстремум на множестве $\textbf{X}$ функцию:
+
+\pnt $f(x) = \begin{cases}
+e^{-1/|x|}\left(\sqrt{2} + \sin{\frac{1}{x}}\right), &x \neq 0;\\
+
+\qquad \qquad 0, &x = 0;
+\end{cases}$
+\quad $\{x\} = \mathds{R}.$
+\vspace{2ex}
+
+\pnt $f(x) = \begin{cases}
+|x| \left(2 + \cos{\frac{1}{x}}\right), &x \neq 0;\\
+
+\qquad \quad 0, &x = 0;
+\end{cases}$
+\quad $\{x\} = \{0\}.$
+
+\task \dem{1437, 1444} Найдите точки локального экстремума следующих функций:
+\vspace{2ex}
+
+\emph{(а)} $y = x e^{-x}$; \hspace{22ex}
+\emph{(б)} $y = |x| \, e^{-|x-1|}$;
+\vspace{2ex}
+
+\emph{(в)} $y = x^x$.
+
+\task \cw Докажите, что при $x \in (0; + \infty)$ выполняется: $e^x \ge x^e.$ Откуда получите неравенство: $$e^{\pi} > \pi^e.$$
+
+\task Для $n \in \mathds{N}$ пусть $\{a_1; \, a_2; \ldots ; \, a_n\} \, \subset \, [0; + \infty).$ Докажите, что:
+\vspace{3ex}
+
+\emph{(а)} $\dfrac{1}{n} \, \sum\limits_{k=1}^n a_k e^{-a_k} \le \dfrac{1}{e};$ \hspace{20ex}
+\emph{(б)} $\dfrac{1}{n} \, \sum\limits_{k=1}^n a_k^2 e^{-a_k} \le \dfrac{4}{e^2};$
+\vspace{3ex}
+
+\emph{(в)} $\prod\limits_{k=1}^n a_k \le \left(\dfrac{3}{e}\right)^n \!\!\textmd{\emph{exp}} \left\{\dfrac{1}{3} \sum\limits_{k=1}^n a_k\right\}$.
+
+\task Найдите нижнюю грань \emph{(inf)} и верхнюю грань \emph{(sup)} следующих функций:
+
+\pnt $f(x) = \left(1 + x + \dfrac{x^2}{2!} + \ldots + \dfrac{x^n}{n!}\right) e^{-x}$ на интервале $(0; + \infty);$
+
+\pnt $f(x) = e^{-x^2} \cos{x^2}$ на интервале $(-\infty; + \infty);$
+
+\task \dem{1458} \cw Пусть $P_{q}(x) = x^2 + q.$ Найдите $\min\limits_q \sup\limits_{-1 \le x \le 1} |P_q(x)|,$ то есть, при каком выборе параметра $q$ многочлен $P_q(x)$ наименее отклоняется от нуля на $[-1; 1]$?
+
+\vspace{2ex}
+\hspace{14ex}
+\includegraphics[width=0.6\textwidth]{ris_27bb.jpg}
+
+\task Для каждого действительного $a$ определите число действительных корней у следующих уравнений:
+\vspace{2ex}
+
+\emph{(а)} \cw $a x = \ln{x};$ \hspace{10ex}
+\emph{(б)} $x^3 + 3 x^2 - a x + 5 = 0;$\hspace{10ex}
+\emph{(в)} $x^3 \ln{x} - x + a = 0.$
+
+\vspace{2ex}
+
+\hspace{-3.5ex}\underline{\textbf{Определение:}} \emph{Абсолютным отклонением двух функций $f$ и $g$ на отрезке $[a; b]$} называется число $\delta = \sup\limits_{[a; b]} |f(x) - g(x)|$.
+\index{Абсолютное отклонение двух функций}
+
+\task \dem{1459, 1460}
+
+\pnt Определите абсолютное отклонение функций $f(x) = x^2, g(x) = x^3$ на сегменте $[0; 1]$;
+
+\pnt Функцию $f(x) = x^2$ на сегменте $[x_1; x_2]$ приближённо замените функцией $g(x)~=~(x_1 + x_2) x + b$ так, чтобы абсолютное отклонение $f$ и $g$ было наименьшим.
+
+\task \st Постройте функцию, точки строгих максимумов и минимумов которой находятся в любом интервале числовой оси.
+
+\task
+\pnt Докажите \emph{неравенство Юнга:} если $a > 0, \; b > 0, \; p > 1$ и $\frac{1}{p} + \frac{1}{q} = 1,$ то
+$$
+\sqrt[p]{a} \sqrt[q]{b} \, \le \, \dfrac{a}{p} + \dfrac{b}{q},
+$$
+\index{Неравенство!Юнга}
+причем знак равенства имеет место только при $a = b.$
+
+\pnt Докажите \emph{неравенство Гёльдера:} если $x_i \ge 0, \; y_i \ge 0 \; (i = 1, 2, \dots, n)\,$, $p > 1$ и $\frac{1}{p} + \frac{1}{q} = 1,$ то
+$$
+\sum\limits_{i=1}^n x_i y_i \le \left(\sum\limits_{i=1}^n x_i^p\right)^{1/p} \left(\sum\limits_{i=1}^n y_i^q\right)^{1/q}.
+$$
+\index{Неравенство!Гёльдера}
+
+\pnt Докажите \emph{неравенство Минковского:} если $x_i \ge 0, \; y_i \ge 0 \; (i = 1, 2, \dots, n)\,$, $p > 1$, то
+$$
+\left( \sum\limits_{i=1}^n (x_i + y_i)^p\right)^{1/p} \le \left(\sum\limits_{i=1}^n x_i^p\right)^{1/p} + \left(\sum\limits_{i=1}^n y_i^p\right)^{1/p}
+$$
+\index{Неравенство!Минковского}
+
+\task \st
+\pnt Найдите наименьшее значение функции
+$$
+\left|\sin{x} + \cos{x} + \tang{x} + \cotg{x} + \dfrac{1}{\cos{x}} + \dfrac{1}{\sin{x}}\right|,\quad x \in \mathds{R}.
+$$
+
+\pnt Найдите на луче $x > 0$ минимальное значение функции $$\dfrac{(x + 1/x)^6 - (x^6 + 1/x^6) - 2}{(x + 1/x)^3 + (x^3 + 1/x^3)}.$$
+
+\task \st Пусть функция $f$ непрерывна на числовой прямой $\mathds{R}$ и ни на одном интервале не является монотонной. Докажите, что на любом интервале имеются точки минимума функции $f$.
+
+\task \st Пусть $a_1, a_2, \ldots ,a_n - $ различные действительные числа. Определите наименьшее на $\mathds{R}$ значение функции
+$$
+f(x) \, = \, \sum\limits_{k=1}^n |x - a_k|.
+$$
+%\end{document}

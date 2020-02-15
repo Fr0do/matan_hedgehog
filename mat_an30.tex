@@ -1,0 +1,256 @@
+%\vmshbanner
+\papertitle{Определённый интеграл. Основные понятия}{30}{22 февраля}{12}
+\addcontentsline{toc}{section}{30. Определённый интеграл. Основные понятия}
+%\vspace{1ex}
+
+%Пусть функция $f(x)$ определена на отрезке $[a; b]$.
+
+\vspace{1ex}
+
+\hspace{-3.5ex}\underline{\textbf{Определение:}} Назовем \emph{разбиением $\textbf{\{T\}}$ отрезка $[a; b]$} множество точек $\{x_0; \, x_1; \, x_2; \, x_3; \ldots ;x_n\}$, таких, что $a = x_0 < x_1 < \ldots < x_n = b$.
+\index{Интегрируемость по Риману!Разбиение отрезка}
+
+\vspace{0ex}
+\begin{center}
+\includegraphics[width=0.46\textwidth]{ris_30bb.jpg}
+\end{center}
+\vspace{-3ex}
+
+\hspace{-3.5ex}\underline{\textbf{Определение:}} Назовем \emph{диаметром разбиения} длину наибольшего интервала разбиения, т.е. $d = \max\limits_i \Delta x_i,$ где $\Delta x_i = x_{i+1} - x_i, \; i = \overline{0, n-1}$
+\index{Интегрируемость по Риману!диаметр разбиения}
+\vspace{1ex}
+
+\hspace{-3.5ex}\underline{\textbf{Определение:}} Функция $f$ \emph{интегрируема по Риману на отрезке $[a; b]$} (обозначение $f~\in~\mathfrak{R}[a;b]$), если
+\index{Интегрируемость по Риману}
+\vspace{-3ex}
+
+
+$$\exists \int\limits_a^b f(x) \, dx = \llim{d}{0} \sum\limits_{i=0}^{n-1} f(\xi_i) \Delta x_i,\;\; \text{где}\;\; \xi_i \in [x_i; x_{i+1}], \eqno (\ast)$$
+\vspace{-1ex}
+
+\hspace{-3.5ex}\underline{\textbf{Замечание:}} Значение предела $(\ast)$ не должно зависеть от выбора точек $x_i$ и  $\xi_i.$
+\vspace{1ex}
+
+\hspace{-3.5ex}\underline{\textbf{Определение:}} Выражение $\displaystyle S_n = S_n(f) = \sum\limits_{i=0}^{n-1} f(\xi_i) \Delta x_i$ называется \emph{интегральной суммой функции $f$ на отрезке $[a; b],$ отвечающее разбиению $\{x_i\}$}.
+\index{Интегрируемость по Риману!интегральная сумма}
+\vspace{1ex}
+
+\hspace{-3.5ex}\underline{\textbf{Определение:}} $\displaystyle s(f) = \sum\limits_{i=0}^{n-1} m_i \Delta x_i$, где $m_i = \inf\limits_{[x_i; x_{i+1}]} f(x)$ -- \emph{нижняя сумма Дарбу}.
+\vspace{1ex}
+
+\hspace{12ex} $\displaystyle S(f) = \sum\limits_{i=0}^{n-1} M_i \Delta x_i$, где $M_i = \sup\limits_{[x_i; x_{i+1}]} f(x)$ -- \emph{верхняя сумма Дарбу}.
+
+\vspace{1ex}
+\hspace{12ex} $I_* = \sup\limits_{\{T\}} \{s(f)\} = \llim{d}{0} s(f) \, - $ \emph{нижний интеграл Дарбу}.
+
+\vspace{1ex}
+\hspace{12ex} $I^* = \inf\limits_{\{T\}} \{S(f)\} = \llim{d}{0} S(f) \, - $ \emph{верхний интеграл Дарбу}.
+\index{Интегральные суммы Дарбу}
+
+\vspace{2ex}
+
+\hspace{-3.5ex}\underline{\textbf{Теорема}} (\emph{критерий Римана интегрируемости функции на отрезке}):
+\vspace{1ex}
+
+Для $\forall \varepsilon > 0 \;\; \exists \{T\}: \; |S - s| < \varepsilon \; \Longleftrightarrow \; f$ интегрируема по Риману на $[a; b].$
+\vspace{2ex}
+
+\hspace{-3.5ex}\underline{\textbf{Замечание 1:}} \; $\exists \llim{d}{0} s = \llim{d}{0} S \; \Longleftrightarrow \; f$ интегрируема по Риману на $[a; b].$
+\vspace{1ex}
+
+\hspace{-3.5ex}\underline{\textbf{Замечание 2:}} \; $\displaystyle \exists \llim{d}{0} \sum\limits_{i=0}^{n-1} w_i(f) \Delta x_i = 0 \; \Longleftrightarrow \; f$ интегрируема по Риману на $[a; b],$  где $w_i(f)~=~\left|\sup\limits_{[x_i; x_{i+1}]} \!\!\! f(x) - \!\!\! \inf\limits_{[x_i; x_{i+1}]} \!\!\! f(x)\right|.$  Напомним, что выражение $w_i(f)$ называется \emph{колебанием функции $f$ на отрезке $[x_i; x_{i+1}]$.}
+\index{Колебание функции на отрезке}
+
+\vspace{3ex}
+
+\hspace{-3.5ex}\underline{\textbf{Теорема}} Пусть выполнено одно из условий:
+\begin{enumerate}
+
+\item $f$ непрерывна на отрезке $[a; b];$
+
+\item $f$ ограничена и монотонна на отрезке $[a; b];$
+
+\item $f$ ограничена и имеет на $[a; b]$ конечное число точек разрыва.
+\end{enumerate}
+Тогда функция $f$ интегрируема по Риману на отрезке $[a; b].$
+
+\vspace{3ex}
+
+\hspace{-3.5ex}\underline{\textbf{Определение:}} Множество $\textbf{X}$ называется \emph{множеством меры нуль (по Лебегу)}, если $\forall \varepsilon > 0$ существует конечная или счётная система интервалов, покрывающая все точки множества~$\textbf{X}$, причём сумма длин этих интервалов меньше $\varepsilon$.
+\index{Множество меры нуль (по Лебегу)}
+
+\vspace{3ex}
+
+\hspace{-3.5ex}\underline{\textbf{Теорема}} (\emph{критерий Лебега интегрируемости функции на отрезке}):
+
+$f$ интегрируема по Риману на отрезке $[a; b],$ тогда и только тогда, когда множество её точек разрыва имеет меру нуль.
+
+\vspace{3ex}
+
+\hspace{-3.5ex}\underline{\textbf{Утверждение}} (\emph{непрерывность интеграла}):
+
+%Если функция $f(x)$ интегрируема на $[a; b]$ и непрерывна в точке $x_0$, то функция $F(x)~=~\int\limits_a^x f(t) dt$ дифференцируема в точке $x_0$ и $F^{\prime}(x_0) = f(x_0)$.
+
+Если функция $f$ интегрируема на отрезке $[a; b],$ то функции
+$$
+F(x) = \int\limits_a^x f(t) \, dt \quad \text{и} \quad G(x) = \int\limits_x^b f(t) \, dt
+$$
+непрерывны на этом отрезке.
+\vspace{3ex}
+\hrule
+\vspace{2ex}
+
+\task \dem{2181, 2182, 2186, 2191}
+
+Объясните интегрируемость функции $f$ и найдите интеграл $\displaystyle \int\limits_{\{x\}} f(x) \, dx$ с помощью интегральных сумм, если:
+\vspace{3ex}
+
+\emph{(а)} \cw $f(x) = x^2, \qquad \textbf{\{x\}} = [-1; 2]; \;\;$ \hspace{10ex}
+\emph{(б)} $f(x) = 1 + x, \qquad \textbf{\{x\}} = [-1; 4];$
+\vspace{3ex}
+
+\emph{(в)} $f(x) = x^3, \qquad \textbf{\{x\}} = [1; 3];$ \hspace{15ex}
+\emph{(г)} $f(x) = \dfrac{1}{x}, \quad \textbf{\{x\}} = [a; b], \;\; (0 < a < b);$
+\vspace{3ex}
+
+\emph{(д)} $f(x) = a^x, \qquad a > 0, \;\;\; \textbf{\{x\}} = [0; 1];$ \hspace{6.5ex}
+\emph{(е)} \st $f(x) = \ln{x},  \;\;\; \textbf{\{x\}} = [1; 2].$
+
+
+\task  Докажите следующее
+\vspace{1ex}
+
+\hspace{-3.5ex}\underline{\textbf{Утверждение}} (\emph{критерий Коши интегрируемости функции на отрезке}):
+\index{Критерий Коши!интегрируемости функции на отрезке}
+
+\hspace{-3.5ex}Функция $f$ интегрируема по Риману на отрезке $[a; b],$ тогда и только тогда, когда для $\forall \varepsilon~>~0$ $\; \exists \delta~>~0,$ что для любых разбиений $\{T_1\}, \{T_2\}$ отрезка  $[a; b]$ с диаметрами $d_1 < \delta$, $d_2 < \delta$ выполняется неравенство
+$$
+|S_{T_1}(f) - S_{T_2}(f)| < \varepsilon,
+$$
+где $S_{T_i}(f)$ - интегральная сумма функции $f$ на отрезке $[a; b],$ отвечающее разбиению $\{T_i\}$.
+\vspace{-1ex}
+
+\task
+\pnt \cw Пусть функции $f$ и $\varphi$ непрерывны на отрезке $[a; b].$ Докажите, что
+$$
+\llim{\max|\Delta x_i|}{0} \sum_{i=0}^{n-1} f(\xi_i) \, \varphi(\theta_i) \, \Delta x_i = \int\limits_a^b f(x) \, \varphi(x) \, dx,
+$$
+где $x_i \le \xi_i, \theta_i \le x_{i+1}, \;\; \Delta x_i = x_{i+1} - x_i, \;\; (i = \overline{0, n-1}).$
+\vspace{-1ex}
+
+\pnt \cw Пусть функция $f$ ограничена и монотонна на $[0; 1].$ Докажите, что
+$$
+\int\limits_0^1 f(x) \, dx - \dfrac{1}{n} \sum_{k=1}^n f\left(\dfrac{k}{n}\right) = \Large\underline{\textmd{O}}\left(\dfrac{1}{n}\right)\normalsize, \;\; \mbox{при} \;\; n \rightarrow \infty.
+$$
+\vspace{-5ex}
+
+\pnt Пусть функция $f$ имеет производную $f^{\prime}$ в некоторой окрестности точки $x$, причём $f^{\prime}$ непрерывна в точке $x$. Докажите, что
+$$
+\llim{n}{\infty} \sum\limits_{k=1}^n \left(f\Big(x + \frac{\scriptstyle k}{\scriptstyle k^2 + n^2}\Big) - f(x)\right) \, = \, f^{\prime}(x) \cdot  \logn{\sqrt{2}}.
+$$
+\vspace{-6ex}
+
+\task Докажите, что \emph{функция Римана}
+$
+R(x) = \begin{cases}
+\dfrac{1}{q},&\text{если $x$ - рациональное число} \; \dfrac{p}{q} \; ,\\
+0,&\text{если $x$ - иррациональное число.}
+\end{cases}
+$
+\index{Функция!Римана}
+интегрируема на любом конечном отрезке,
+\vspace{2ex}
+
+%\emph{(а)} \cw используя критерий Лебега; \hspace{15ex}
+%\emph{(б)} без использования критерия Лебега.
+\vspace{0ex}
+
+\hspace{-3.5ex} Вычислите интеграл от \emph{функции Римана} по произвольному отрезку.
+\vspace{-1ex}
+
+\task \cw Докажите, что \emph{функция Дирихле}
+\index{Функция!Дирихле}
+$
+D(x) = \begin{cases}
+1,&\text{если $x \in \mathds{Q}$,}\\
+0,&\text{если $x \in \mathds{R} \setminus \mathds{Q}$;}
+\end{cases}
+$
+не интегрируема на любом отрезке.
+
+\vspace{-2ex}
+\task Исследуйте следующие функции на интегрируемость на сегменте $[0; 1]:$
+\vspace{2ex}
+
+(а) $
+f(x) = \begin{cases}
+\frac{1}{x} - \left[\frac{1}{x}\right],&\text{если $x \neq 0$,}\\
+0,&\text{если $x = 0$;}
+\end{cases}
+$ \hspace{10ex}
+(б) $
+f(x) = \begin{cases}
+\textmd{sgn}\left(\sin\frac{\pi}{x}\right),&\text{если $x \neq 0$,}\\
+0,&\text{если $x = 0$;}
+\end{cases}
+$
+
+\task Следует ли из интегрируемости функции $|f|$ интегрируемость функции $f$?
+
+\task Пусть функция $f$ интегрируема на отрезке $[a; b]$. Докажите, что
+$$
+\llim{\varepsilon}{0+0} \int\limits_{a + \varepsilon}^{b - \varepsilon} f(x) \, dx = \int\limits_a^b f(x) \, dx, \;\;\; 0 < \varepsilon < b - a.
+$$
+\vspace{-6ex}
+\task Покажите некорректность определения интеграла, при котором
+\pnt \cw отрезок разбивается на равные части, а значения функции берутся в серединах отрезков разбиения;
+\pnt не требуется стремление максимума длин отрезков разбиения к нулю.
+
+\vspace{-2ex}
+\task \cw Пусть функции $f$ и $\varphi$ интегрируемы. Обязательно ли будет интегрируема их суперпозиция $\varphi \bigl(f\bigr)$?
+
+\task (\emph{соотношение интегрируемости и существования первообразной на отрезке})
+\vspace{1ex}
+
+Установите, верны ли следующие утверждения:
+\vspace{-2ex}
+
+\pnt Любая интегрируемая на сегменте функция имеет первообразную на нём;
+\pnt Любая функция, имеющая первообразную на сегменте является интегрируемой на нём.
+
+
+\vspace{-1ex}
+\task Докажите, что для существования определённого интеграла функции $f$ на интервале $(a; b)$ необходимо и достаточно, чтобы по заданным числам $\varepsilon > 0, \; \sigma > 0$ можно было найти такое $\delta(\varepsilon, \sigma) > 0$, что при диаметре разбиения $d < \delta$,
+сумма $\sum\limits_{i^{\prime}} \Delta x_{i^{\prime}}$ длин тех интервалов, которым отвечают колебания функции $w_{i^{\prime}}(f) \ge \varepsilon$ сама меньше $\sigma$.
+
+\vspace{-1ex}
+\task \dem{2200, 2202}
+\pnt Пусть $f$ интегрируема на отрезке $[a; b].$ Докажите, что $|f|$ интегрируема на $[a; b]$, причём
+$\;\; \displaystyle  \left|\int\limits_a^b f(x) \, dx\right| \le \int\limits_a^b |f(x)| \, dx.$
+
+\pnt Пусть функция $f(x)$ интегрируема на $[a; b]$ и $c \le f(x) \le d$ для $\forall x \in [a; b]$; пусть функция $\varphi(y)$ непрерывна на $[c; d].$ Докажите, что их суперпозиция $\varphi \bigl(f(x)\bigr)$ интегрируема на $[a; b]$.
+
+\vspace{-1ex}
+\task \st Определите все интегрируемые на отрезке $[0; 1]$ функции $f$, удовлетворяющие условиям:
+\vspace{-0ex}
+$$
+f(x) = \dfrac{1}{3} \left(f\left(\frac{x}{3}\right) + f\left(\frac{x+1}{3}\right) + f\left(\frac{x+2}{3}\right)\right), \quad x \in [0; 1];
+$$
+$$
+f\left(\frac{1}{\pi}\right) = 1.
+$$
+\vspace{-4ex}
+
+\task \st Функция $f : [a; b] \mapsto \mathbb{R}$ дифференцируема и $|f^{\prime}(x)| \le 1$ всюду на отрезке $[a; b].$ Докажите, что если $a = x_0 < x_1 < \ldots < x_n = b,$ $\; \max\limits_{1 \le i \le n} (x_i - x_{i-1}) \le \dfrac{1}{b-a},$ $\; \xi_i \in [x_{i-1}; x_i),$ то
+$$
+\left| \int\limits_a^b f(x) dx - \sum\limits_{i=1}^n f(\xi_i) (x_i - x_{i-1}) \right| \le \dfrac{1}{2},
+$$
+и покажите, что приведённая оценка \emph{неулучшаема}, т.е. найдётся функция, удовлетворяющая всем условиям задачи, на которой достигается равенство.
+\vspace{-2ex}
+
+\task \st Существует ли функция $f$, непрерывная на полуоси $(1; \, +\infty)$ и такая, что
+$$
+\int\limits_x^{x^2} f(t) dt = 1, \quad \forall x \in (1; +\infty) ?
+$$
+
+%\end{document}

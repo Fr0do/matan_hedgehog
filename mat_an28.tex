@@ -1,0 +1,190 @@
+%\vmshbanner
+\papertitle{Построение графиков функций. Декартовы координаты}{28}{14 февраля}{12}
+\addcontentsline{toc}{section}{28. Построение графиков функций. Декартовы координаты}
+
+\vspace{3ex}
+
+\hspace{-3.5ex}\underline{\textbf{Определение:}} Прямая $x = x_0$ называется \emph{вертикальной асимптотой} графика функции $y = f(x)$, если выполнено хотя бы одно  из условий: $\llim{x}{x_0 - 0} f(x) = \pm \infty,$ или $\llim{x}{x_0 + 0} f(x) = \pm \infty$.
+\index{Асимптота графика функции}
+
+\vspace{4ex}
+
+\hspace{-3.5ex}\underline{\textbf{Определение:}} Прямая $y = k x + b$ называется \emph{наклонной асимптотой} графика функции $y = f(x)$ при $x \rightarrow \pm \infty$, если $\llim{x}{\pm \infty} \left(f(x) - (k x + b) \right) = 0.$
+
+\vspace{4ex}
+
+\hspace{-3.5ex}\underline{\textbf{Замечание:}} Из определения наклонной асимптоты при $x \rightarrow \pm \infty$ следует, что:  $k~=~\llim{x}{\pm \infty}~\dfrac{f(x)}{x}, \;\;$ $b~=~\llim{x}{\pm \infty}~\left(f(x) - k x \right)$.
+
+\vspace{4ex}
+
+\hspace{-3.5ex}\underline{\textbf{{Определение:}}} Если $k = 0$, то асимптота $y = b$ называется \emph{горизонтальной}.
+
+\vspace{6ex}
+\hrule
+\vspace{4ex}
+
+\task Найдите наклонные асимптоты графика функции $f$ при $x \rightarrow + \infty$, если:
+\vspace{4ex}
+
+\emph{(а)} $f(x) = \dfrac{2x^2 + 3x - 2}{x - 1}$; \hspace{20ex}
+\emph{(б)} $f(x) = \dfrac{\sqrt{x^4 + 3x - 1}}{x - 4}$.
+
+\vspace{6ex}
+
+\hspace{-3.5ex}\underline{\textbf{Замечание:}} При исследовании асимптот иррациональных, трансцендентных функций, а также функций, аналитическое выражение которых содержит модуль,  целесообразно рассматривать два случая:  $x \rightarrow + \infty$ и $x \rightarrow - \infty$. Совместное исследование асимптот при $x \rightarrow + \infty$ и при $x \rightarrow - \infty$ может привести к ошибкам в исследовании. При нахождении пределов или главной части при $x \rightarrow - \infty$  необходимо выполнить замену переменной $x = -t$.
+
+\vspace{3ex}
+
+\begin{wrapfigure}{r}{200pt}
+\vspace{2ex}
+\hspace{-15ex}
+\includegraphics[width=0.55\textwidth]{ris_28a.jpg}
+\end{wrapfigure}
+
+\task Найдите наклонные асимптоты графика функции $f$ при $x \rightarrow + \infty$ и $x \rightarrow - \infty$:
+\vspace{6ex}
+
+\emph{(а)} \cw $f(x) = \sqrt{x^2 - 6x + 14}$;
+\vspace{6ex}
+
+\emph{(б)} $f(x) = \sqrt{4 x^2 - x + 2}$;
+\vspace{6ex}
+
+\emph{(в)} $f(x) = x + \sqrt{4x^2 + x}$.
+
+\begin{wrapfigure}{r}{0pt}
+\end{wrapfigure}
+
+\vspace{7ex}
+
+\textbf{Взаимное расположение графика функции и его асимптоты}(см. задачу ниже).
+\begin{enumerate}
+\item Если функция $y = f(x)$ имеет асимптоту  при $x \rightarrow + \infty$, дифференцируема и строго выпукла вниз на луче $x \ge x_0$, то график функции лежит выше асимптоты.
+\item Если функция $y = f(x)$ имеет асимптоту при  $x \rightarrow + \infty$, дифференцируема и строго выпукла вверх на луче  $x \ge x_0$, то график функции лежит ниже асимптоты.
+\item Могут быть другие случаи поведения графика функции при стремлении к асимптоте. Например, возможно, что, график функции бесконечное число раз пересекает асимптоту.
+\end{enumerate}
+\index{Взаимное расположение графика функции и его асимптоты}
+\vspace{5ex}
+
+\hspace{-8ex}
+\includegraphics[width=1.1\textwidth]{ris_28.jpg}
+\vspace{1ex}
+\hrule
+\vspace{4ex}
+
+\begin{wrapfigure}{r}{200pt}
+\vspace{1ex}
+\hspace{-15ex}
+\includegraphics[width=0.54\textwidth]{ris_28b.jpg}
+\end{wrapfigure}
+
+\task Определите взаимное расположение графика функции $f$ и его асимптот:
+\vspace{6ex}
+
+\emph{(а)} \cw $f(x) = \dfrac{2x^2 + 3x - 2}{x-1}$;
+\vspace{6ex}
+
+\emph{(б)} $f(x) = \sqrt{x^2 - 6x + 14}$;
+\vspace{6ex}
+
+\emph{(в)} $f(x) = \sqrt[3]{x^3 + 6x^2 - 2x + 14}$.
+
+\begin{wrapfigure}{r}{0pt}
+\end{wrapfigure}
+
+\task \st Известно, что функция $y = f(x)$ имеет наклонную асимптоту и $f^{\prime \prime}(x) > 0$. Докажите, что график данной функции приближается к этой асимптоте сверху.
+
+\vspace{6ex}
+
+\hspace{-3.5ex}\underline{\textbf{Замечание:}} Аналогично можно доказать, что если $f^{\prime \prime}(x) < 0$, то график функции приближается к этой асимптоте снизу.
+
+\newpage
+\textbf{План исследования функции при построении её графика.}
+\index{План исследования функции при построении её графика}
+\vspace{1ex}
+\begin{enumerate}
+
+\item Найти область определения функции. Исследовать специальные свойства функции: чётность/нечётность, периодичность, свойство симметрии;
+\vspace{1ex}
+
+\item Установить интервалы знакопостоянства, корни;
+\vspace{1ex}
+
+\item Найти интервалы непрерывности, точки разрыва;
+\vspace{1ex}
+
+\item Исследовать асимптоты графика функции (вертикальные, наклонные). Проанализировать взаимное расположение графика функции и его асимптот;
+\vspace{1ex}
+
+\item Найти участки монотонности функции, экстремумы (минимумы и максимумы);
+\vspace{1ex}
+
+\item Найти промежутки выпуклости, точки перегиба.
+\end{enumerate}
+
+\vspace{5ex}
+\hrule
+\vspace{5ex}
+
+\task \dem{1471,1477,1483,1490,1500,1505,1508,1512,1513,1516,1527}
+
+ Постройте графики следующих функций, заданных в декартовой системе координат:
+\vspace{5ex}
+
+\emph{(а)}  $y = 3x - x^3;$ \hspace{30.5ex}
+\emph{(б)}  \cw $y = \dfrac{x^4}{(1+x)^3};$
+\vspace{5ex}
+
+\emph{(в)} \cw $y = \dfrac{1}{1+x} - \dfrac{10}{3 x^2} + \dfrac{1}{1-x};$ \hspace{15ex}
+\emph{(г)} \cw $y = (x - 5) \, \sqrt[3]{x^2};$
+\vspace{5ex}
+
+\emph{(д)} $y = (x+1)^{2/3} + (x-1)^{2/3};$\hspace{16.5ex}
+\emph{(е)} $y = \cos{x} - \dfrac{1}{2} \cos{2x};$
+\vspace{5ex}
+
+\emph{(ж)} $y = 2x - \tang{x};$ \hspace{27.5ex}
+\emph{(з)} \cw $y = x + e^{-x};$
+\vspace{5ex}
+
+\emph{(и)} $y = \dfrac{\ln{x}}{\sqrt{x}};$ \hspace{33ex}
+\emph{(к)} $y = \ln{\left(x + \sqrt{x^2 + 1}\right)};$
+\vspace{5ex}
+
+\emph{(л)} \cw $y = x + \arctg{x}$ \hspace{25ex}
+\emph{(м)} $y = x^{1/x};$
+\vspace{5ex}
+
+\emph{(н)} $y = \sqrt[3]{(x-6)^2 \,\, |x+4|};$ \hspace{20ex}
+\emph{(о)} $y = |x - 4| \,\, \sqrt[3]{1 + \dfrac{9}{x}}.$
+
+\vspace{11ex}
+
+\task Может ли график непрерывной функции $f : \mathds{R} \mapsto \mathds{R}\vspace{1ex}$ пересекать каждую вертикальную (не вертикальную) прямую бесконечное число раз?
+
+\task \st Проведите исследование и постройте график функции
+$$
+f(x) = \int\limits_0^x \sin{t^2} \, dt.
+$$
+\vspace{-5ex}
+
+\task \st Окружность единичного радиуса катится по верхней стороне положительной ветви гиперболы $y = \dfrac{1}{x}.$ Будет ли линия, которую описывает центр окружности, ветвью какой-либо гиперболы?
+
+\task \st Нарисуйте график функции $y(t),$ удовлетворяющей дифференциальному тождеству:
+
+$$
+y^{\prime}(t) = 1 + \sin^2{\big(y(t)\big)}, \; t > 0,
+$$
+
+\hspace{-3.5ex}и \emph{начальному условию} $\quad y(0) = 0.$
+
+%[Selected], N35
+\task \st Постройте график функции:
+$$
+y = \ln{\Big(x + \ln{\big(x + \ln{(x + \ldots)}\big)}\Big)}, \quad x \geqslant 1.
+$$
+\vspace{-5ex}
+
+\task \st Найдите область определения и постройте график функции $\llimn \big(\th{nx}\big)^{2^n+n}$.
+
+%\end{document}

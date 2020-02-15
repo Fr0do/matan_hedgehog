@@ -1,0 +1,245 @@
+%\vmshbanner
+\papertitle{Понятие числовой последовательности}{3}{10 сентября}{12}
+\addcontentsline{toc}{section}{3. Понятие числовой последовательности}
+\vspace{1ex}
+
+\hspace{-3.5ex}\textbf{\underline{Определение:}} $\{x_n\}_{n=1}^\infty$ - множество занумерованных вещественных чисел - \textit{числовая последовательность}.
+\index{Числовая последовательность}
+
+\vspace{1ex}
+
+\hspace{-3.5ex}\textbf{\underline{Определение:}} $\{x_n\}$ - \textit{ограничена}, если $\exists M: \forall n\in \mathds{N} \,\,\, |x_n|\leqslant M$.
+\index{Числовая последовательность!ограниченная}
+
+\hspace{13.5ex}$\{x_n\}$ - \textit{не ограничена}, если для $\forall M \;\; \exists n(M)\in \mathds{N} \; : \; |x_{n(M)}| > M$.
+\index{Числовая последовательность!не ограниченная}
+
+\vspace{1ex}
+
+\hspace{-3.5ex}\textbf{\underline{Определение:}} $\lim\limits_{n\rightarrow\infty} x_n = a \, \Longleftrightarrow \, \forall \varepsilon > 0 \;\; \exists N(\varepsilon) \, : \, \forall n \geqslant N(\varepsilon) \;\; |x_n - a| < \varepsilon$.
+\index{Предел числовой последовательности}
+
+\vspace{1ex}
+
+\hspace{-3.5ex}\textbf{\underline{Определение:}} $\{x_n\}$ - \textit{бесконечно малая}, если $$\lim\limits_{n\rightarrow\infty} x_n = 0 \Longleftrightarrow \forall\varepsilon > 0 \;\; \exists N(\varepsilon) \; : \; \forall n \geqslant N(\varepsilon) \;\;  |x_n|<\varepsilon.$$
+\index{Числовая последовательность!бесконечно малая}
+
+\vspace{0ex}
+
+\hspace{-3.5ex}\textbf{\underline{Определение:}} $\{x_n\}$ - \textit{бесконечно большая}, если:
+\begin{enumerate}
+\item [1)] $\{x_n\}$ - знакопостоянна
+\item [2)] $\lim\limits_{n\rightarrow\infty} x_n=\infty,$ то есть
+$$x_n > 0 \,\,\, (x_n < 0) \,\,\, \text{для} \; \forall n \in \mathds{N} \;\; \text{и} \;\,\, \text{для} \; \forall E>0 \,\,\,\, \exists N(E): \;\; \text{при}\;\; \forall n \geqslant N(E) \,\,\,\, |x_n|>E.$$
+\end{enumerate}
+\index{Числовая последовательность!бесконечно большая}
+
+\hspace{-4ex}\textbf{\underline{Замечание:}} Знакопостоянство бесконечно большой последовательности иногда не требуется.
+
+\vspace{1ex}
+
+\hspace{-3.5ex}\textbf{\underline{Утверждение:}} Пусть $\lim\limits_{n\rightarrow\infty} x_n = x, \lim\limits_{n\rightarrow\infty} y_n = y$, тогда
+\begin{enumerate}
+\item [1)] $\exists \lim\limits_{n\rightarrow\infty} (x_n\pm y_n)=x \pm y$;
+\item [2)] $\exists \lim\limits_{n\rightarrow\infty} (x_n\cdot y_n)= x \cdot y$;
+\item [3)] $\exists \lim\limits_{n\rightarrow\infty} \dfrac{x_n}{y_n}=\dfrac{x}{y} \,\,\,\,\,\, (y_n\neq 0 \,\,\, \text{для} \;\; \forall n, \;\; y \neq 0).$
+\end{enumerate}
+\index{Числовая последовательность!арифметические свойства}
+
+\vspace{1ex}
+
+\hspace{-3.5ex}\textbf{\underline{Утверждение:}} Если $\exists N: \,\, \forall n\geqslant N$ выполнено $x_n \leqslant y_n$, то $\lim\limits_{n\rightarrow\infty} x_n \leqslant \lim\limits_{n\rightarrow\infty} y_n$ (если данные пределы существуют).
+\index{Предельный переход в неравенствах}
+
+\vspace{2ex}
+\hrule
+\vspace{1ex}
+
+\begin{wrapfigure}{r}{240pt}
+\vspace{6ex}
+\hspace{-10ex}
+\includegraphics[width=0.65\textwidth]{List_3a.jpg}
+\end{wrapfigure}
+
+\task \dem{42} Докажите, что последовательность $\{x_n\}$ есть бесконечно малая, указав для $\forall \varepsilon~>~0$ число $N(\varepsilon),$ что для $\forall n \geqslant N(\varepsilon)\,$ выполнено $ \; |x_n|<\varepsilon$, если:
+
+\pnt \cw $x_n=\dfrac{(-1)^{n+1}}{n}$;
+
+\pnt \cw $x_n=\dfrac{2n}{n^3+1}$;
+
+\pnt $x_n=\dfrac{1}{n!}$;
+
+\pnt $x_n=(-1)^n \cdot 0,999^n.$
+
+\begin{wrapfigure}{r}{0pt}
+\end{wrapfigure}
+
+\task Приведите пример бесконечно малой последовательности $\{x_n\}$, члены которой:
+
+\pnt \cw поочередно, то приближаются к своему пределу, то удаляются от него;
+
+\pnt поочередно, то принимают значение равное своему пределу, то удаляются от него.
+
+\vspace{3ex}
+
+\emph{Помещённые выше примеры бесконечно малых последовательностей интересны тем, что они охватывают различные способы стремления переменной к нулю. При этом \textbf{несущественно}, лежат ли значения последовательности с одной стороны \textbf{\emph{(№3.1 б,в)}} от предела или нет \textbf{\emph{(№3.1 а,г)}}; \textbf{несущественно}, приближается ли она с каждым шагом к своему пределу \textbf{\emph{(№3.1)}} или нет \textbf{\emph{(№3.2)}}; \textbf{несущественно} наконец, достигает ли последовательность своего предела, т.е. принимает ли значения равные ему \textbf{\emph{(№3.2 б)}}. \textbf{Существенно} лишь то, о чем говорится в определении: \textbf{последовательность должна отличаться от предела сколь угодно мало для достаточно больших своих номеров}.}
+
+\vspace{0ex}
+
+\begin{wrapfigure}{r}{240pt}
+\vspace{6ex}
+\hspace{-10ex}
+\includegraphics[width=0.6\textwidth]{List_3bb.jpg}
+\end{wrapfigure}
+
+\task\dem{43} Докажите, что $\{x_n\}$ есть бесконечно большая, возможно незнакопостоянная, определив для $\forall E>0$ число $N(E): |x_n|>E$ при $n\geqslant N(E)$, если:
+
+\pnt \cw $x_n=(-1)^n\cdot n$;
+
+\pnt $x_n = 2^{\sqrt{n}}$;
+
+\pnt $x_n = \lg(\lg n) \,\,\,\, (n\geqslant 2)$;
+
+\pnt $x_n = \dfrac{3^n - 2^n}{2^n + 1}$.
+
+\begin{wrapfigure}{r}{0pt}
+\end{wrapfigure}
+
+\vspace{0ex}
+
+\task \dem{41} \cw Докажите, что $\lim\limits_{n\rightarrow\infty} \dfrac{n}{n+1}=1$, определив для $\forall \varepsilon > 0$ число $N(\varepsilon): |x_n-1|<\varepsilon$ при всех $n\geqslant N$.
+
+\task \dem{45} Сформулируйте с помощью кванторов и неравенств следующие утверждения:
+\vspace{2ex}
+
+\emph{(а)} $\lim\limits_{n\rightarrow\infty} x_n=+\infty$; \qquad\qquad \emph{(б)} $\lim\limits_{n\rightarrow\infty} x_n=-\infty$.
+
+\task \cw Приведите пример неограниченной последовательности $\{x_n\}$, у которой есть ограниченная подпоследовательность.
+
+\vspace{4ex}
+
+\hspace{-3.5ex}\textbf{\underline{Замечание:}} \; Отметим, что построенная \textbf{неограниченная последовательность не является бесконечно большой,} т.е. данные понятия \underline{существенно} разные.
+
+\begin{wrapfigure}{r}{240pt}
+\vspace{2ex}
+\hspace{-6ex}
+\includegraphics[width=0.5\textwidth]{List_3d.jpg}
+\end{wrapfigure}
+
+\task Докажите, по определению, что:
+
+\pnt  $\lim\limits_{n\rightarrow\infty}\sqrt[n]{a}=1, \;\;\; (a>1)$;
+
+\pnt \cw $\lim\limits_{n\rightarrow\infty} q^n = 0, \;\;\; (|q|<1)$.
+
+\pnt $\lim\limits_{n\rightarrow\infty} Q^n = \infty, \;\;\; (|Q|>1)$.
+
+\begin{wrapfigure}{r}{0pt}
+\end{wrapfigure}
+
+\task \cw Рассмотрим \emph{бесконечно убывающую геометрическую прогрессию:} $$a, \; aq, \; aq^2, \, \ldots\, , aq^n, \, \ldots \,\,\,\,\, (|q|<1)$$ Под ее суммой понимается предел, к которому стремится сумма $S_n$ ее $n$ членов при $n\rightarrow\infty$. Найдите сумму бесконечно убывающей геометрической прогрессии.
+
+\task Приведите пример последовательностей $\{x_n\}$ и $\{y_n\}$, таких, что $\{x_n\}>\{y_n\}$ \text{для}\;\; $\forall n\in \mathds{N}$, но $\lim\limits_{n\rightarrow\infty} x_n=\lim\limits_{n\rightarrow\infty} y_n$.
+
+\task\dem{46-57} Найдите следующие пределы:
+\vspace{3ex}
+
+\emph{(а)} $\lim\limits_{n\rightarrow\infty} \dfrac{10000n}{n^2+1}$; \hspace{34ex}
+\emph{(б)} \cw $\lim\limits_{n\rightarrow\infty}\left(\sqrt{n+1}-\sqrt{n}\right)$;
+\vspace{2ex}
+
+\emph{(в)} $\lim\limits_{n\rightarrow\infty} \dfrac{\sqrt[3]{n^2}\sin n!}{n+1}$; \hspace{31ex}
+\emph{(г)} $\lim\limits_{n\rightarrow\infty} \dfrac{(-2)^n+3^n}{(-2)^{n+1}+3^{n+1}}$;
+\vspace{2ex}
+
+\emph{(д)} $\lim\limits_{n\rightarrow\infty} \dfrac{1+a+a^2+\ldots+a^n}{1+b+b^2+\ldots+b^n}, \; |a|<1, \, |b|<1$;\hspace{5ex}
+\emph{(е)} \cw $\lim\limits_{n\rightarrow\infty}\left(\dfrac{1}{n^2}+\dfrac{2}{n^2}+\ldots+\dfrac{n-1}{n^2}\right)$;
+\vspace{2ex}
+
+\emph{(ж)} $\lim\limits_{n\rightarrow\infty}\left|\dfrac{1}{n}-\dfrac{2}{n}+\dfrac{3}{n}-\ldots+\dfrac{(-1)^{n-1}n}{n}\right|$;\hspace{10ex}
+\emph{(з)} $\lim\limits_{n\rightarrow\infty}\left(\dfrac{1^2}{n^3}+\dfrac{2^2}{n^3}+\ldots+\dfrac{(n-1)^2}{n^3}\right)$;
+\vspace{2ex}
+
+\emph{(и)} $\lim\limits_{n\rightarrow\infty}\left(\dfrac{1^2}{n^3}+\dfrac{3^2}{n^3}+\ldots+\dfrac{(2n-1)^2}{n^3}\right)$;\hspace{13ex}
+\emph{(к)} $\lim\limits_{n\rightarrow\infty}\left(\dfrac{1}{2}+\dfrac{3}{2^2}+\dfrac{5}{2^3}\ldots+\dfrac{2n-1}{2^n}\right)$;
+\vspace{2ex}
+
+\emph{(л)} \cw $\lim\limits_{n\rightarrow\infty}\left(\dfrac{1}{1\cdot 2}+\dfrac{1}{2\cdot 3}+\ldots+\dfrac{1}{n(n+1)}\right)$;\hspace{9ex}
+\emph{(м)} $\lim\limits_{n\rightarrow\infty} \Big(\sqrt{2}\cdot \sqrt[4]{2}\cdot \sqrt[8]{2}\ldots \cdot \sqrt[2^n]{2}\Big)$.
+
+\vspace{2ex}
+
+\includegraphics[width=1\textwidth]{List_3c.jpg}
+
+%\hspace{12ex}\emph{$\scriptstyle x_n \, = \, \sqrt{n+1}-\sqrt{n}$ \hspace{30ex} $\scriptstyle x_n \, = \, \frac{1}{n^2}+\frac{2}{n^2}+\ldots+\frac{n-1}{n^2}$}
+
+
+\task Найдите предел $$\lim\limits_{n\rightarrow\infty} \left(\dfrac{1}{1\cdot 2\cdot 3}+\dfrac{1}{2\cdot 3\cdot 4}+\ldots+\dfrac{1}{n(n+1)(n+2)}\right).$$
+\vspace{-5ex}
+
+\task  Пусть заданы два числа $a$ и $b$. Положим $x_1=a, \; x_2=b, \; x_n=\dfrac{x_{n-1}+x_{n-2}}{2} \;\;\; (n\geqslant 3)$. Найдите предел последовательности $\{x_n\}$.
+\vspace{-1ex}
+
+\task \st Докажите, что последовательность $\{x_n\} = 1 + 17n^2$ содержит бесконечно много квадратов целых чисел.
+\vspace{-1ex}
+
+\task \st Определим последовательности $\{x_n\}$ и $\{y_n\}$ при помощи условий:
+$$
+x_n = x_{n-1} + 2 y_{n-1} \sin^2{\alpha}, \;\; y_n = y_{n-1} + 2 x_{n-1} \cos^2{\alpha}, \;\; x_0 = 0, \;\; y_0 = \cos{\alpha}.
+$$
+Найдите выражение для $x_n$ и $y_n$ через $n$ и $\alpha$.
+\vspace{-1ex}
+
+\task \st Найдите формулу общего члена для последовательности:
+\vspace{1ex}
+\pnt
+$
+x_1 = 1, \; x_2 = 1, \;\; x_n = x_{n-1} + x_{n-2}, \;\; 3 \le n \in \mathds{N}, \;\; \text{\emph{(последовательность Фибоначчи)}};
+$
+\index{Числовая последовательность!Фибоначчи}
+\vspace{1ex}
+\pnt
+$
+%x_1 = 0, \;\; x_2 = 1, \;\; x_n = x_{n-1} - \dfrac{x_{n-2}}{4}, \;\;\; 3 \le n \in \mathds{N}.
+x_1 = a, \;\; x_2 = b, \;\; x_n = x_{n-1} - \dfrac{x_{n-2}}{4}, \;\;\; 3 \le n \in \mathds{N}.
+$
+\vspace{-4ex}
+
+\task \st Докажите, что последовательность $\{x_n\}$, заданная условием $x_{n+1} = x_n + \dfrac{x_n^2}{n^2}$ при~$n \in \mathds{N}$, где $0 < x_1 < 1,$ ограничена.
+\vspace{-1ex}
+
+\task На отрезке $AB$, длины $l$ строится последовательность точек $\{x_n\}$ следующим образом: $x_1 = A, \;\; x_2 = B,$ каждая следующая точка $x_{n+1}$ является серединой отрезка, соединяющего точки $x_{n-1}$ и $x_n$. К какой точке отрезка $AB$ стремится последовательность~$\{x_n\}$?
+\vspace{-5ex}
+
+\task \st (\emph{модификация последовательности Фаррея})
+
+Определим последовательность $\{a_n\}$ следующим образом:
+$$
+a_0 = 1, \;\; a_{2n+1} = a_n, \;\; a_{2n+2} = a_n + a_{n+1}, \;\; \mathds{Z} \ni n \ge 0.
+$$
+Докажите, что множество $\left\{\dfrac{a_{n-1}}{a_n}, n \in \mathds{N}\right\} \, = \, \left\{\dfrac11, \dfrac12, \dfrac21, \dfrac13 \ldots \right\}$ содержит все положительные рациональные числа.
+\vspace{-3ex}
+\index{Числовая последовательность!Фаррея}
+
+%\task \st Пусть $(x) - $ расстояние между действительным числом $x$ и ближайшим целым. Для каждого натурального $n$ вычислите сумму:
+%$$
+%S_n = \sum\limits_{m=1}^{6n-1} \min\left\{\left(\dfrac{m}{6n}\right); \, \left(\dfrac{m}{3n}\right)\right\}.
+%$$
+%\vspace{-6ex}
+
+\task \st Найдите значения параметров $a$ и $b$, при которых сходится последовательность
+$$
+x_0 = a, \; x_n = 1 + b \cdot x_{n-1}, \; n = 1, 2, \ldots
+$$
+\vspace{-1ex}
+И вычислите её предел в данных случаях.
+\vspace{-1ex}
+%\task Бесконечная десятичная дробь устроена следующим образом. Перед десятичной запятой стоит нуль. После запятой подряд выписаны члены строго возрастающей последовательности натуральных чисел $a_n$. В результате получилось рациональное число, которое выражается несократимой дробью, знаменатель которой меньше $100$. Найдите наименьшее возможное значение $a_7$. % и наименьшую возможную седьмую цифру после запятой.
+
+\task \st Пусть $m, n \in \mathds{N}$. Докажите, что любое множество из $m n + 1$ попарно различных действительных чисел содержит либо строго возрастающую совокупность из $m + 1$ чисел, либо строго убывающую совокупность из $n + 1$ чисел.
+\vspace{-1ex}
+%\task \st Пусть $m, n \in \mathds{N}$. Докажите, что любая последовательность из $m n + 1$ попарно различных действительных чисел содержит либо возрастающую последовательность из $m + 1$ чисел, либо убывающую последовательность из $n + 1$ чисел.
+
+\task \st Рассмотрим последовательность $\{x_n\}$, не равных $0$ вещественных чисел, таких что для всех $n \in \mathds{N}$ выполнено: $x_{n+1}^2 - x_n \cdot x_{n+2} = 1$. Докажите, что найдется такое действительное число $a$, что $x_{n+2} = a \cdot x_{n+1} - x_n, \; \forall n \in \mathds{N}.$
+
+%\end{document}

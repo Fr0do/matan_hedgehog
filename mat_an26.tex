@@ -1,0 +1,245 @@
+%\vmshbanner
+
+\papertitle{Возрастание и убывание функции. Направление выпуклости}{26}{7 февраля}{12}
+\addcontentsline{toc}{section}{26. Возрастание и убывание функции. Направление выпуклости}
+
+\vspace{1ex}
+
+\hspace{-3.5ex}\underline{\textbf{Определение:}} Функция $f$ \emph{возрастает} в точке $x=x_0$, если
+$\exists \delta(x_0) > 0$, что выполнено $f(x) < f(x_0)$ при $x_0 - \delta < x < x_0$, и $f(x) > f(x_0)$ при $x_0 < x < x_0 + \delta$.
+
+\vspace{2ex}
+
+\hspace{-3.5ex}\underline{\textbf{Определение:}} Функция $f$ \emph{убывает} в точке $x = x_o$, если
+$\exists \delta(x_0) > 0$, что выполнено $f(x)>f(x_0)$ при $x_0 - \delta < x < x_0$, и $f(x) < f(x_0)$ при $x_0 < x < x_0 + \delta$.
+
+\vspace{2ex}
+
+\hspace{-3.5ex}\underline{\textbf{Утверждение:}} Пусть функция $f$ дифференцируема на интервале $(a; b)$.
+Между характером монотонности данной функции и знаком её производной на этом интервале имеется следующая взаимосвязь:
+$$f^{\prime}(x) > 0 \, \emph{(\text{дост})} \; \Rightarrow \, f(x)\!  \uparrow \; \emph{(\text{необх})} \; \Rightarrow \,  f^{\prime}(x) \geqslant 0; \quad f^{\prime}(x) \geqslant 0 \, \Rightarrow \, f(x)\!\!\nearrow \; \Rightarrow \,  f'(x) \geqslant 0;$$
+
+$$f^{\prime}(x) = 0 \, \Rightarrow \, f(x) = \textbf{const} \, \Rightarrow \, f^{\prime}(x) = 0;$$
+
+$$f^{\prime}(x) < 0 \, \Rightarrow \, f(x)\! \downarrow \; \Rightarrow \, f^{\prime}(x) \leqslant 0; \quad f^{\prime}(x) \leqslant 0 \, \Rightarrow \, f(x)\!\! \searrow \; \Rightarrow \, f^{\prime}(x) \leqslant 0;$$
+
+\vspace{2ex}
+
+\hspace{-3.5ex}\underline{\textbf{Замечание:}} Отметим, что строгая положительность производной не является необходимым условием возрастания функции.
+
+\textit{Например, функция $f(x) = x^{3}$ в точке $x=0$ возрастает, но $f^{\prime}(x) = 0$.}
+
+\vspace{2ex}
+\hrule
+\vspace{1ex}
+
+\task \dem{1276, 1278} Определите интервалы монотонности \emph{(возрастания или убывания)} следующих функций:
+\vspace{0ex}
+
+\emph{(а)} $y=x^n \, e^{-x}, \quad (n > 0, \; x > 0);$ \hspace{6ex}
+\emph{(б)} $y = \begin{cases}
+x \Bigl(\sqrt{\frac{3}{2}}+\sin{(\ln{x}})\Bigr), &\text{при $x > 0$;}\\
+\;\;\;\;\;\;\;\;\;\,0,&\text{при $x = 0$.}
+\end{cases}
+$
+\vspace{1ex}
+
+\emph{(в)} \cw $y = \cos{\dfrac{\pi}{x}};$ \hspace{23ex}
+\emph{(г)} \cw $y = \left(1+\dfrac{1}{x}\right)^x, \quad x \in \mathds{R} \backslash [-1;0];$
+\vspace{3ex}
+
+\emph{(д)} $y = \sqrt{x-2} \, + \, \sqrt{x-1} \, + \, \sqrt{x+2} \, + \, \sqrt{x+1} \, - \, 2\sqrt{x}, \qquad x \geqslant 2.$
+\vspace{1ex}
+
+\begin{center}
+\hspace{0ex} \includegraphics[width=1.05\textwidth]{ris_26b.jpg}
+\end{center}
+
+\task Пусть $f: \mathds{R}\rightarrow \mathds{R}, \,\, g: \mathds{R}\rightarrow \mathds{R}$ - произвольные монотонно возрастающие на множестве $\mathds{R}$ функции. Какие из функций вида $f + g, \, f - g, \, f \cdot g, \, f(g)$  необходимо монотонно возрастают на $\mathds{R}$?
+\vspace{-2ex}
+
+\task Докажите, что функция:
+\pnt \cw $f(x)= 1 - \dfrac{x^2}{2} + \dfrac{x^3}{3} - (1+x)\cdot e^{-x},$ \; строго положительна при $x > 0;$
+
+\pnt $f(x) = \dfrac{2}{2x+1}-\ln\left(1 + \dfrac{1}{x}\right),$ \; строго отрицательна при $x > 0;$
+
+\pnt $f(x) = \ln\left(1 + \dfrac{1}{x}\right) - \dfrac{1}{\sqrt{x^2 + x}},$ \; строго отрицательна при $x > 0.$
+\vspace{-1ex}
+
+\task Пусть $f : (-1;1) \, \rightarrow \, \mathds{R}$ - функция, имеющая производную на $(-1;1)$ и $f^{\prime}(0) > 0$. Существует ли окрестность точки $0$, в которой функция $f$ возрастает? Существует ли такая окрестность, если функция $f^{\prime}$ непрерывна в точке $0$?
+\vspace{-1ex}
+
+\task \dem{1284, 1288} Докажите, что если
+\vspace{-1.5ex}
+
+\pnt $\varphi$ - монотонно возрастающая дифференцируемая функция и $|f^{\prime}(x)| \leqslant |\varphi^{\prime}(x)|$ при $x \geqslant x_0$, то $|f(x) - f(x_0)| \leqslant \varphi(x) - \varphi(x_0)$ при $x \geqslant x_0$;
+\vspace{-0.7ex}
+
+\pnt \cw \hspace{2ex} \emph{1.} $\varphi(x), \psi(x)$ $n$ раз дифференцируемы при $x > x_0$;
+\vspace{1ex}
+
+\hspace{9ex} \emph{2.} $\varphi^{(k)}(x_0)=\psi^{(k)}(x_0) \quad (k = \overline{0, n-1})$;
+\vspace{1ex}
+
+\hspace{9ex} \emph{3.} $\varphi^{(n)}(x) > \psi^{(n)}(x)$ при $x > x_0$,
+\vspace{1ex}
+
+\emph{то $\varphi(x) > \psi(x)$ при $x > x_0$}.
+\vspace{-1ex}
+
+\task \dem{1289, 1291, 1297} Докажите следующие неравенства:
+\vspace{1ex}
+
+\emph{(а)} $e^x>1+x,$ при $x\neq 0;$ \hspace{15ex}
+\emph{(б)} \!\cw \!\!$\left(\!1+\dfrac{1}{x}\!\right)^x\!\!\!<\!e\!<\!\!\left(\!1+\dfrac{1}{x}\!\right)^{x+1}\!\!\!\!,$ при $x>0;$
+\vspace{1ex}
+
+\emph{(в)} $x^\alpha-1>\alpha(x-1)$, при $\alpha \geqslant 2, x>1;$ \hspace{2ex}
+\emph{(г)} $1+2\ln{x}\leqslant x^2,$ при $x>0;$
+\vspace{4ex}
+
+\emph{(д)} \cw $x^{\sqrt{x+1}}>(x + 1)^{\sqrt{x}}$, при $x\geqslant 9;$ \hspace{8ex}
+\emph{(е)} $\dfrac{\tg{x_2}}{\tg{x_1}} > \dfrac{x_2}{x_1}$, при $0 < x_1 < x_2 < \dfrac{\pi}{2}.$
+\vspace{-1ex}
+
+\task
+\pnt \st Докажите неравенство: $\pi x (1 - x) < \sin{\pi x} \le 4x (1 - x), \;\; 0 < x < 1;$
+\pnt \st Сравните $\tg{\big(\sin{x}\big)}$ и $\sin{\big(\tg{x}\big)}$ для всех $x \in \left(0; \dfrac{\pi}{2}\right).$
+\vspace{-1ex}
+
+\task \st Докажите, что для любого $x > 0$ и любого $n \in \mathds{N}$ справедливо неравенство:
+$$
+0 < e^x - \sum_{k = 0}^n \dfrac{x^k}{k!} < \dfrac{x}{n} (e^x - 1).
+$$
+
+\begin{wrapfigure}{r}{235pt}
+\vspace{2ex}
+\hspace{-2ex}
+\includegraphics[width=0.55\textwidth]{ris_26aa.jpg}
+\end{wrapfigure}
+
+\hspace{-3.5ex}\underline{\textbf{Определение:}} Функция $f$ \emph{выпукла вверх на множестве $\textbf{X}$}, если $\forall x_1, x_2 \in \{x\};$
+
+\hspace{-3.5ex}$\forall \alpha_1, \alpha_2 \geqslant 0 \, : \, \alpha_1~+~\alpha_2~=~1 \, \Rightarrow$ \vspace{-1ex}$$ f(\alpha_1 x_1 + \alpha_2 x_2) \geqslant \alpha_1 f(x_1) + \alpha_2 f(x_2).$$
+\vspace{-2ex}
+
+\hspace{-3.5ex}\underline{\textbf{Определение:}} Функция $f$ \emph{выпукла вниз на множестве $\textbf{X}$}, если $\forall x_1, x_2 \in \textbf{X};$
+
+\hspace{-3.5ex}$\forall \alpha_1, \alpha_2 \geqslant 0 \, : \, \alpha_1~+~\alpha_2~=~1 \Rightarrow$ \vspace{1ex}
+$$\hspace{-46ex} f(\alpha_1 x_1+\alpha_2 x_2) \leqslant \alpha_1 f(x_1)+\alpha_2 f(x_2).$$
+\vspace{-3ex}
+
+%\hspace{-3.5ex}\underline{\textbf{Теорема (достаточное условие выпуклости):}}
+%\begin{itemize}
+%\item[\textbf{-}] Пусть функция $f(x)$ дважды дифференцируема на множестве $\{x\}$, и $f^{\prime \prime}(x) \le 0 \,$ для $\forall x~\in~\{x\}$, тогда $f(x)$ - \emph{выпукла вверх} на множестве $\{x\}.$
+
+%\item[\textbf{-}] Пусть функция $f(x)$ дважды дифференцируема на множестве $\{x\}$, и $f^{\prime \prime}(x) \ge 0 \,$ для $\forall x~\in~\{x\}$, тогда $f(x)$ - \emph{выпукла вниз} на множестве $\{x\}.$
+%\end{itemize}
+
+\hspace{-3.5ex}\underline{\textbf{Теорема}} \emph{(критерий выпуклости):}
+
+Пусть функция $f$ дважды дифференцируема на множестве $\textbf{X}$. Тогда, для того, чтобы данная функция была выпуклой вверх (выпуклой вниз), необходимо и достаточно, чтобы $f^{\prime \prime}(x) \le 0 \,$ $\bigl(f^{\prime \prime}(x) \ge 0 \,\bigr)$ для всех $x$ из множества $\textbf{X}$. Если же $f^{\prime \prime}(x) < 0 \,$ $\bigl(f^{\prime \prime}(x) > 0 \,\bigr),$ то этого достаточно, чтобы гарантировать \textsf{\textsl{строгую}} выпуклость вверх (вниз) данной функции на этом множестве.
+\index{Критерий!выпуклости}
+
+%\begin{itemize}
+%\item[\textbf{-}] , и $f^{\prime \prime}(x) \le 0 \,$ для $\forall x~\in~\{x\}$, тогда $f(x)$ - \emph{выпукла вверх} на множестве $\{x\}.$
+
+%\item[\textbf{-}] Пусть функция $f(x)$ дважды дифференцируема на множестве $\{x\}$, и $f^{\prime \prime}(x) \ge 0 \,$ для $\forall x~\in~\{x\}$, тогда $f(x)$ - \emph{выпукла вниз} на множестве $\{x\}.$
+%\end{itemize}
+
+\vspace{2ex}
+
+\hspace{-3.5ex}\underline{\textbf{Определение:}} Точка $x$ является \emph{точкой перегиба функции} \emph{$f$}, если в данной точке $f$ меняет направление выпуклости.
+\index{Точка перегиба}
+\vspace{2ex}
+
+\hspace{-3.5ex}\underline{\textbf{Теорема:}} Пусть функция $f$ дважды дифференцируема на множестве
+$\{0<|x-x_0|<\delta\},\,$ $f^{\prime \prime}(x_0)~=~0$ или $\nexists f^{\prime \prime}(x_0),$ и, кроме того,
+$f^{\prime \prime}(x_1) \cdot f^{\prime \prime}(x_2)<0$, где $x_0 - \delta < x_1 < x_0 < x_2 < x_0 + \delta.$ Тогда $x_0 ~-~\text{точка перегиба}$.
+
+\vspace{4ex}
+\hrule
+\vspace{1ex}
+
+\task Найдите интервалы выпуклости и точки перегиба функции:
+\vspace{3ex}
+
+\emph{(а)} \cw $f(x)=\dfrac{x^2}{(x-1)^3};$ \hspace{25ex}
+\emph{(б)} $f(x)=\dfrac{|x-1|}{x\sqrt{x}};$
+\vspace{2ex}
+
+\emph{(в)} $y=f(x), \,\,\, \begin{cases}
+x=1+\ctg{t}\\
+y=\dfrac{\cos{2t}}{\sin{t}}
+\end{cases}\!\!\!\!\!\!,
+$ $0<t<\pi.$
+
+\task \dem{1308} Покажите, что кривая $y = \dfrac{x+1}{x^2+1}$ имеет \emph{три} точки перегиба, лежащие на одной прямой.
+
+\task \dem{1311} \cw Пусть $f(x)$ дважды дифференцируема на луче $[a , +\infty)$, причём:
+$$\textbf{1)} \; f(a) = A > 0; \qquad \textbf{2)} \; f^{\prime}(a) < 0; \qquad \textbf{3)} \; f^{\prime \prime}(x) \le 0, \; \text{при} \;\; x > a.$$
+Докажите, что уравнение $f(x)=0$ имеет единственный корень на луче $(a, +\infty)$.
+
+\task \dem{1317} \cw Пусть для дважды дифференцируемой функции $f(x)$ выполнено
+$\lim\limits_{x\rightarrow x_0+0} f(x) = 0, \lim\limits_{x\rightarrow +\infty} f(x) = 0$.
+Докажите, что на луче $(x_0, +\infty)$ имеется по меньшей мере одна точка $\xi,$ что $f^{\prime \prime}(\xi)=0$.
+
+\task \dem{1309} При каком выборе параметра $h$ "кривая вероятности" $y=\dfrac{h}{\sqrt{\pi}}e^{-h^2x^2} (h>0)$ имеет точки перегиба $x=\pm \sigma$?
+
+\task \dem{1313} Покажите, что
+\begin{itemize}
+\item[-] функции  $x^n \,\, (n>1), \;\, e^x, \;\, x \ln{x}$ выпуклы вниз на $(0,+\infty)$,
+\item[-] а функции $x^n \,\, (0<n<1), \;\, \ln{x}$ выпуклы вверх на $(0, +\infty)$.
+\end{itemize}
+
+\vspace{-3ex}
+\task \emph{(неравенство Йенсена)}
+\index{Неравенство!Йенсена}
+
+Пусть $f$ - выпуклая вниз на интервале $(a; b)$ функция.
+Для $\forall  n \in \mathds{N}, n  \ge 2$, $\; \forall \{x_1, x_2, \ldots ,x_n\}~\in~(a; b)$ и
+$\;\, \forall \{\alpha_1, \alpha_2, \ldots ,\alpha_n\} \in [0; 1], \; \sum\limits_{k=1}^n \alpha_k = 1.$ Докажите, что выполнено следующее неравенство:
+\vspace{-3ex}
+
+$$
+f\left(\sum\limits_{k=1}^n \alpha_k x_k\right) \le \sum\limits_{k=1}^n \alpha_k f(x_k).
+$$
+
+\vspace{-3ex}
+
+\task Дана возрастающая функция $f : [0; 1] \mapsto [0; 1].$ Докажите, что найдётся такая точка $x \in [0; 1],$ что $f(x) = x.$
+
+\vspace{2ex}
+
+\hspace{-3.5ex}\underline{\textbf{Замечание:}} Данную задачу полезно сравнить с номером \textbf{9.16}.
+
+\vspace{-1ex}
+\task Пусть $f$ -- действительнозначная функция. Обозначим через $Im[f] - $ множество значений данной функции. Докажите или опровергните следующие утверждения:
+\vspace{-2ex}
+
+\pnt Если $f(x) - $ непрерывна и $Im[f] = \mathds{R},$ тогда $f(x) - $ монотонна;
+\pnt Если $f(x) - $ монотонна и $Im[f] = \mathds{R},$ тогда $f(x) - $ непрерывна;
+\pnt Если $f(x) - $ монотонна и непрерывна, тогда $Im[f] = \mathds{R}$.
+
+\vspace{-1ex}
+\task \st Пусть функция $f$ дважды непрерывно дифференцируема на отрезке $[0; 1].$ Докажите, что функцию $f$ можно представить в виде разности двух выпуклых вниз функций.
+
+\task \st Пусть $f : [0; 1] \mapsto \mathds{R} - $ непрерывная функция. Докажите, что найдётся подмножество $\textbf{X} \subset [0; 1]$ мощности континуум, на котором функция $f$ монотонна.
+
+\vspace{-1ex}
+\task \st Существует ли
+\vspace{-2ex}
+
+\pnt монотонная функция $f : [0; 1] \mapsto [0; 1]$ такая, что для каждого $y \in [0; 1]$ уравнение $f(x) = y$ имеет несчётное множество решений $x$.
+\pnt непрерывно дифференцируемая функция $f : [0; 1] \mapsto [0; 1]$ такая, что для каждого $y \in [0; 1]$ уравнение $f(x) = y$ имеет несчётное множество решений $x$.
+
+\task \st Докажите, что ограниченная и выпуклая на отрезке $[a; b]$ функция всюду на нём непрерывна и имеет производные слева и справа.
+
+%\task Пусть $p \ge 1$. Докажите, используя неравенство Йенсена, что для любых неотрицательных $a_1, \ldots, a_n$ справедливо неравенство
+%$$a_1^p \, + \, a_2^p \, + \dots + a_n^p \, \le \, (a_1 \, + \, a_2 + \dots + a_n)^p.$$
+
+%\vspace{2ex}
+
+%\hspace{-3.5ex}\underline{\textbf{Замечание:}} Сравните данное решение с тем, что было получено в №1.17.
+
+%\end{document}
