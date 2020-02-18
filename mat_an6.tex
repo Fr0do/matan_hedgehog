@@ -1,0 +1,221 @@
+%\vmshbanner
+\papertitle{Критерий Коши существования предела последовательности}{6}{19 сентября}{12}
+\addcontentsline{toc}{section}{6. Критерий Коши существования предела последовательности}
+
+\vspace{1ex}
+
+\hspace{-3.5ex}\textbf{\underline{Определение:}} \; Назовем последовательность $\{x_n\}$ - \emph{фундаментальной} или \emph{последовательностью Коши}, если
+\index{Числовая последовательность!фундаментальная}
+$$
+\forall \varepsilon > 0 \;\; \exists N(\varepsilon) \, : \; \forall n \ge N(\varepsilon), \; \forall p \in \mathds{N} \; \Longrightarrow \; |x_n - x_{n+p}| < \varepsilon, \; \text{или}
+$$
+$$
+\forall \varepsilon > 0 \;\; \exists N(\varepsilon) \, : \; \forall n \ge N(\varepsilon), \; \forall m \ge N(\varepsilon) \; \Longrightarrow \; |x_n - x_{m}| < \varepsilon.
+$$
+\vspace{0ex}
+
+\hspace{-3.5ex}\underline{\textbf{Теорема}} \emph{(критерий Коши):} Последовательность $\{x_n\}$ сходится, тогда и только тогда, когда $\{x_n\}$ фундаментальна.
+\index{Критерий Коши!сходимости числовой последовательности}
+
+\vspace{2ex}
+
+\hspace{-3.5ex}\textbf{\underline{Замечание:}} Критерий Коши можно переформулировать так: числовая последовательность сходится, тогда и только тогда, когда ее значения безгранично сближаются между собой по мере возрастания их номеров. То есть, числовая последовательность не может "попасть" \; в $\varepsilon -\!\! $ трубку c "несблизившимися" \; членами. И, наоборот, если числовая последовательность "попала" \; в $\varepsilon -\!\! $ трубку, то ее члены заведомо сблизились между собой.
+
+\vspace{2ex}
+
+\hspace{-3.5ex}\emph{Отрицания фундаментальности последовательности $x_n$:}
+$$
+\exists \, \varepsilon > 0 \; : \;\; \forall N \in \mathds{N} \;\; \exists n \ge N, \; \exists p \in \mathds{N} \;\;\; |x_n - x_{n+p}| \ge \varepsilon;
+$$
+$$
+\exists \, \varepsilon > 0 \; : \; \forall n \in \mathds{N} \;\; \exists p \in \mathds{N} \; : \; |x_n - x_{n+p}| \ge \varepsilon.
+$$
+
+\vspace{2ex}
+
+\hspace{-3.5ex}\textbf{\underline{Замечание:}} Отрицание фундаментальности часто бывает полезно для доказательства несуществования предельного значения.
+
+\vspace{2ex}
+\hrule
+\vspace{2ex}
+
+\begin{wrapfigure}{r}{160pt}
+\vspace{13ex}
+\hspace{-17ex}
+\includegraphics[width=0.53\textwidth]{List_6a.jpg}
+\end{wrapfigure}
+
+\task \dem{82,84,85} Пользуясь критерием Коши, докажите сходимость следующих последовательностей:
+
+\pnt \cw
+$x_n = a_0 + a_1 q + \ldots + a_n q^n, \;\; \text{где} \;\;|a_k| < M \in \mathds{R}, \;\;\text{для}\;\; \forall k \;\; \text{и} \;\; |q| < 1;$
+
+\pnt $x_n = \dfrac{\cos{1!}}{1 \cdot 2} + \dfrac{\cos{2!}}{2 \cdot 3} + \ldots + \dfrac{\cos{n!}}{n \cdot (n + 1)};$
+
+\pnt $x_n = \dfrac{\sin{1}}{3} + \dfrac{\sin{2}}{3^2} + \ldots + \dfrac{\sin{n}}{3^n};$
+
+\pnt $x_n = 1 + \dfrac{1}{2^2} + \dfrac{1}{3^2} + \ldots + \dfrac{1}{n^2};$
+
+\pnt $x_n = \dfrac{1}{1\cdot2} - \dfrac{1}{2\cdot3} + \ldots + \dfrac{(-1)^{n-1}}{n\cdot(n+1)}.$
+
+\begin{wrapfigure}{r}{0pt}
+\end{wrapfigure}
+
+%\pnt Пусть $x_1 = 0, \;\; x_2 = 0, \alpha_1, \;\; x_3 = 0, \alpha_1 \alpha_2, \ldots$ - последовательность десятичных дробей, причём каждая последующая дробь получается приписыванием к предыдущей любой цифры от $0$ до $9$.
+
+
+\task \cw Предположим, что для последовательности $\{a_n\}$ справедливы неравенства
+$$
+|a_{n+1} - a_n| < \dfrac{1}{2^n}, \;\;\; \text{для} \; \forall n \ge 1.
+$$
+Докажите, что данная последовательность сходится.
+
+\task Используя критерий Коши, докажите расходимость следующих последовательностей:
+\vspace{2ex}
+
+\emph{(а)} \cw $x_n = 1 + \dfrac{1}{2} + \dfrac{1}{3} + \ldots + \dfrac{1}{n}$, \qquad \qquad \;\; \emph{(б)} $x_n = \dfrac{1}{\logn{2}} + \dfrac{1}{\logn{3}} + \ldots + \dfrac{1}{\logn{n}};$ %\text{(частичная сумма \emph{гармонического ряда})};$
+\vspace{2ex}
+
+\emph{(в)} $x_n = \sum\limits_{k=1}^n \left(\dfrac{1}{3k-2} + \dfrac{1}{3k-1} - \dfrac{1}{3k}\right),$ \qquad \emph{(г)} $x_n = \dfrac{n \cos{\pi n} - 1}{2 n}.$
+
+\task \dem{92} \cw
+
+Если $\lim\limits_{n \rightarrow \infty}x_n = a$, то что можно сказать о пределе $\lim\limits_{n \rightarrow \infty} \dfrac{x_{n+1}}{x_n}\; ?$
+
+\vspace{4ex}
+\index{Числовая последовательность!с ограниченным изменением}
+\hspace{-3.5ex} \textbf{\underline{Определение:}} \; Будем говорить, что последовательность $\{x_n\}$ имеет \emph{ограниченное изменение} (или \emph{ограниченную вариацию}), если
+\vspace{-1ex}
+$$
+\exists C > 0 \, : \, |x_2 - x_1| + |x_3 - x_2| + \ldots + |x_n - x_{n-1}| < C, \;\;\; (n = 2, 3, \ldots)
+$$
+
+\vspace{-5ex}
+\task \dem{86}
+\pnt Докажите, что последовательность с ограниченным изменением сходится;
+\pnt Приведите пример сходящейся последовательности, не имеющей ограниченного изменения.
+\pnt \st Докажите, что для всякой последовательности $\{x_n\}$ с ограниченным изменением существуют возрастающие ограниченные последовательности $\{a_n\}$ и $\{b_n\}$ такие, что $x_n~=~a_n~-~b_n, \; n \in \mathds{N}$.
+
+\task Предположим, что для последовательности $\{a_n\}$ существует $\alpha \in (0, 1) :$
+$$
+|a_{n+1} - a_n| \le \alpha |a_n - a_{n-1}|, \;\;\; n \ge 2.
+$$
+
+Докажите, что последовательность $\{a_n\}$ сходится.
+
+\task \cw Существует ли предел $\lim\limits_{n \rightarrow \infty} \sin{n},\,$ где $n \in \mathds{N}$?
+
+\task "Усилим"\! критерий Коши, потребовав выполнение неравенства $|x_{n+p} - x_n| < \varepsilon$ не для произвольного $p \in \mathds{N}$, а лишь для некоторого \textsl{фиксированного} $p \in \mathds{N}$. Можно ли утверждать сходимость последовательности, удовлетворяющей новому критерию?
+
+\task \cw Пусть $\big\{a_k \, \big| \, k\ge1\big\}\,-$ фиксированная последовательность, состоящая из чисел $\{0, 1, \ldots 9\}$. Докажите, что последовательность $\left\{x_n = \dfrac{a_1}{10} + \dfrac{a_2}{10^2} + \ldots + \dfrac{a_n}{10^n}\right\}$ фундаментальная.
+
+\task (\emph{теорема Коши о \textmd{«прореживании»}} или \emph{телескопический признак сходимости})
+\vspace{-2ex}
+
+\pnt \cw Предположим, что $a_1 \ge a_2 \ge a_3 \ge \ldots \ge 0.$ Докажите, \emph{не используя критерий Коши}, что последовательность $x_n = a_1 + a_2 + \ldots + a_n$ сходится тогда и только тогда, когда сходится последовательность $y_n = a_1 + 2a_2 + 4a_4 + \ldots + 2^n a_{2^n};$
+\vspace{-1ex}
+
+\pnt \st Докажите утверждение пункта $(a)$, \emph{используя критерий Коши};
+\index{Теорема!Коши!о «прореживании»}
+\index{Признак!телескопический сходимости ряда}
+
+\vspace{2ex}
+
+\hspace{-3.5ex}\textbf{\underline{Замечание:}} Поразительная особенность данного утверждения состоит в том, что довольно "редкая" \, подпоследовательность последовательности $\{x_n\}$ определяет ее сходимость или расходимость.
+
+\pnt Докажите, что последовательность $x_n = 1 + \dfrac{1}{2^p} + \dfrac{1}{3^p} + \ldots + \dfrac{1}{n^p}$, сходится тогда и только тогда, когда $p > 1$;
+\vspace{-1ex}
+
+\pnt Докажите, что последовательность $x_n = 1 + \dfrac{1}{2 (\logn{2})^p} + \dfrac{1}{3(\logn{3})^p} + \ldots + \dfrac{1}{n (\logn{n})^p}$, сходится тогда и только тогда, когда $p > 1$.
+
+%\task \, \emph{(теорема Штольца)}
+
+%Пусть последовательность $\{y_n\} \xrightarrow[n\rightarrow\infty]{} +\infty$, причем $\exists\,N$, что для $\forall\,n \geqslant N$ выполнено $y_{n+1}>y_n$. Кроме того, пусть $\exists\, \lim\limits_{n \rightarrow \infty} \dfrac{x_n-x_{n-1}}{y_n-y_{n-1}}$ (конечный или бесконечный, но одного знака). Докажите, что тогда $\lim\limits_{n \rightarrow \infty} \dfrac{x_n}{y_n} = \lim\limits_{n \rightarrow \infty} \dfrac{x_n-x_{n-1}}{y_n-y_{n-1}}$.
+
+\task Найдите следующие пределы, используя теорему Штольца \textit{(см. в конце листочка)}
+
+\vspace{2ex}
+
+\hspace{0ex}\emph{(а)} $\lim\limits_{n \rightarrow \infty} \dfrac{1 + \sqrt{2} + \sqrt[3]{3} + \ldots + \sqrt[n]{n}}{n};$ \; \emph{(б)} $\!\lim\limits_{n \rightarrow \infty} \left(\!\dfrac{1^k + 2^k + 3^k + \ldots + n^k}{n^{k}} - \dfrac{n}{k+1}\!\right)\!, \, \text{где} \, k \in \mathds{N}.$
+
+\vspace{1ex}
+
+\emph{(в)}$\lim\limits_{n \rightarrow \infty} \dfrac{1^k + 2^k + 3^k + \ldots + n^k}{n^{k+1}}, \; \text{где} \; k \in \mathds{N};$
+\qquad \emph{(г)} $x_n = \dfrac{1}{\sqrt{n}}\left(1 + \dfrac{1}{\sqrt{2}}+ \ldots + \dfrac{1}{\sqrt{n}}\right);$
+
+\task \st Пусть
+\vspace{-1ex} $$a_1 = 1 \;\; \text{и} \;\; a_{n+1} = a_n (1 + |\sin{a_n}|)^{-1}, \;\; n \ge 1. \;\; \text {Вычислите предел} \;\; \lim\limits_{n \rightarrow \infty} (n \cdot a_n).$$
+
+\task \st Пусть $\llim{n}{\infty} a_n = a, \; a \in \mathds{R},$ а $\alpha \,- $ фиксированное число, $|\alpha| < 1$. Пусть также
+\vspace{-0ex}$$b_n = a_n + \alpha a_{n-1} + \alpha^2 a_{n-2} + \ldots + \alpha^{n-1} a_1, \;\; n \ge 1.$$
+Вычислите предел: $\llim{n}{\infty} b_n.$
+
+% ПОВТОР
+%\task \st Пусть для последовательности $\big\{a_n\big\}$ справедливы следующие соотношения:
+%\vspace{-0ex}$$
+%\llim{n}{\infty}\dfrac{\left(a_1 + a_2 + \ldots + a_n\right)}{n} = a; \quad \llim{n}{\infty} n(a_{n+1}-a_n) = b, \;\; \text{для некоторых} \;\; \{a, %b\} \subset \mathds{R}.
+%$$
+%Докажите, что последовательность $\big\{a_n\big\}$ сходится, и найдите её предел.
+
+\task \st Для последовательности $\big\{a_n\big\}$ пусть
+\vspace{-0ex}$$
+x_n = a_n + a_{n-1}, \;\; y_n = 2a_n + a_{n-1}, \quad n \ge 2.
+$$
+
+Докажите, что:
+\vspace{1ex}
+
+\emph{\textbf{1)}} \; из сходимости последовательности $\big\{x_n\big\}$ не следует сходимость $\big\{a_n\big\}$;
+\vspace{1ex}
+
+\emph{\textbf{2)}} \; если $\llim{n}{\infty} y_n = y \in \mathds{R}$, то последовательность $\big\{a_n\big\}$ сходится. Найдите $\llim{n}{\infty} a_n.$
+
+\newpage
+
+\hspace{-3.5ex}\textbf{\underline{Теорема}} (\emph{теорема Штольца}): Пусть $x_n$ и $y_n$ — две последовательности вещественных чисел, удовлетворяющие следующим условиям:
+\begin{enumerate}
+\item Для всех $n \in \mathds{N}$ выполнено неравенство $\; y_n < y_{n+1}$;
+\item $\llimn y_n = +\infty$;
+\item Существует предел $\llimn \dfrac{x_n-x_{n-1}}{y_n-y_{n-1}}$ (конечный или бесконечный одного знака).
+\end{enumerate}
+Тогда существует предел $\lim\limits_{n \rightarrow \infty} \dfrac{x_n}{y_n}$, причём справедливо равенство: $\lim\limits_{n \rightarrow \infty} \dfrac{x_n}{y_n} = \lim\limits_{n \rightarrow \infty} \dfrac{x_n-x_{n-1}}{y_n-y_{n-1}}$.
+
+$\blacktriangleright$
+Сначала рассмотрим случай конечного предела, т.е. пусть
+%В силу того, что
+$\exists\, \lim\limits_{n \rightarrow \infty} \dfrac{x_n-x_{n-1}}{y_n-y_{n-1}} = a < \infty.$
+
+Тогда для $\forall\varepsilon>0 \,\,\, \exists\, N(\varepsilon)$ такое, что для $\forall n \ge N$ выполнено:
+$$\left|\dfrac{x_n-x_{n-1}}{y_n-y_{n-1}}-a\right|<\dfrac{\varepsilon}{2}.  \;\;\; \text{Откуда имеем}\;\; a-\dfrac{\varepsilon}{2}<\dfrac{x_n-x_{n-1}}{y_n-y_{n-1}}<a+\dfrac{\varepsilon}{2}.$$
+Запишем данные неравенство для номеров $N+1, N+2, \ldots ,n$:
+$$\forall n \geqslant N(\varepsilon) \; \Longrightarrow \;  a - \dfrac{\varepsilon}{2} \; < \; \dfrac{x_{\scriptscriptstyle N+1}-x_{\scriptscriptstyle N}}{y_{\scriptscriptstyle N+1}-y_{\scriptscriptstyle N}}, \;\; \dfrac{x_{\scriptscriptstyle N+2}-x_{\scriptscriptstyle N+1}}{y_{\scriptscriptstyle N+2}-y_{\scriptscriptstyle N+1}}, \ldots, \; \dfrac{x_n-x_{n-1}}{y_n-y_{n-1}} \; < \; a + \dfrac{\varepsilon}{2}.$$
+Помножим каждое из данных неравенств на знаменатель, стоящей в нём дроби, и просуммируем их. Пользуясь верным для всех $n$ неравенством $\; y_n < y_{n+1}$, получаем:
+%Тогда, т.к. $y_{n+1}\, -\, y_{n}\, >\, 0 \;\; \text{для} \;\; \forall n \geqslant N$, то
+%$$x_n - x_{\scriptscriptstyle N} =(x_n - x_{n-1}) + \ldots + (x_{\scriptscriptstyle N+1} - x_{\scriptscriptstyle N}) \; \in $$
+$$\left(a - \dfrac{\varepsilon}{2}\right) \big((y_n - y_{n-1}) + (y_{n-1} - y_{n-2}) + \ldots + (y_{\scriptscriptstyle N+1} - y_{\scriptscriptstyle N})\big) \; <
+(x_n - x_{n-1}) + (x_{n-1} - x_{n-2}) + \ldots + (x_{\scriptscriptstyle N+1} - x_{\scriptscriptstyle N}) \; <
+$$
+$$
+< \; \left(a + \dfrac{\varepsilon}{2}\right)\big((y_n - y_{n-1}) + (y_{n-1} - y_{n-2}) + \ldots + (y_{\scriptscriptstyle N+1} - y_{\scriptscriptstyle N})\big) \; \Longrightarrow
+$$
+$$
+\Longrightarrow \; a - \dfrac{\varepsilon}{2} < \dfrac{x_n-x_{\scriptscriptstyle N}}{y_n-y_{\scriptscriptstyle N}} < a + \dfrac{\varepsilon}{2} \; \Longleftrightarrow \; \left|\dfrac{x_n-x_{\scriptscriptstyle N}}{y_n-y_{\scriptscriptstyle N}} - a\right| < \dfrac{\varepsilon}{2}
+$$
+Далее, т.к. $\dfrac{x_n}{y_n} - a = \dfrac{x_{\scriptscriptstyle N} - a \, y_{\scriptscriptstyle N}}{y_n} + \left(1 - \dfrac{y_{\scriptscriptstyle N}}{y_n}\right)\left(\dfrac{x_n - x_{\scriptscriptstyle N}}{y_n - y_{\scriptscriptstyle N}} - a \right)$, то
+$$\left|\dfrac{x_n}{y_n}-a\right| \leqslant \left|\dfrac{x_{\scriptscriptstyle N}-a \, y_{\scriptscriptstyle N}}{y_n}\right| + \left|\dfrac{x_n-x_{\scriptscriptstyle N}}{y_n-y_{\scriptscriptstyle N}} - a\right| \cdot \left|1 - \dfrac{y_{\scriptscriptstyle N}}{y_n}\right|$$
+Слагаемое $\left|\dfrac{x_n\!-\!x_{\scriptscriptstyle N}}{y_n\!-\!y_{\scriptscriptstyle N}}\!-\!a\right|$, как мы установили, при $n\!\ge\!N$ становится меньше $\dfrac{\varepsilon}{2};\,$ слагаемое $\left|\dfrac{x_{\scriptscriptstyle N}\!-\!a \, y_{\scriptscriptstyle N}}{y_n}\right|\!\!<~\!\!\!\!\!~\!~\dfrac{\varepsilon}{2}$ при достаточно больших $n \ge \widetilde{N}(\eps)$, т.к. величина $(x_{\scriptscriptstyle N} - a \, y_{\scriptscriptstyle N})$ -- фиксирована, а $y_n \rightarrow +\infty$. Наконец, множитель $\left|1 - \dfrac{y_{\scriptscriptstyle N}}{y_n}\right|$ в силу монотонности последовательности $y_n$ строго меньше $1$ при $n > N(\eps)$.%также будет меньше $\dfrac{\varepsilon}{2}$, скажем для $n \ge \widetilde{N}.$
+
+Поэтому,
+$$\left|\dfrac{x_n}{y_n}-a\right| < \dfrac{\varepsilon}{2} + \dfrac{\varepsilon}{2} = \varepsilon, \;\; \text{для} \; \forall \varepsilon > 0 \;\; \text{и} \;\; \forall n \ge \max\big\{N(\varepsilon) \, ; \, \widetilde{N}(\varepsilon)\big\}.$$
+
+Случай бесконечного предела: $\llimn \dfrac{x_n-x_{n-1}}{y_n-y_{n-1}} = +\infty$, легко приводится к рассмотренному случаю ''переворачиванием дроби''.
+
+\begin{flushright} $\blacksquare$ \end{flushright}
+
+%\hspace{-3.5ex}\textbf{\underline{Замечание:}} Отметим, что \emph{теорема Штольца} может рассматриваться, как дискретный аналог \emph{правила Лопиталя}.
+
+
+%\hspace{-3.5ex}\textbf{\underline{Замечание:}} Если в формулировке теоремы допустить, что последовательность $\{y_n\}\!\xrightarrow[n\rightarrow\infty]{}~\!\!0$, то, если $\{x_n\}\!\xrightarrow[n\rightarrow\infty]{}~\!\!0$, справедлив тот же результат.
+
+
+%\end{document}

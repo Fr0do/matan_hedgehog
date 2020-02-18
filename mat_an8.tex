@@ -1,0 +1,207 @@
+%\vmshbanner
+\papertitle{Вычисление пределов последовательности}{8}{26 сентября}{12}
+\addcontentsline{toc}{section}{8. Вычисление пределов последовательности}
+
+\hspace{-3.5ex}\textbf{\underline{Утверждения:}}
+
+\vspace{1ex}
+\hspace{-3.5ex}\textbf{1.} Сходящаяся числовая последовательность не может иметь более одной предельной точки;
+
+\vspace{0ex}
+\hspace{-3.5ex}\textbf{2.} Пусть $\{x_{k_n}\}$ - подпоследовательность последовательности $\{x_n\}$. Тогда,
+$$\varliminf\limits_{n \rightarrow \infty} x_n \le \varliminf\limits_{n \rightarrow \infty} x_{k_n} \;\;\; \bigl(\, \varlimsup\limits_{n \rightarrow \infty} x_n \ge \varlimsup\limits_{n \rightarrow \infty} x_{k_n}\bigr);$$
+
+\vspace{0ex}
+\hspace{-3.5ex}\textbf{3.} Если $\exists \varliminf\limits_{n \rightarrow \infty} x_n \;\; (\exists \varlimsup\limits_{n \rightarrow \infty} x_n)$, то найдется такая подпоследовательность $\{x_{k_n}\}$, что:
+$$ \lim\limits_{n \rightarrow \infty} x_{k_n} = \varliminf\limits_{n \rightarrow \infty} x_n \;\;\;\;\; (\, \lim\limits_{n \rightarrow \infty} x_{k_n} = \varlimsup\limits_{n \rightarrow \infty} x_n);$$
+
+\vspace{0ex}
+\hspace{-3.5ex}\textbf{4.} $\varliminf\limits_{n \rightarrow \infty} (-x_n) = - \varlimsup\limits_{n \rightarrow \infty} x_n;$ \hspace{15ex} \textbf{5.} $\dfrac{1}{\varlimsup\limits_{n \rightarrow \infty} x_n}  = \varliminf\limits_{n \rightarrow \infty} \dfrac{1}{x_n}, \;\; x_n \neq 0$ для $\forall n.$
+
+
+\vspace{2ex}
+\hrule
+\vspace{1ex}
+
+\task \dem{131} Пусть $\{x_n\}, \; \{y_n\}$ - произвольные последовательности. Докажите, что:
+
+\pnt \cw $\varliminf\limits_{n \rightarrow \infty} x_n + \varliminf\limits_{n \rightarrow \infty} y_n \le \varliminf\limits_{n \rightarrow \infty} (x_n + y_n) \le \varliminf\limits_{n \rightarrow \infty} x_n + \varlimsup\limits_{n \rightarrow \infty} y_n,$
+
+\vspace{1ex}
+
+\hspace{-3.5ex}\emph{постройте примеры, на которых достигаются строгие неравенства;}
+
+\vspace{1ex}
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{List_8.jpg}
+\end{center}
+
+\vspace{1ex}
+\hspace{-3.5ex}\textbf{\underline{Замечание:}} Отметим, что последовательности $\{x_n\}, \; \{y_n\}$ могут расходится. В сходящихся последовательностях вместо неравенств достигаются равенства.
+
+\pnt $\varliminf\limits_{n \rightarrow \infty} x_n + \varlimsup\limits_{n \rightarrow \infty} y_n \le \varlimsup\limits_{n \rightarrow \infty} (x_n + y_n) \le \varlimsup\limits_{n \rightarrow \infty} x_n + \varlimsup\limits_{n \rightarrow \infty} y_n,$
+
+\hspace{-3.5ex}\emph{постройте примеры, на которых достигаются строгие неравенства;}
+
+\vspace{-1ex}
+\task \cw \emph{(аналог задачи \textbf{7.7.(а)} для произведения)}
+
+Пусть $\exists \lim\limits_{n \rightarrow \infty} x_n = a \neq 0,$ \;и\;\; $\exists \lim\limits_{n \rightarrow \infty} x_n \cdot y_n.$ Докажите, что последовательность $\{y_n\}$ сходится. Показать, что, если $\lim\limits_{n \rightarrow \infty} x_n = 0,$ то из сходимости последовательности $\{x_n \cdot y_n\}$ может не вытекать сходимость последовательности $\{y_n\}$;
+
+\vspace{2ex}
+\hspace{-3.5ex} \textbf{\underline{Замечание:}} В названии под "аналогом задачи" \, имеется ввиду, какие дополнительные условия требуется наложить на сходимость последовательности $\{x_n\},$ чтобы из сходимости ещё и $\{x_n \cdot y_n\}$ вытекала сходимость последовательности $\{y_n\}.$
+
+\task \dem{132} Пусть $x_n \ge 0, \;\; y_n \ge 0$ для $\forall n \in \mathds{N}$. Докажите, что:
+
+\pnt $\varliminf\limits_{n \rightarrow \infty} x_n \cdot \varliminf\limits_{n \rightarrow \infty} y_n \le \varliminf\limits_{n \rightarrow \infty} (x_n \cdot y_n) \le \varliminf\limits_{n \rightarrow \infty} x_n \cdot \varlimsup\limits_{n \rightarrow \infty} y_n,$
+
+\pnt $\varliminf\limits_{n \rightarrow \infty} x_n \cdot \varlimsup\limits_{n \rightarrow \infty} y_n \le \varlimsup\limits_{n \rightarrow \infty} (x_n \cdot y_n) \le \varlimsup\limits_{n \rightarrow \infty} x_n \cdot \varlimsup\limits_{n \rightarrow \infty} y_n,$
+
+\vspace{2ex}
+
+\emph{постройте примеры, когда в этих соотношениях имеют место строгие неравенства;}
+\vspace{-1ex}
+
+\task \dem{133} Докажите, что если $\exists \lim\limits_{n \rightarrow \infty} x_n$, то какова бы ни была последовательность $\{y_n\}$ имеем:
+\pnt \cw $\varlimsup\limits_{n \rightarrow \infty} (x_n + y_n) = \lim\limits_{n \rightarrow \infty} x_n + \varlimsup\limits_{n \rightarrow \infty} y_n;$
+\vspace{-2ex}
+
+\pnt $\varlimsup\limits_{n \rightarrow \infty} (x_n \cdot y_n) = \lim\limits_{n \rightarrow \infty} x_n \cdot \varlimsup\limits_{n \rightarrow \infty} y_n, \;\;\; x_n \ge 0.$
+\vspace{-1ex}
+
+\task \dem{134} Докажите, что если для некоторой последовательности $\{x_n\}$, какова бы ни была последовательность $\{y_n\}$ имеет место тождество $\mathfrak{A}$, то последовательность $\{x_n\}$ сходится.
+
+\pnt \cw $\mathfrak{A}\; : \;\; \varlimsup\limits_{n \rightarrow \infty} (x_n + y_n) = \varlimsup\limits_{n \rightarrow \infty} x_n + \varlimsup\limits_{n \rightarrow \infty} y_n;$
+\vspace{-2ex}
+
+\pnt $\mathfrak{A}\; : \;\; \varlimsup\limits_{n \rightarrow \infty} (x_n \cdot y_n) = \varlimsup\limits_{n \rightarrow \infty} x_n \cdot \varlimsup\limits_{n \rightarrow \infty} y_n, \;\;\; (x_n \geqslant 0);$
+\vspace{-1ex}
+
+\task \dem{135} Докажите, что если $x_n > 0$ для $\forall n \in \mathds{N}\;$ и $\;\varlimsup\limits_{n \rightarrow \infty} x_n \cdot \varlimsup\limits_{n \rightarrow \infty} \dfrac{1}{x_n} = 1$, то последовательность $\{x_n\}$ сходится.
+\vspace{-1ex}
+
+\task \cw Составим для последовательности $\{a_n\}$, последовательность её средних арифметических $b_n = \dfrac{a_1 + a_2 + \ldots + a_n}{n}$. Докажите, используя только лишь определение предела последовательности, что если $\{a_n\}$  сходится, то и $\{b_n\}$ сходится к тому же пределу.
+\vspace{-1ex}
+
+\task \st Усильте утверждение из предыдущего номера, доказав, что
+$$\varliminf\limits_{n \rightarrow \infty} a_n \le \varliminf\limits_{n \rightarrow \infty} b_n \le \varlimsup\limits_{n \rightarrow \infty} b_n \le \varlimsup\limits_{n \rightarrow \infty} a_n.$$
+\vspace{-5ex}
+
+\task \st Пусть $\exists \llim{n}{\infty} a_n = a, \; \llim{n}{\infty} b_n = b$ н последовательности $\{x_n\}$ и $\{y_n\}$ определяются следующими соотношениями:
+$$
+x_0 = 1; \;\; a_n = 2 x_n + y_n, \;\; b_n = x_{n-1} + 2 y_n, \;\; n \ge 1.
+$$
+Докажите сходимость последовательностей $\{x_n\}$ и $\{y_n\}$, а также найдите их пределы.
+\vspace{-1ex}
+
+%\task \st Пусть $\lim\limits_{n \rightarrow \infty} x_n = a, \;\; \lim\limits_{n \rightarrow \infty} y_n = b.$ Докажите, что последовательность $$z_n = \dfrac{x_1 y_n + x_2 y_{n-1} + \ldots + x_n y_1}{n} \xrightarrow[n\rightarrow\infty]{} a \cdot b.$$
+\task \st Пусть $\lim\limits_{n \rightarrow \infty} x_n = a, \;\; \lim\limits_{n \rightarrow \infty} y_n = b.$ Найдите предел последовательности $$z_n = \dfrac{x_1 y_n + x_2 y_{n-1} + \ldots + x_n y_1}{n}.$$
+
+%\task \emph{(малая теорема Теплица)}
+
+%Рассмотрим последовательность $\{A_{nm}\}$, зависящую от двух индексов, удовлетворяющую условиям:
+%\begin{enumerate}
+%\item $A_{nm} \geqslant 0$, \; для $\;\forall n, m \in \mathds{N}$;
+%\item $A_{n1} + \ldots + A_{nm}=1$;
+%\item $\lim\limits_{n \rightarrow \infty}A_{nm}= 0$ для $\forall$ фиксированного $m\in\mathds{N}$,
+
+%\hpace{-6ex}
+%\vspace{-1ex}
+%а также числовую последовательность $\{\widetilde{x}_n\}$, такую, что
+
+%\item $\exists \lim\limits_{n\rightarrow\infty}\widetilde{x}_n=a<\infty$.
+%\end{enumerate}
+
+%Докажите, что последовательность $S_n = \sum\limits_{m=1}^n A_{nm}x_m$ сходится и $\lim\limits_{n\rightarrow\infty} S_n = a$
+
+\task \dem{138,139,140}
+Примените теорему Тёплица (см. в конце листочка) для решения следующих задач:
+\index{Теорема!Тёплица о регулярном преобразовании последовательности}
+\vspace{-1ex}
+
+\pnt \cw пусть последовательность $\{x_n\}$ сходится. Докажите, что последовательность средних арифметических $\xi_n = \dfrac{x_1 + x_2 + \ldots + x_n}{n}$ также сходится и $\lim\limits_{n \rightarrow \infty} x_n = \lim\limits_{n\rightarrow\infty} \xi_n.$ Постройте пример, что обратное не верно.
+
+\pnt пусть $\lim\limits_{n\rightarrow\infty} x_n = + \infty$. Докажите, что $\lim\limits_{n\rightarrow\infty} \dfrac{x_1 + x_2 + \ldots + x_n}{n} = + \infty.$
+
+\pnt докажите, что если последовательность $\{x_n\}$ сходится и $x_n > 0$ для $\forall n \in \mathds{N},\;$ то последовательность средних геометрических сходится и $\lim\limits_{n \rightarrow \infty} \sqrt[n]{x_1 \cdot x_2 \cdot \ldots \cdot x_n} = \lim\limits_{n\rightarrow\infty} x_n.$
+
+\pnt пусть $\llim{n}{\infty} x_n = a$. Найдите предел $\llim{n}{\infty} \dfrac{n \cdot x_1 + (n - 1) \cdot x_2 + \ldots + 1 \cdot x_n}{n^2}.$
+
+\task \dem{141} Докажите, что если $x_n > 0$ для $\forall n \in \mathds{N},\;$ и $\; \exists \lim\limits_{n \rightarrow \infty} \dfrac{x_n}{x_{n-1}}$, то $\lim\limits_{n \rightarrow \infty} \sqrt[n]{x_n} = \lim\limits_{n \rightarrow \infty} \dfrac{x_n}{x_{n-1}}.$
+
+\task \dem{142} Докажите, что $\lim\limits_{n \rightarrow \infty} \dfrac{n}{\sqrt[n]{n!}} = e.$
+
+\task \st Докажите, что $\varlimsup\limits_{n \rightarrow \infty} \left(\dfrac{x_1 + x_{n+1}}{x_n}\right)^n \ge e$ для любой положительной последовательности $\{x_n\}$.
+
+\task \st Последовательности чисел $\{a_n\}$ и $\{b_n\}$ удовлетворяют следующим условиям:
+\vspace{2ex}
+
+\emph{(1)} $a_n \neq 0 \;\; \forall n \ge 1;$ \hspace{16.5ex}
+\emph{(2)} $a_1 + a_2 + \ldots + a_n \rightarrow +\infty, \;\; n \rightarrow \infty;$
+\vspace{2ex}
+
+\emph{(3)} $\llim{n}{\infty}\dfrac{b_n}{a_n} = d < \infty.$ \hspace{14ex}
+\emph{(4)}  $\exists C \in \mathds{R} \, : \, \forall n \ge 1 \;\; \dfrac{|a_1| + |a_2| + \ldots + |a_n|}{a_1 + a_2 + \ldots + a_n} < C;$
+\vspace{2ex}
+
+Докажите, что $\; \llim{n}{\infty}\dfrac{b_1 + b_2 + \ldots + b_n}{a_1 + a_2 + \ldots + a_n} = d.$
+
+\task \st Пусть $0 \, < \, a_n \, < \, 1$ при $n \in \mathds{N}$.
+\vspace{-1ex}
+
+\pnt Покажите на примерах, что существование одного из пределов $\llimn \dfrac{a_1 + \ldots + a_n}{n}$ и $\llimn \dfrac{a^2_1 + \ldots + a^2_n}{n}$ не связано с существованием другого.
+\vspace{-0ex}
+
+\pnt Пусть $\llimn \dfrac{a_1 + \ldots + a_n}{n} = a$ и $\llimn \dfrac{a^2_1 + \ldots + a^2_n}{n} = b$. Докажите, что $a^2 \le b \le a$ и что переменная $b$ может принимать \emph{любые} значения между $a^2$ и $a$.
+
+\newpage
+
+\begin{flushleft}\textbf{\Large{Теорема Тёплица о регулярном преобразовании последовательности}}\end{flushleft}
+\index{Теорема!Тёплица о регулярном преобразовании последовательности}
+
+Рассмотрим последовательность $A_{nm}$, зависящую от двух индексов, удовлетворяющую условиям:
+\begin{enumerate}
+\item $A_{nm} \geqslant 0$, для всех $n, m \in \mathds{N}$;
+\item $A_{n1} + \ldots + A_{nn} = 1$;
+\item $\lim\limits_{n \rightarrow \infty}A_{nm}= 0$ для любого фиксированного $m\in\mathds{N}$,
+
+\hspace{-6ex}
+\vspace{-1.5ex}
+а также числовую последовательность $\{\widetilde{x}_n\}$, такую, что
+
+\item $\exists \lim\limits_{n\rightarrow\infty}\widetilde{x}_n = a < \infty$.
+\end{enumerate}
+
+\vspace{-2ex}
+Тогда последовательность $S_n=\sum\limits_{m=1}^n A_{nm} \widetilde{x}_m$ сходится и $\lim\limits_{n\rightarrow\infty} S_n=a$.
+
+\vspace{2ex}
+
+$\blacktriangleright$ \; Для $\forall \varepsilon>0$ рассмотрим, при достаточно больших $n$, модуль разности:
+$$\left|\sum\limits_{m=1}^n A_{nm} \widetilde{x}_m - a\right| = \left\{\sum\limits_{m=1}^n A_{nm}=1\right\}=\left|\sum\limits_{m=1}^n A_{nm}(\widetilde{x}_m-a)\right|\leqslant \sum\limits_{m=1}^n A_{nm}|\widetilde{x}_m-a|  \eqno{(\ast)}$$
+\emph{Получение оценок из условий 3 и 4:}
+
+\hspace{-3.5ex}$\exists \lim\limits_{n \rightarrow \infty}\widetilde{x}_n=a\Leftrightarrow$ для $\forall\varepsilon>0$, которое было выбрано выше, $\exists N_x(\varepsilon)$:
+$$\forall n > N_x(\varepsilon) \;\;\; |\widetilde{x}_n-a|<\dfrac{\varepsilon}{2} \eqno(1)$$
+Далее, т.к. $\exists \lim\limits_{n \rightarrow \infty}\widetilde{x}_n=a<\infty$, то $\{\widetilde{x}_n\}$ - ограничена, т.е. $\exists M \ge |a| \ge 0$ такое, что $|\widetilde{x}_n|\leqslant M$, а
+$$|\widetilde{x}_n-a|\leqslant |\widetilde{x}_n|+|a|\leqslant 2M, \; \text{для} \; \forall n\in\mathds{N} \eqno(2)$$
+Так как $\lim\limits_{n \rightarrow \infty}A_{nm}=0$ и $A_{nm}\geqslant 0$, то для фиксированного нами $\varepsilon > 0  \; \exists N_A(\varepsilon) \geqslant   N_x(\varepsilon)$, что
+$$0 \leqslant A_{nm}<\dfrac{\varepsilon}{4N_xM} \eqno(3)$$
+для $\forall m=1, \ldots ,N_x$ и $\forall n > N_A$.
+
+\emph{Продолжаем оценивать выражение $(\ast)$, используя неравенства (1)-(3).}
+
+Пусть $n \geqslant N_A(\varepsilon)$ тогда
+$$\sum\limits_{m=1}^{n} A_{nm}|\widetilde{x}_m-a|=A_{n1}|\widetilde{x}_1-a|+ \ldots + A_{n \scriptscriptstyle N_{x}}|\widetilde{x}_{\scriptscriptstyle N_x}-a|+A_{n \scriptscriptstyle N_{x}+1}|\widetilde{x}_{\scriptscriptstyle N_{x}+1}-a|+ \ldots + A_{nn} |\widetilde{x}-a|< $$ $$ < \; N_x \dfrac {\varepsilon}{4N_xM}\cdot 2M + \dfrac{\varepsilon}{2} \left(A_{n \scriptscriptstyle N_{x}+1} + \ldots + A_{nn} \right)< \dfrac{\varepsilon}{2} + \dfrac{\varepsilon}{2} = \varepsilon$$.
+\vspace{-6ex}
+\begin{flushright} $\blacksquare$ \end{flushright}
+\vspace{3ex}
+
+\hspace{-3.5ex}\textbf{\underline{Замечание:}} \; Если условие $\;\;1. \; A_{nm} \geqslant 0$, \, для $\,\forall n, m \in \mathds{N}\;\;$ не выполнено, то для справедливости теоремы Тёплица необходимо добавить условие: $\exists C > 0,$ что для $\forall n \ge 1$ следует $\displaystyle \sum\limits_{m=1}^n |A_{nm}| \, \le \, C.$
+
+
+
+
+
+%\end{document}

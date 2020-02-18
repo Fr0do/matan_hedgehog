@@ -1,0 +1,190 @@
+%\vmshbanner
+\papertitle{Монотонная последовательность и её предел}{5}{17 сентября}{12}
+\addcontentsline{toc}{section}{5. Монотонная последовательность и её предел}
+
+\vspace{3ex}
+
+\hspace{-3.5ex}\underline{\textbf{Определение:}} Последовательность $\{x_n\}$ называется \emph{монотонной}, если для $\forall n\in \mathds{N}$ выполнено одно из условий:
+\index{Числовая последовательность!монотонная}
+\vspace{2ex}
+
+$x_{n+1}>x_n, \qquad \{x_n\}$ - \emph{возрастающая}, $\hspace{5ex} \{x_n\}\!\uparrow$
+
+\vspace{2ex}
+
+$x_{n+1}\geqslant x_n, \qquad \{x_n\}$ - \emph{неубывающая}, $\hspace{6ex} \{x_n\}\!\nearrow$
+
+\vspace{2ex}
+
+$x_{n+1}\leqslant x_n, \qquad \{x_n\}$ - \emph{невозрастающая}, $\hspace{3ex} \{x_n\}\!\!\searrow$
+
+\vspace{2ex}
+
+$x_{n+1}<x_n, \qquad \{x_n\}$ - \emph{убывающая}, $\hspace{9ex} \{x_n\}\!\downarrow$
+
+\vspace{5ex}
+
+\hspace{-3.5ex}\underline{\textbf{Теорема}} \emph{(Вейерштрасс)}:
+\index{Теорема!Вейерштрасса о сходимости монотонной последовательности}
+\vspace{2ex}
+
+Пусть последовательность $\{a_n\}$ возрастает или неубывает и ограничена сверху, тогда $\exists \lim\limits_{n\rightarrow\infty} a_n = \sup\{a_n\},$ где $\sup\{a_n\} - $ наименьшее из чисел, ограничивающих данную последовательности сверху.
+
+\vspace{1ex}
+
+Пусть последовательность $\{a_n\}$ убывает или невозрастает и ограничена снизу, тогда $\exists \lim\limits_{n\rightarrow\infty} a_n = \inf\{a_n\},$ где $\inf\{a_n\} - $ наибольшее из чисел, ограничивающих данную последовательности снизу.
+
+\vspace{6ex}
+\hrule
+\vspace{3ex}
+
+\task \cw Пусть $a>0$. Докажите сходимость последовательности
+$$x_n=\underbrace{\sqrt{a+\sqrt{a+\ldots+\sqrt{a}}}}_{\text{$n$ корней}}$$
+
+и найдите её предел
+
+\task \textit{(среднее арифметико-геометрическое)}
+\index{Среднее арифметико-геометрическое}
+\vspace{1ex}
+
+Пусть даны два положительных числа $a > b$. Положим
+$$a_1=\dfrac{a+b}{2}, \;\; b_1=\sqrt{ab}, \quad a_{n+1}=\dfrac{a_n+b_n}{2}, \;\; b_{n+1}=\sqrt{a_n b_n}, \;\;\; n = 1, 2, \ldots .$$
+
+Докажите, что $\lim\limits_{n\rightarrow\infty} a_n = \lim\limits_{n\rightarrow\infty} b_n$.
+
+\vspace{5ex}
+
+\hspace{-3.5ex}\underline{\textbf{Замечание:}} В данном примере мы не находим выражение для предела, но, зная, что он существует, легко можем вычислить его с любой степенью точности, т.к. он содержится между последовательностями $a_n$ и $b_n$ $\left(a_n \ge b_n \; \text{для} \;\; \forall n\right)$. Вычисление данного предела будет проведено в дальнейшем.
+
+\newpage
+
+\task \dem{69} \cw \emph{(число \textbf{e})}
+\index{Число \textbf{e}}
+
+Докажите, что последовательность $x_n=\left(1+\dfrac{1}{n}\right)^n \,\,\,\,\, (n=1,2,\ldots)$ монотонно
+возрастает и ограничена сверху, а последовательность $y_n=\left(1+\dfrac{1}{n}\right)^{n+1} \,\,\,\,\, (n=1,2,\ldots)$
+монотонно убывает и ограничена снизу. Отсюда, выведите что эти последовательности
+имеют общий предел:
+$$\lim\limits_{n\rightarrow\infty} \left(1+\dfrac{1}{n}\right)^n=\lim\limits_{n\rightarrow\infty} \left(1+\dfrac{1}{n}\right)^{n+1}=e.$$
+
+\vspace{0ex}
+\task Используя равенство $\lim\limits_{n\rightarrow\infty} \left(1+\dfrac{1}{n}\right)^n=e$,
+
+\pnt \cw Докажите, что
+\vspace{-3ex} $$\lim\limits_{n\rightarrow\infty} \left(2+\dfrac{1}{2!}+\ldots+\dfrac{1}{n!}\right)=\sum\limits_{n=0}^{\infty} \dfrac{1}{n!}=e;$$
+
+\vspace{1ex}
+
+\hspace{-3.5ex}\textbf{\underline{Замечание:}} Последовательность $\{s_n\}=2+\dfrac{1}{2!}+\ldots+\dfrac{1}{n!}$ сходится к числу $e$ гораздо быстрее последовательности $\{e_n\}=\left(1+\dfrac{1}{n}\right)^n$, и поэтому, применима к вычислениям числа $e$ значительно лучше. Например, $e - e_5 \approx 0,2299; \;\; e - s_5 \approx 0,0016.$ Более подробно скорости сходимости данных последовательностей можно изучить по рисунку.
+
+\vspace{3ex}
+\hspace{-11ex}
+\includegraphics[width=1.11\textwidth]{List_5a.jpg}
+
+\vspace{-1ex}
+
+\pnt Докажите, что
+\vspace{-3ex}$$
+\llim{n}{\infty} \left(1 + \dfrac{k}{n}\right)^n \, = \, e^k \quad \text{где} \;\;\; k \in \mathds{N}, \; k \ge 2.
+$$
+
+\vspace{2ex}
+
+\hspace{-3.5ex}\textbf{\underline{Замечание:}} Основная трудность этой задачи заключается в доказательстве сходимости данной последовательности.
+
+\pnt выведите формулу:
+$$ e = 2 + \dfrac{1}{2!} + \ldots + \dfrac{1}{n!} + \dfrac{\theta_n}{n! n}, \;\; \text{где} \;\;\; 0 < \theta_n < 1.$$
+
+\pnt докажите, что число $e$ иррациональное.
+
+\vspace{3ex}
+
+\hspace{-3.5ex}\textbf{\underline{Замечание:}} Отметим, что число $e$ не только \emph{иррациональное}, но даже \emph{трансцендентное} (число, не являющееся корнем никакого многочлена с целыми коэффициентами).
+\index{Трансцендентные числа}
+
+\pnt \st докажите, что $A e^2 + B e + C \neq 0,\;$ если $A,\, B, \, C \in \mathds{Z}, \;\; A^2 + B^2 + C^2 \neq 0.$
+
+\task \dem{70} Докажите, что
+$$
+0 < e - \left(1 + \dfrac{1}{n}\right)^n \, < \, \dfrac{3}{n}, \;\; (n = 1, 2, \ldots).
+$$
+
+\task \dem{71} Пусть $\{p_n\}_{n=1}^{\infty}$ - произвольная последовательность чисел, стремящихся к $+ \infty$, и $\{q_n\}_{n=1}^{\infty}$ - последовательность, стремящихся к $- \infty$, $\;\bigl(p_n, q_n \notin [-1, 0]\bigr).$  Докажите, что
+$$
+\lim\limits_{n\rightarrow\infty} \left(1+\dfrac{1}{p_n}\right)^{p_n} = \lim\limits_{n\rightarrow\infty} \left(1+\dfrac{1}{q_n}\right)^{q_n} = e.
+$$
+
+\task \dem{74,75} Пусть $n \in \mathds{N}$. Докажите следующие неравенства:
+
+\vspace{3ex}
+
+\emph{(а)} \cw $\left(\dfrac{n}{e}\right)^n \, < \, n! \, < \, e \left(\dfrac{n}{2}\right)^n;$ \qquad \qquad \;\, \emph{(б)} \cw $\dfrac{1}{n+1} \, < \, \textmd{ln} \left(1 + \dfrac{1}{n}\right) \, < \, \dfrac{1}{n};$
+
+\vspace{3ex}
+
+\emph{(в)} $\left(1 + \dfrac{1}{n}\right)^{n+1} \, < \, \left(1 + \dfrac{1}{n-1}\right)^{n};$ \qquad \emph{(г)} $1 + \alpha \, < \, e^{\alpha}, \;\; \text{где} \;\; 0 \neq \alpha \in \mathds{R}.$
+\\
+
+%\vspace{3ex}
+\hspace{-11ex}
+\includegraphics[width=1.15\textwidth]{List_5b.jpg}
+\vspace{-6ex}
+
+\task \dem{79,80} Докажите сходимость следующих последовательностей:
+
+\pnt $x_n = \left(1 - \dfrac{1}{2}\right) \left(1 - \dfrac{1}{4}\right) \ldots \left(1 - \dfrac{1}{2^n}\right);$
+
+\pnt \cw $x_n = \left(1 + \dfrac{1}{2}\right) \left(1 + \dfrac{1}{4}\right) \ldots \left(1 + \dfrac{1}{2^n}\right);$
+
+\task \dem{90} Докажите, что монотонная последовательность будет сходящейся, если сходится некоторая ее подпоследовательность.
+
+\task Последовательности $\{a_n\}$ и $\{b_n\}$ определяются следующими соотношениями:
+$$
+a_1 = 1, \;\; b_1 = 1, \;\;\;\; a_{n+1} = \sqrt{2 + b_n}, \;\; b_{n+1} = \sqrt{2 a_n}, \;\; n = 1, 2, \ldots.
+$$
+Докажите, что эти последовательности сходятся, и найдите их пределы.
+
+\task
+\pnt \st Докажите, что последовательность $\left\{\dfrac{n}{\sqrt[n]{n!}}\right\}, \; n \ge 1$ строго возрастает и сходится к числу $e$, а последовательность $\left\{\dfrac{n}{(\sqrt[n]{n!})^2}, \; n \ge 2\right\}$ строго убывает и сходится к $0$.
+
+\pnt Докажите, что
+$
+\;\; \llim{n}{\infty} \dfrac{1}{n} \underbrace{\sqrt[n]{n! + \sqrt[n]{n! + \ldots + \sqrt[n]{n!}}}}_{\text{$n$ факториалов}} \, = \, \dfrac{1}{e}.
+$
+
+\task Пусть $1 < p \in \mathds{N}$ и
+$\; x_n = \underbrace{\sqrt[p]{1 + \sqrt[p]{1 + \ldots + \sqrt[p]{1}}}}_{\text{$n$ корней}}.$
+\\
+
+Докажите, что последовательность $\{x_n\}$ сходится к положительному корню уравнения $$x^p~-~x~-~1~=~0.$$
+\vspace{-5ex}
+
+\task \st \emph{(задача Рамануджана)} Пусть $\;\;x_n = \sqrt{1 + 2\sqrt{1 + 3 \sqrt{1 + \ldots + n \sqrt{1+n}}}}.$
+\\
+
+\hspace{-3.5ex} Докажите, что существует предел $\lim\limits_{n\rightarrow\infty} x_n$, и найдите его.
+\index{Задача!Рамануджана}
+
+\task \st \emph{(задача о тетрации)}
+\index{Задача!о тетрации}
+
+Пусть последовательность $\left\{a_n\right\}$ задана формулами:
+$$
+a_1 = a > 0, \;\;\; a_2 = a^a, \;\;\; a_3 = a^{a^{\scriptstyle a}}, \ldots ,a_{n+1} = a^{a_n}, \ldots
+$$
+Докажите, что данная последовательность сходится тогда и только тогда, когда $$\textstyle a \in \left[\left(\frac{1}{e}\right)^e; \;\; e^{\frac{1}{e}} \right].$$
+
+\vspace{1ex}
+
+\hspace{-3.5ex}\textbf{\underline{Замечание:}} Много интересной информации по этой и подобным задачам можно найти из списка литературы: \;
+\textbf{http://www.tetration.org/Links/index.html}.
+
+%\task \st Для какой последовательности $\big\{x_n\big\}$ существует биекция $\sigma \, : \, \mathds{N} \rightarrow \mathds{N}$ такая, что последовательность $\big\{x_{\sigma(n)}\big\}$ монотонно \textbf{строго} возрастает?
+
+\task \st Найдите необходимые и достаточные условия, накладываемые на последовательность $\big\{x_n\big\}$ для того, чтобы существовала биекция $\sigma \, : \, \mathds{N} \rightarrow \mathds{N}$ такая, что последовательность $\big\{x_{\sigma(n)}\big\}$ монотонно \textbf{строго} возрастает?
+
+\task \st Докажите, что
+$$
+\lim\limits_{n\rightarrow\infty} \Big(\textbf{C}^0_n \cdot \textbf{C}^1_n \cdot \textbf{C}^2_n \cdot \ldots \cdot \textbf{C}^n_n\Big)^{\frac{2}{n(n+1)}}\; = \; e, \;\; \text{где} \;\; \textbf{C}^k_n = \dfrac{n!}{k! (n-k)!}.
+$$
+%\end{document}

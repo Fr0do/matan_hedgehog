@@ -1,0 +1,241 @@
+%\vmshbanner
+\papertitle{Вычисление определенных интегралов}{31}{27 февраля}{12}
+\addcontentsline{toc}{section}{31. Вычисление определённых интегралов}
+
+\vspace{1ex}
+
+\hspace{-3.5ex}\underline{\textbf{Теорема}} (\emph{формула Ньютона - Лейбница}):
+
+Пусть функция $f$ непрерывна на $[a; b]$ и $F^{\prime}(x) = f(x)$. Тогда справедливо следующее равенство:
+$$
+\int\limits_a^b f(x) \, dx = F(x)\Big|_a^b = F(b) - F(a).
+$$
+\index{Формула!Ньютона-Лейбница}
+
+\vspace{1ex}
+
+\hspace{-3.5ex}\underline{\textbf{Теорема}} (\emph{интегрирование по частям}):
+Пусть функции $u$ и $v$ непрерывно дифференцируемы на $[a; b]$. Тогда справедлива формула:
+$$
+\int\limits_a^b u(x) \, v^{\prime}(x) \, dx = u(x) \, v(x) \Big|_a^b - \int\limits_a^b u^{\prime}(x) \, v(x) \, dx
+$$
+
+\hspace{-3.5ex}\underline{\textbf{Теорема}} (\emph{формула замены переменной}): \; Предположим, что: функция
+$$\varphi \, : \, [\alpha, \beta] \mapsto [c, d] \supset [a, b], \;\; a = \varphi(\alpha), \; b = \varphi(\beta)$$
+непрерывно дифференцируема на $[\alpha, \beta]$, а $f$ непрерывна на отрезке $[c, d]$. Тогда справедлива формула:
+% где $\alpha = \varphi^{-1}(a), \; \beta = \varphi^{-1}(b).$ Тогда
+$$
+\int\limits_a^b f(x) \, dx \, = \,
+\left\{
+\begin{array}{rcl} x&=&\varphi(t) \\ dx&=&\varphi^{\prime}(t) \, dt \\ \end{array}
+\right\} \, = \, \int\limits_{\alpha}^{\beta} f\bigl(\varphi(t)\bigr) \cdot \varphi^{\prime}(t) \, dt.
+$$
+
+\hspace{-3.5ex}\underline{\textbf{Утверждение}} (\emph{обобщение формулы Ньютона - Лейбница}):
+\index{Формула!Ньютона-Лейбница!обобщение}
+
+Пусть функция $f$ интегрируема на $[a; b]$, $f$ терпит \emph{разрывы первого рода} во внутренних точках $c_i~\in~(a; b)$, $i = \overline{1,n},$ и, может быть, в точках $a$ и $b$. Кроме того, пусть $F^{\prime}(x) = f(x)$ за исключением точек разрыва. Тогда справедлива формула:
+$$
+\int\limits_a^b f(x) \, dx = F(b - 0) - F(a + 0) + \sum\limits_{i=1}^n \Bigl[F(c_i - 0) - F(c_i + 0)\Bigr].
+$$
+
+
+\vspace{1ex}
+\hrule
+\vspace{1ex}
+
+\task \dem{2219, 2222, 2223, 2226, 2230}
+
+С помощью определённых интегралов найдите пределы следующих сумм:
+\vspace{3ex}
+
+\emph{(а)} \cw $\displaystyle \llim{n}{\infty} \sum\limits_{k=1}^{n-1} \, \dfrac{k}{n^2} \, ;$ \hspace{31ex} \emph{(б)} $\llim{n}{\infty} \dfrac{1}{n} \displaystyle \sum\limits_{k=1}^{n-1} \, \sin{\frac{\pi k}{n}}$ ;
+\vspace{3ex}
+
+\emph{(в)} $\displaystyle \llim{n}{\infty} \dfrac{1}{n^{p+1}} \sum\limits_{k=1}^{n} \, k^p, \;\, p > 0$ ; \hspace{20ex} \emph{(г)} $\displaystyle \llim{n}{\infty} \dfrac{1}{n} \sum\limits_{k=1}^n \dfrac{2^{k/n}}{1 + \frac{1}{k \cdot n}}$
+\vspace{3ex}
+
+\emph{(д)} $\displaystyle \llim{n}{\infty} \dfrac{1}{n} \sum\limits_{k=1}^{n} \, f \left(a + k \dfrac{b - a}{n}\right), \;\; f$ \emph{интегрируемая на $[a; b]$ функция};
+
+
+\task \dem{2211, 2213, 2239, 2242, 2243, 2245, 2246, 2249, 2269, 2279, 2218}
+\vspace{0ex}
+
+Найдите следующие определённые интегралы:
+\vspace{1.2ex}
+
+\emph{(а)} \cw $\displaystyle \int\limits_0^2 |x - 1| \, dx;$ \hspace{30ex} \emph{(б)} $\displaystyle \int\limits_0^{2 \pi} \dfrac{dx}{1 + \varepsilon \cos{x}}, \quad (0 \le \varepsilon < 1);$
+\vspace{1.7ex}
+
+\emph{(в)} $\displaystyle \int\limits_0^{\logn{2}} x e^{-x} \, dx;$ \hspace{33ex}  \emph{(г)} $\displaystyle \int\limits_{1/e}^e |\logn{x}| \, dx$ ;
+\vspace{1.7ex}
+
+\emph{(д)} $\displaystyle \int\limits_0^1 \arccos{x} \, dx$ ; \hspace{29.3ex} \emph{(е)} $\displaystyle \int\limits_{-1}^1 \dfrac{x \, dx}{\sqrt{5 - 4x}}$ ;
+\vspace{1.7ex}
+
+\emph{(ж)} $\displaystyle \int\limits_0^a x^2 \sqrt{a^2 - x^2} \, dx, \quad (a > 0);$ \hspace{15ex} \emph{(з)} $\displaystyle \int\limits_0^1 \dfrac{\arcsin{\sqrt{x}}}{\sqrt{x(1-x)}} \, dx$ ;
+\vspace{1.7ex}
+
+\emph{(и)} $\displaystyle \int\limits_{-1}^1 \dfrac{x \, dx}{x^2 + x + 1}$ ; \hspace{29ex} \emph{(к)} $\displaystyle \int\limits_0^{\pi} e^x \cos^2{x} \, dx$ ;
+\vspace{1.7ex}
+
+\emph{(л)} $\displaystyle \int\limits_0^4 \dfrac{|x-1|}{|x-2| + |x-3|} \, dx$ ; \hspace{20ex} \emph{(м)} \cw $\displaystyle \int\limits_{-1}^2 \dfrac{1 + x^2}{1 + x^4} \, dx$ ;
+\vspace{1.7ex}
+
+\emph{(н)} $\displaystyle \int\limits_0^1 e^x \, \arcsin{e^{-x}} \, dx$ ; \hspace{24ex} \emph{(о)} $\displaystyle \int\limits_0^{2 \pi} \dfrac{dx}{3 + \cos{x}}$ ;
+\vspace{1.7ex}
+
+
+\emph{(п)} $\displaystyle \int\limits_0^{100 \pi} \sqrt{1 - \cos{2x}} \, dx$ .
+\vspace{-1.4ex}
+
+\task \dem{2309, 2310, 2311, 2313, 2315}
+
+Вычислите определённые интегралы от ограниченных разрывных функций:
+\vspace{1ex}
+
+\emph{(а)} $\displaystyle \int\limits_0^3 \textmd{sgn} (x - x^3) \, dx$ ; \hspace{20ex} \emph{(б)} \cw $\displaystyle \int\limits_0^2 \bigl[e^x\bigr] \, dx$ ;
+\vspace{1.5ex}
+
+\emph{(в)}  $\displaystyle \int\limits_0^6 [x] \, \sin{\frac{\pi x}{6}} \, dx$ ;\hspace{22.5ex} \emph{(г)} \cw $\displaystyle \int\limits_1^{n+1} \logn{[x]} \, dx, \quad n \in \mathds{N}$ ;
+\vspace{1.5ex}
+
+\emph{(д)} $\displaystyle \int\limits_{\{E\}} |\cos{x}| \cdot \sqrt{\sin{x}} \, dx, \quad \{E\} - $ \emph{множество тех значений отрезка $[0; 4\pi],$ для которых подынтегральная функция имеет смысл;}
+\vspace{1.5ex}
+
+\emph{(е)} $\displaystyle \int\limits_0^{4 \pi} x \, \textmd{sgn}(sin{x}) \, dx;$
+\vspace{1.5ex}
+
+\emph{(ж)} Докажите, что $\displaystyle \intt{1}{n+1} \dfrac{\sin{\pi x}}{[x]} dx = - \dfrac{2}{\pi} \sum\limits_{k=1}^n \dfrac{(-1)^{k+1}}{k}, \;\; n \in \mathds{N}$.
+
+\task \dem{2257}
+
+Докажите, что если функция $f$ непрерывна на $(0; 1),$ то
+\vspace{2ex}
+
+\emph{(а)} \cw $\displaystyle \int\limits_0^{\pi/2} f(\sin{x}) \, dx \, = \, \int\limits_0^{\pi/2} f(\cos{x}) \, dx;$ \hspace{15ex}
+\emph{(б)} $\displaystyle \int\limits_0^{\pi} x \, f(\sin{x}) \, dx \, = \, \dfrac{\pi}{2} \int\limits_0^{\pi} f(\sin{x}) \, dx.$
+
+\vspace{1ex}
+\hspace{-3.5ex}\underline{\textbf{Замечание}} Предполагается, что все данные интегралы существуют.
+
+\begin{wrapfigure}{r}{140pt}
+\vspace{3ex}
+\hspace{-30ex}
+\includegraphics[width=0.46\textwidth]{ris_31a.jpg}
+\end{wrapfigure}
+
+\task Используя технику из предыдущего номера, найдите следующие интегралы:
+\vspace{3ex}
+
+\pnt $\displaystyle \int\limits_0^{\pi} \dfrac{x \, \sin{x}}{1 + \cos^2{x}} \, dx$ ;
+
+\vspace{2ex}
+
+\pnt \cw $\displaystyle \int\limits_0^{\pi/2} \logn{\bigl(\sin{x}\bigr)} \, dx$ .
+
+\begin{wrapfigure}{r}{0pt}
+\end{wrapfigure}
+
+\vspace{-3ex}
+\task Вычислите интеграл $\displaystyle I_n = \int\limits_0^{\pi/2} \sin^n x \, dx = \int\limits_0^{\pi/2} \cos^n x \, dx$ для $n \in \mathds{N} \cup \{0\}$ и докажите \emph{формулу Валлиса}:
+\index{Формула!Валлиса}
+$$
+\llim{n}{\infty} \left(\dfrac{(2n)!!}{(2n - 1)!!}\right)^2 \cdot \dfrac{1}{2n} \, = \, \dfrac{\pi}{2}.
+$$
+
+\task Вычислите \emph{интеграл Дирихле}: $\quad \displaystyle \int\limits_0^{\pi/2} \dfrac{\sin{(2n-1)x}}{\sin{x}} \, dx, \quad n \in \mathds{N}.$
+\index{Интеграл!Дирихле}
+
+\task Докажите равенство: $\quad \displaystyle \int\limits_0^1 \dfrac{\arctg{x}}{x} \, dx \, = \, \dfrac{1}{2} \int\limits_0^{\pi/2} \dfrac{t}{\sin{t}} \, dt.$
+
+%\begin{wrapfigure}{r}{155pt\vspace{8ex}
+%\hspace{-15ex}
+%\includegraphics[width=0.53\textwidth]{ris_31b.jpg}
+%\end{wrapfigure}
+
+\task Найдите следующие интегралы:
+\vspace{2ex}
+
+\emph{(а)} \cw $\displaystyle \int\limits_{-1}^1 \dfrac{dx}{(e^x + 1)(x^2 + 1)}$ ; \hspace{24ex}
+\emph{(б)} $\displaystyle \int\limits_{0}^{\pi/2} \cos{ax} \cdot (\cos{x})^{a-2} dx, \quad a > 1$ ;
+\vspace{2ex}
+
+\emph{(в)} \st $\displaystyle \int\limits_{0}^{\pi} \dfrac{x \, \sin^{2n}{x}}{\sin^{2n}{x} + \cos^{2n}{x}} \, dx, \quad n \in \mathds{N}$; \hspace{12ex}
+\emph{(г)} \st $\displaystyle \int\limits_{-\pi}^{\pi} \dfrac{\sin{nx}}{\bigl(1 + 2^x\bigr)\sin{x}} \, dx, \quad n \in \mathds{N}$.
+
+\begin{wrapfigure}{r}{0pt}
+\end{wrapfigure}
+
+\task Пусть функция $f$ непрерывна на отрезке $[-a; a]$ и чётна. Докажите, что:
+$$
+\int\limits_{-a}^a \dfrac{f(x)}{1 + e^x} \, dx \, = \, \int\limits_0^a f(x) \, dx.
+$$
+\vspace{-5ex}
+
+\task
+
+\emph{(а)} \st Зная, что $\displaystyle \int\limits_0^1 \dfrac{\logn{(1+x)}}{x} \, dx \, = \, \dfrac{\pi^2}{12}$, вычислите интеграл:
+$
+\quad \displaystyle \int\limits_0^1 \dfrac{\logn{(1 - x^3)}}{x} \, dx.
+$
+\vspace{0ex}
+
+\emph{(б)} \st Найдите интеграл $\quad \displaystyle \int\limits_0^1 \dfrac{\logn{(1 + x)}}{1 + x^2} dx.$
+\vspace{-2ex}
+
+\task \st
+
+\emph{(а)} Докажите, что
+$\quad \displaystyle
+\llim{n}{\infty} \sum \limits_{k=1}^n \dfrac{n}{n^2 + k^2} = \llim{n}{\infty} \dfrac{1}{n^2} \sum\limits_{k=1}^n \sqrt{n^2 - k^2} \, = \, \dfrac{\pi}{4}.
+$
+\vspace{1ex}
+
+\emph{(б)} Пусть $\{\eps_n\}_{n=1}^{\infty} - $ последовательность положительных вещественных чисел таких, что $\llim{n}{\infty}\eps_n = 0.$ Найдите предел:
+$
+\quad \displaystyle \llim{n}{\infty} \dfrac{1}{n} \sum\limits_{k=1}^n \logn\left(\dfrac{k}{n} + \eps_n\right).
+$
+
+\vspace{-2ex}
+\task \st Определим \emph{классические многочлены Лежандра}, следующим образом: $P_n(x)~=~\dfrac{1}{2^n n!} \, \dfrac{d^n (x^2 - 1)^n}{dx^n}$. Докажите, что для любых натуральных $m$ и $n$ выполняется равенство:
+$$
+\intt{-1}{1} P_m(x) \, P_n(x) \, dx \, = \, \dfrac{2}{2n + 1} \, \delta_{mn},
+$$
+где $\delta_{mn}$ - \emph{символ Кронекера}.
+\index{Многочлены Лежандра}
+\index{Символ Кронекера}
+
+\vspace{-2ex}
+\task \st Докажите, что существует многочлен $P(x)$ такой, что для любого натурального числа $n$ выполнено: \quad $\displaystyle \intt{n-1}{n} P(x) \, dx \, = \, n^4.$ \quad Найдите сумму: $\;\;\displaystyle \sum\limits_{k=1}^{n} k^4.$
+
+\vspace{-2ex}
+\task \st Пусть $C(\alpha) - $ коэффициент при $x^{2012}$ в разложении по формуле Маклорена функции $(1 + x)^{\alpha}.$ Вычислите интеграл:
+\vspace{-2ex}
+
+$$
+\intt{0}{1} C(-y-1) \left(\dfrac{1}{y+1} + \ldots + \dfrac{1}{y + 2012}\right) \, dy.
+$$
+\vspace{-4ex}
+
+\task \st Определите все непрерывные на $[0; +\infty)$ и положительные на $(0; +\infty)$ функции, удовлетворяющие для $\forall x > 0$ условию:
+\vspace{1ex}
+
+\emph{(а)} $\displaystyle 2x \intt{0}{x} f(t) dt = f(x);$ \hspace{22ex}
+\emph{(б)} $\displaystyle \sin{\left(\intt{0}{x} f(t) dt\right)} \, = \, \dfrac{x}{1+x}.$
+\vspace{-2ex}
+
+\task \st Пусть $h(x) \in C[a, \,b], \; h(x) > 0$ и $\displaystyle h_n = \int\limits_a^b x^n h(x) \; dx$. Докажите, что при любом натуральном $m$:
+$$
+\textbf{det} \; \begin{vmatrix}
+h_0 & h_1 & \ldots & h_{m-2} & h_{m-1}\\
+h_1 & h_2 & \ldots & h_{m-1} & h_m\\
+\ldots & \ldots & \ldots & \ldots & \ldots \\
+h_{m-2} & h_{m-1} & \ldots & h_{2m-4} & h_{2m-3} \\
+h_{m-1} & h_m & \ldots & h_{2m-3} & h_{2m-2}
+\end{vmatrix} \; \neq \; 0.
+$$
+
+
+
+%\end{document}

@@ -1,0 +1,222 @@
+%\vmshbanner
+\papertitle{Оценки интегралов. Теоремы о среднем}{32}{29 февраля}{12}
+\addcontentsline{toc}{section}{32. Оценки интегралов. Теоремы о среднем}
+\vspace{1ex}
+
+\hspace{-3.5ex}\underline{\textbf{Определение:}} Пусть функция $f$ интегрируема на отрезке $[a; b]$, тогда выражение $ \displaystyle M[f]~=~\dfrac{1}{b-a} \int\limits_a^b f(x) \, dx$ называется \emph{средним значением функции $f$ на $[a; b]$.}
+\index{Среднее значение функции}
+
+\vspace{2ex}
+
+\hspace{-3.5ex}\underline{\textbf{Утверждение:}} Если функция $f$ непрерывна на отрезке $[a; b],$ то $\exists \xi \in (a; b),$ такое что $M[f]~=~f(\xi).$
+
+\vspace{2ex}
+
+\hspace{-3.5ex}\underline{\textbf{Теорема}} \emph{(Первая теорема о среднем)}: Пусть выполнено:
+\begin{enumerate}
+\item $f$ и $\varphi$ интегрируемы на $[a; b]$;
+\item $\varphi$ знакопостоянна на $[a; b]$;
+
+Тогда $\displaystyle \exists \mu \in \Bigl[\inf\limits_{[a; b]}f(x); \, \sup\limits_{[a; b]}f(x)\Bigr] \,,\text{что} \; \int\limits_a^b f(x) \, \varphi(x) \, dx \, = \, \mu \int\limits_a^b  \varphi(x) \, dx.$
+\item если, дополнительно, функция $f$ непрерывна на $[a; b],$ то $\exists \xi \in [a; b] \,,\text{такое что} \; \mu = f(\xi).$
+\end{enumerate}
+\index{Теорема!о среднем первая и вторая}
+\vspace{2ex}
+
+\hspace{-3.5ex}\underline{\textbf{Теорема}} \emph{(Вторая теорема о среднем)}: Пусть выполнено:
+\begin{enumerate}
+\item $f$ и $\varphi$ интегрируемы на $[a; b]$;
+\item $\varphi$ монотонна на $[a; b]$;
+
+Тогда $\displaystyle \exists \xi \in [a; b] \,,\text{что} \;  \int\limits_a^b f(x) \, \varphi(x) \, dx \, = \, \varphi(a) \int\limits_a^{\xi}  f(x) \, dx \, + \, \varphi(b) \int\limits_{\xi}^{b}  f(x) \, dx.$
+\item если $\displaystyle \varphi(x) \ge 0, \;\; \varphi(x) \searrow,$ то $\displaystyle \exists \xi_1 \in [a; b] \,,\text{что} \;  \int\limits_a^b f(x) \, \varphi(x) \, dx \, = \, \varphi(a) \int\limits_a^{\xi_1}  f(x) \, dx.$
+\item если $\displaystyle \varphi(x) \ge 0, \;\; \varphi(x) \nearrow,$ то $\displaystyle \exists \xi_2 \in [a; b] \,,\text{что} \;  \int\limits_a^b f(x) \, \varphi(x) \, dx \, = \, \varphi(b) \int\limits_{\xi_2}^b  f(x) \, dx.$
+\end{enumerate}
+\vspace{1ex}
+
+\hspace{-3.5ex}\underline{\textbf{Замечание}}: Последние две формулы иногда называют \emph{формулами Бонне}.
+\index{Формула!Бонне}
+
+
+\vspace{4ex}
+\hrule
+\vspace{1ex}
+
+\task \dem{2316} Определите знаки следующих определённых интегралов:
+\vspace{2ex}
+
+\emph{(а)} $\displaystyle \int\limits_0^{2\pi} x \, \sin{x} \, dx$; \hspace{9ex}
+\emph{(б)} \cw $\displaystyle \int\limits_0^{2\pi} \dfrac{\sin{x}}{x} \, dx$; \hspace{9ex}
+\emph{(в)} $\displaystyle \int\limits_{-2}^2 x^3 2^x \, dx$;
+\vspace{1ex}
+
+\emph{(г)} $\displaystyle \int\limits_0^{2\pi} x^a \, \sin{x} \, dx, \quad a > 0$; \hspace{12ex}
+\emph{(д)} $\displaystyle \int\limits_0^{2\pi} x^{a+1}\, \cos{x} \, dx, \quad a > 0$.
+
+\task\dem{2317} Определите, какой интеграл больше:
+\vspace{2ex}
+
+\emph{(а)} $\displaystyle \int\limits_0^{\pi/2} \sin^{10}{x} \, dx \;$ или $\displaystyle \; \int\limits_0^{\pi/2} \sin^{2}{x} \, dx$; \hspace{15ex}
+\emph{(б)} $\displaystyle \int\limits_0^1 e^{-x} \, dx \;$ или $\; \displaystyle \int\limits_0^1 e^{-x^2} \, dx$;
+\vspace{2ex}
+
+\emph{(в)} \cw $\displaystyle \int\limits_0^{\pi} e^{-x^2}\cos^{2}{x} \, dx \;\;$ или $\;\; \displaystyle \int\limits_{\pi}^{2 \pi} e^{-x^2}\cos^{2}{x} \, dx$.
+
+\task\dem{2319} Найдите среднее значение функции $f$ на заданном сегменте:
+\vspace{3ex}
+
+\emph{(а)} $f(x)=\textmd{sgn}\,x$ на $[-1;2]$; \hspace{15ex}
+\emph{(б)} \cw $f(x) = \sin{x} \cdot \sin{(x + \varphi)}$ на $[0; 2\pi]$;
+\vspace{4ex}
+
+\emph{(в)} $f(x)= \dfrac{2}{e^x+1}$ на $[0;2]$;
+\vspace{4ex}
+
+\emph{(г)} \cw $f(x)=\dfrac{\rho}{1 - \varepsilon \cos{x}}$ на $[0; 2\pi], \; 0<\varepsilon<1$ \;\; ($\varepsilon$ - \emph{среднее значение длины фокального радиуса вектора эллипса}).
+\index{Среднее значение длины фокального радиуса вектора эллипса}
+
+\task \dem{2323, 2324, 3228, 2330}
+
+Пользуясь теоремами о среднем, оцените интегралы:
+\vspace{2ex}
+
+\emph{(а)} $\displaystyle \int\limits_{0}^{2 \pi} \dfrac{dx}{1 + 0,5 \, \cos{x}}$; \hspace{12ex}
+\emph{(б)} \cw $\displaystyle \int\limits_{0}^1 \dfrac{x^9}{\sqrt{1 + x}} \, dx$; \hspace{12ex}
+\emph{(в)} $\displaystyle \int\limits_{100 \pi}^{200 \pi} \dfrac{\sin{x}}{x} \, dx$;
+\vspace{2ex}
+
+\emph{(г)} $\displaystyle \int\limits_a^b \sin{x^2} \, dx, \quad (0 < a < b);$ \hspace{9ex}
+\emph{(д)} $\displaystyle \int\limits_a^b \dfrac{e^{- \alpha x}}{x} \, \sin{x} \, dx, \quad (\alpha \ge 0, \;\; 0 < a < b);$
+
+\begin{wrapfigure}{r}{155pt}
+\vspace{4ex}
+\hspace{-25.5ex}
+\includegraphics[width=0.6\textwidth]{ris_32a.jpg}
+\end{wrapfigure}
+
+\task Докажите следующие неравенства:
+\vspace{2ex}
+
+\emph{(а)} $\displaystyle \dfrac{1}{20 \sqrt{2}} \, < \, \int\limits_{0}^1 \dfrac{x^{19}}{\sqrt{1 + x^2}} \, dx \, < \, \dfrac{1}{20};$
+\vspace{3ex}
+
+\emph{(б)} \cw $\displaystyle \dfrac{1}{2} \, < \, \int\limits_{0}^1 \dfrac{2 x}{1 + x^{13}} \, dx \, < \, 1;$
+\vspace{3ex}
+
+\emph{(в)} $\displaystyle \dfrac{1}{2} \, < \, \int\limits_{0}^{1/2} \dfrac{dx}{\sqrt{1 - x^{2n}}} \, < \, \dfrac{\pi}{6}, \quad n \in \mathds{N};$
+\vspace{3ex}
+
+\begin{wrapfigure}{r}{0pt}
+\end{wrapfigure}
+
+\emph{(г)} $\displaystyle \dfrac{2}{3} \, < \, \int\limits_{0}^1 e^{-x^2} \, dx \, < \, \dfrac{\pi}{4};$ \hspace{10ex}
+\emph{(д)} $\displaystyle \dfrac{4}{9} (e - 1) \, < \, \int\limits_{0}^1 \dfrac{e^x}{(x + 1)(2 - x)} \, dx < \dfrac{1}{2} (e - 1).$
+
+\task \dem{2322}
+Пусть $\displaystyle \int\limits_0^x f(t) \, dt \, = \, x \, f(\theta \cdot x).$ Найти $\theta,$ если:
+\vspace{2ex}
+
+\emph{(а)} $f(t) = t^n, \;\; (n > -1)$; \hspace{10ex}
+\emph{(б)} $f(t) = \logn{t}$;
+\vspace{3ex}
+
+\emph{(в)} $f(t) = e^t, \qquad \llim{x}{0} \theta(x) = ?, \;\;\; \llim{x}{\infty} \theta(x) = ?$
+
+\task \dem{2321, 2233}
+\pnt \cw Пусть $f$ непрерывна на $[0; \, + \infty)$ и $\llim{x}{+ \infty} f(x) \, = \, A.$ Найдите $\displaystyle \llim{x}{+\infty} \dfrac{1}{x} \int\limits_0^x f(t) \, dt.$ Рассмотрите пример $f(x) = \textmd{arctg} x.$
+
+\pnt Пусть $f$ непрерывна на $[0; \, + \infty)$ и $\llim{x}{+ \infty} f(x) \, = \, A.$ Найдите $\displaystyle \llim{n}{+ \infty} \int\limits_0^1 f(n x) \, dx;$
+
+\pnt Пусть $f$ и $g$ непрерывны на $[0; \, + \infty),$ причём $\llim{x}{+ \infty} f(x) = a, \;\; \llim{x}{+ \infty} x \cdot g(x) = b.$ Вычислите предел $\displaystyle \llim{x}{+ \infty} \Bigl(g(x) \cdot \int\limits_0^x f(t) \, dt \Bigr)$;
+
+\pnt Приведите пример непрерывной на $[0; + \infty)$ функции $g$, для которой существует предел $\displaystyle \llim{x}{+ \infty} \Bigl[\dfrac{1}{x} \, \int\limits_0^x g(t) \, dt\Bigr],$ но не существует $\llim{x}{+ \infty} g(x)$;
+
+\pnt Пусть функции $f$ и $g$ непрерывны на $[0; 1),$ причём:
+\vspace{2ex}
+
+\textbf{\emph{1)}} для $\forall x \in [0; 1] \;\; g(x) > 0;$ \hspace{7ex}
+\textbf{\emph{2)}} $\displaystyle \llim{x}{1-0} \, \int\limits_0^x g(t) \, dt= + \infty$; \hspace{7ex}
+\textbf{\emph{3)}} $\llim{x}{1-0} \, \dfrac{f(x)}{g(x)}=a.$
+
+Докажите, что $\quad \llim{x}{1-0} \, \displaystyle \int\limits_0^x\, f(t) \, dt \cdot \left(\displaystyle \int\limits_0^x\, g(t) \, dt \right)^{\!\!\!-1} \! = \; a.$
+
+\task\dem{2332}
+\pnt Пусть $f$ непрерывно дифференцируемая на отрезке $[a; b]$ функция, $\, f(a)=0,$ $\, M~=~\sup\limits_{[a;b]} |f(x)|$. Докажите, что
+\vspace{-2ex}
+
+$$\quad M^2 \leqslant (b-a)\int\limits_a^b [f'(x)]^2 \, dx.$$
+
+\pnt Пусть функция $f$ непрерывна на отрезке $[a; b]$ и найдутся такие числа $M, \delta > 0, $ что для любых $\alpha, \beta \;\; (a \le \alpha < \beta \le b)$ выполнено:
+$
+\displaystyle \left|\int\limits_{\alpha}^{\beta} f(x) \, dx \right| \, \le M \cdot |\beta - \alpha|^{1 + \delta}.
+$
+Докажите, что $f(x) \equiv 0$ на $[a; \, b].$
+
+\task Вычислите пределы:
+\vspace{1ex}
+
+\emph{(а)} $\displaystyle \llim{n}{\infty} \int\limits_0^{\pi/2} \sin^n{x} \, dx;$
+\vspace{2ex}
+
+\emph{(б)} \cw $\displaystyle \llim{\varepsilon}{0 + 0} \int\limits_{a \varepsilon}^{b \varepsilon} \dfrac{f(x)}{x}\, dx, \;$ \emph{где} $\;\; a > 0, \;\; b > 0\,$ и $\,f(x) - $ \emph{непрерывна на }$[0; 1]$;
+\vspace{2ex}
+
+\emph{(в)} $\displaystyle \llim{n}{\infty} \int\limits_n^{n + p} \dfrac{\sin{x}}{x} \, dx, \;\; p > 0;$ \hspace{10ex}
+\emph{(г)} $\displaystyle \llim{n}{\infty} \left( n^4 \int\limits_n^{n+1} \dfrac{x}{1 + x^5} \, dx \right).$
+
+\begin{wrapfigure}{r}{155pt}
+\vspace{-11ex}
+\hspace{-10ex}
+\includegraphics[width=0.45\textwidth]{ris_32b.jpg}
+\end{wrapfigure}
+
+\task \st Пусть $\quad f(x) = \begin{cases}
+\cos{1/x}, &\text{при $x > 0$;}\\
+\;\;\;\;\,0,&\text{при $x = 0$,}
+\end{cases}
+$
+\vspace{1ex}
+
+и $F(x) := \displaystyle \int\limits_0^x f(u) \, du, \;\; x \ge 0.$ Вычислите $F^{\prime}(0).$
+
+\begin{wrapfigure}{r}{0pt}
+\end{wrapfigure}
+
+\vspace{-2ex}
+\task \st Найдите предел
+$
+\quad \displaystyle \llim{\varepsilon}{0 + 0} \int\limits_{\varepsilon}^1 u^{a - 1} \, \logn{u} \, du \;
+$
+для положительного $a$.
+
+\task \st Пусть $f$ и $g$ -- две непрерывные функции, переводящие отрезок $[0; 1]$ в отрезок $[0; 1]$. Причём известно, что $f$ строго возрастает. Докажите, что
+$$
+\intt{0}{1} f\big(g(x)\big) \, dx \le \intt{0}{1} \big(f(x) + g(x)\big) \, dx.
+$$
+
+\vspace{-2ex}
+\task \st Пусть $\;\;\; f$ -- непрерывная функция, действующая из $[0; 1]$ в $\mathds{R}$ такая, что для $\forall x, y \in [0; 1]$ выполняется неравенство: $\;\; x f(y) + y f(x) \le 1.$
+
+\pnt Докажите, что $\displaystyle \intt{0}{1} f(x) dx \le \dfrac{\pi}{4}.$
+
+\pnt Найдите функцию, которая данное неравенство обращает в тождество.
+
+\vspace{-2ex}
+\task \st Пусть $0 < a < b.$ Докажите, что
+$
+\quad \displaystyle \intt{a}{b} (x^2 + 1) \, e^{-x^2} dx \; \ge \; e^{-a^2} - e^{-b^2}.
+$
+
+%\vspace{-3ex}
+%\task \st Даны непрерывные функции $f(x), g(x) : [0; 1] \mapsto [0; 1],$ причём известно, что функция $f(x)$ строго возрастает. Докажите, что
+%$
+%\quad \displaystyle \intt{0}{1} f\big(g(x)\big) dx \; \le \; \intt{0}{1} \big(f(x) + g(x) \big) \, dx.
+%$
+
+\vspace{-2ex}
+\task \st Для возрастающих функций $f, g : [0; \pi/2] \mapsto \mathds{R}$ докажите неравенство
+$$
+\intt{0}{\pi/2} f(x) g(x) \sin{x} \, dx \ge \intt{0}{\pi/2} f(x) \sin{x} \, dx \cdot \intt{0}{\pi/2} g(x) \sin{x} \, dx.
+$$
+
+%\end{document}
