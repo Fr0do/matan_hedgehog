@@ -161,11 +161,13 @@
 }%
 
 \renewcommand{\thepart}{\arabic{part}}
+\font\myfont=cmr12 at 35pt
+
 
 \titleformat{\part}[hang]{{\thispagestyle{fancypart}}\Huge\bfseries}{\marginnote{
 \begin{tcolorbox}[width=\marginparwidth,height=\marginparwidth/2,colback=black!75!white,colframe=black!75!white,center title,fonttitle=\bfseries\normalsize,title=ЛИСТОК,text fill]
   \begin{center}
-  {\color{white}\thepart}
+  {\color{white}\myfont{\thepart}}
   \end{center}
 \end{tcolorbox}
 }[-1.25in]}{0pt}{\sffamily\Huge\bfseries}
@@ -175,6 +177,12 @@
     {\textwidth+\marginparwidth+\marginparsep}\hrule\smallskip\smallskip}
     {\hrule\end{minipage}\vspace{.1in}}
 
+
+
+
+
+\newcounter{propositioncount}
+\setcounter{propositioncount}{1}
 
 % ----------------------------------------------------------------------
 %           User Created Environments
@@ -188,9 +196,11 @@
   {}%
   {\small\bf\sffamily}%
   {.}%
-  { }%
+  {\newline}%
   {}%
+  
 
+  
 \newtheoremstyle{commentstyle}%
   {}%
   {}%
@@ -231,16 +241,17 @@
   { }%
   {}%
 
+
 % Boxed/framed environments
 \newtheoremstyle{greynumbox}% Theorem style name
-{0pt}% Space above
-{0pt}% Space below
+{5pt}% Space above
+{5pt}% Space below
 {\normalfont}% Body font
 {}% Indent amount
 {\small\bf\sffamily\color{greygreen}}% Theorem head font
-{\;}% Punctuation after theorem head
+{\;\newline}% Punctuation after theorem head
 {0.25em}% Space after theorem head
-{\small\sffamily\bf\color{black}\thmname{#1}\nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}.}% Theorem text (e.g. Theorem 2.1)
+{\small\sffamily\bf\color{black}\thmname{#1}\nobreakspace\thmnumber{\arabic{propositioncount}\addtocounter{propositioncount}{1}.}% Theorem text (e.g. Theorem 2.1)
 \thmnote{\nobreakspace\the\thm@notefont\sffamily\itshape\color{black}(#3).}} % Optional theorem note
 
 
@@ -261,13 +272,14 @@
 %	REMARK ENVIRONMENT
 %----------------------------------------------------------------------------------------
 
-\newenvironment{remark}{\par\vspace{10pt}\small % Vertical white space above the remark and smaller font size
-\begin{list}{}{
-\leftmargin=35pt % Indentation on the left
-\rightmargin=25pt}\item\ignorespaces % Indentation on the right
-\makebox[-2.5pt]{\begin{tikzpicture}[overlay]
-\node[draw=darkgreen,line width=1pt,circle,fill=black!15,font=\sffamily\bfseries,inner sep=2pt,outer sep=0pt] at (-15pt,0pt){\textcolor{darkgreen}{Зам.}};\end{tikzpicture}} % Orange R in a circle
-\advance\baselineskip -1pt}{\end{list}\vskip5pt} % Tighter line spacing and white space after remark
+%\newenvironment{remark}{ % Vertical white space above the remark and smaller font size
+%\begin{list}{}{ \textbf{Замечание.}
+%\leftmargin=0pt % Indentation on the left
+%\rightmargin=25pt}\item\ignorespaces % Indentation on the right
+%{\begin{tikzpicture}
+%{\textcolor{darkgreen}{Зам.}};\end{tikzpicture}} % Orange R in a circle
+
+%\advance\baselineskip -1pt}{\end{list}\vskip5pt} % Tighter line spacing and white space after remark
 
 \newenvironment{remarknb}{\par\vspace{10pt}\small % Vertical white space above the remark and smaller font size
 \begin{list}{}{
@@ -315,6 +327,10 @@
 }
 
 \theoremstyle{mystyle}{
+  \newtheorem*{remark}{Замечание}%[section]
+}
+
+\theoremstyle{mystyle}{
   \newtheorem{definitionnum}{Определение}%[section]
 }
 
@@ -327,7 +343,7 @@
 }
 
 \theoremstyle{greynumbox}{
-  \newtheorem{proposition}{Утверждение}[part]
+  \newtheorem{proposition}{Утверждение}[part] 
 }
 
 %\theoremstyle{queststyle}{
@@ -354,9 +370,9 @@
   \newtheorem*{exercise}{Упражнение}
 }
 
-\theoremstyle{definition}{
+\theoremstyle{remark}{
     \newtheorem{problem}{Задача}[part]}
-
+	
 \theoremstyle{commentstyle}{
   \newtheorem*{Comment}{}
 }
@@ -631,7 +647,7 @@
   enhanced jigsaw,
   borderline west={1pt}{0pt}{blue},
   sharp corners,
-  before skip=10pt,
+  before skip=25pt,
   after skip=10pt,
   breakable,
 }
@@ -675,14 +691,16 @@
 \tcolorboxenvironment{remark}{
   boxrule=0pt,
   boxsep=2pt,
-  blanker,
-  borderline west={2pt}{0pt}{white},
+  colback=greygreen,
+  enhanced jigsaw,
+  borderline west={1pt}{0pt}{Red},
+  sharp corners,
   before skip=10pt,
   after skip=10pt,
-  left=12pt,
-  right=12pt,
   breakable,
 }
+
+
 
 \tcolorboxenvironment{remarknb}{
   boxrule=0pt,
