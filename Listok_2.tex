@@ -1,0 +1,319 @@
+\documentclass[10pt]{article}
+\pdfoutput=1
+\usepackage{Listo4ki}
+
+
+\begin{document}
+
+\setcounter{footnote}{0}
+
+\setcounter{section}{0}
+
+\setcounter{part}{1}
+	%\maketitle
+	\flushbottom
+	\newpage
+	\pagestyle{fancynotes}
+	\part[Ограниченные и неограниченные, счетные и несчетные числовые множества. Точные верхние и нижние грани.]{Ограниченные и неограниченные, счетные и несчетные числовые множества. Точные верхние и нижние грани.}
+	\begin{margintable}\vspace{.8in}\footnotesize
+		\begin{tabularx}{\marginparwidth}{|X}
+		Секция~\ref{sec:theory_9}. Теория\\
+		Секция~\ref{sec:problems_9}. Задачи\\
+		%Section~\ref{sec:license}. Margins\\
+		\end{tabularx}
+	\end{margintable}
+	\section[Теория]{Теория}\label{sec:theory_9}
+
+\begin{definition}
+
+$ \{X\}$ ограничено сверху, если $\exists С:  \forall x \in \{X\} \Longrightarrow x \leqslant C$ (C - верхняя грань множества)
+
+$ \{X\}$ ограничено снизу, если $\exists c:  \forall x \in \{X\} \Longrightarrow x \geqslant с$ (с - нижняя грань множества)
+
+$ \{X\}$ ограничено, если $\exists c:  \forall x \in \{X\} \Longrightarrow |x| \leqslant C$
+\end{definition}
+
+\begin{proposition}
+$ \{X\}$ ограничено $\Longleftrightarrow$, когда  $\{X\}$ ограничено сверху и снизу
+\end{proposition}
+
+
+\begin{definition}
+
+$M^*\!=\sup\{X\}$, если \, \textbf{1)}  $\forall x \in \{X\}, x\leqslant  M^*$; \, \textbf{2)} $\forall \varepsilon >0 ~ \exists x' \in \{X\}: x'>M^*-\varepsilon$
+
+Супремум - наименьшая верхняя грань $\{X\}$;
+
+$M_*\!=\inf\{X\}$, если \,\textbf{1)} $\forall x \in \{X\}, x\geqslant  M_*$;  \, \textbf{2)} $\forall \varepsilon >0 ~ \exists x' \in \{X\}: x'<M_*-\varepsilon$
+
+ Инфимум - наибольшая нижняя грань $\{X\}$.
+\end{definition}
+
+\begin{definition}
+
+Если $\exists x^* \in \{X\}: \forall x\in\{X\} \Longrightarrow x \leqslant x^*$, то $x^*$ называется наибольшим элементом $\{X\}$  ($x^*\!=\max\{X\}$).
+
+Если $\exists x_* \in \{X\}: \forall x\in\{X\} \Longrightarrow x \geqslant x_*$, то $x_*$ называется наименьшим элементом $\{X\}$  ($x_*\!=\min\{X\}$)
+
+\end{definition}
+
+\begin{remark}
+%Отличие\textbf{ sup} и\textbf{ inf} от \textbf{max} и \textbf{min}
+Точная верхняя (нижняя) грань может быть и не достижима. Т.е. $\nexists x \in \{X\}$, такого что $x\!=\sup\{X\}$ ($x\!=\inf\{X\}$). $\max \{X\}$ и $\min\{X\}$, если они существуют, напротив всегда принадлежит множеству $ \{X\}$.
+
+
+С другой стороны, если $\exists \max\{X\}$, то $\sup\{X\}\!=\max\{X\}$ (если $\exists \min\{X\}$, то $\inf\{X\}\!=\min\{X\}$)
+\end{remark}
+
+
+\section[Задачи]{Задачи.}\label{sec:problems_9}
+
+\begin{problem}
+\emph{} Пусть $\{r\}=\{r \in \mathbb{Q}  |  r^2<2\}$. Найти $\sup\{r\},\inf\{r\}$
+
+\end{problem}
+\begin{solution}
+ $r^2<2 \Longleftrightarrow {-\sqrt 2<r<\sqrt 2} \cap \mathbb{Q} = \{r\} $ \newline
+Докажем, что $\inf\{r\}=-\sqrt2$ 1) $-\sqrt2<r$, для $\forall r \in \{r\}$
+2) $\forall \epsilon \exists r^{''} \in \{r\}: r^{''} < -\sqrt 2 + \epsilon $, т.к. между двумя произвольными действительными числами всегда найдется рациональное число. Можно доказать, что $\inf\{r\} \notin \{r\}$, т.е.$ -\sqrt2 \notin \mathbb{Q}$.
+
+\medskip
+
+ Рассмотрим аналогичную задачу: $\sqrt2 \notin \mathbb{Q}$. Допустим это не так, и есть дроби, в квадрате равные 2. Выберем среди них дробь с наименьшим знаменателем. Пусть эта дробь есть $n/2$. Тогда $m^2/n^2=2 \leftrightarrow m^2=2n^2 \rightarrow m$ - четное число (т.к. квадрат нечетного числа есть число нечетное). $m=2k \rightarrow (2k)^2=2n^2 \leftrightarrow 2k^2=n^2 \rightarrow k<n$ и $(n/k)^2=2.$ Следовательно, m/n не является дробью с нашим знаменателем.
+
+\footnote{ Аналогично доказывается, что $\sup\{r\}=\sqrt2.$}
+
+
+
+\end{solution}
+
+\begin{problem}
+
+Пусть $\{x\} \subset \{y\}$. Доказать, что \emph{\textbf{a)}}  $\sup\{x\} \leq\{y\}$
+
+\medskip
+
+\emph{\textbf{б)}} $\inf\{x\} \geq \inf\{y\}$
+
+
+\end{problem}
+\begin{solution}
+\emph{\textbf{a)}} Предположим, что $\sup\{x\}>\sup\{y\}$. Следовательно, $\exists x_0 \in (\sup\{x\};\sup\{y\})$;
+
+$x_0>\sup\{y\}$, но т.к. $\{x\} \subset \{y\}$, то $x_0 \in \{y\}$. Поэтому $\exists x_0 \in \{y\}: x_0>\sup\{y\}.$ - Противоречие
+
+\medskip
+
+\emph{\textbf{б)}}
+От противного, аналогично пункту "a"
+\end{solution}
+
+
+\begin{problem}
+
+Пусть $A=\{x\}\cup\{y\}, B=\{x\}\cap\{y\}$. Доказать, что
+
+\medskip
+
+\emph{\textbf{а)}} $\sup{A} = \max \{\sup\{x\};\sup\{y\}\}$.
+
+\medskip
+
+\emph{\textbf{б)}} $\sup{B} \leq \min \{\sup\{x\};\sup\{y\}\}$.
+
+\medskip
+
+\emph{\textbf{в)}} $\inf{A} = \min \{\inf\{x\};\inf\{y\}\}$.
+
+\end{problem}
+
+\begin{solution}
+\emph{\textbf{а)}} $\forall$ a $\in$ A $\rightarrow$ %система
+
+$\rightarrow a \leq\max \{\sup\{x\};\sup\{y\}\}$
+
+\medskip
+
+Далее, $\forall \epsilon >0 \exists x^{'}  \in \{x\} : x^{'}> \sup \{x\} - \epsilon , \exists y^{'} >\sup\{y\} - \epsilon $.
+
+Выберем $a^{'}=\max \{x^{'};y^{'}\} \rightarrow a^{'} > \max \{\sup\{x\};\sup\{y\}\} - \epsilon $ для $ \forall \epsilon>0 $.
+
+В заключении заметим, что $a^{'}\in$ A.
+
+\medskip
+
+\emph{\textbf{б)}} $\forall b \in B \rightarrow$ %система
+
+$\rightarrow b \leq \min \{\sup\{x\};\sup\{y\}\} \rightarrow$ (т.к. b - произвольный элемент) $\sup \leq\min \{\sup\{x\};\sup\{y\}\}$.
+
+\medskip
+
+\emph{\textbf{в)}} $\inf A = \min \{\inf\{x\};\inf\{y\}\}$.
+
+\end{solution}
+
+
+
+\begin{problem}
+Пусть {x} - огр. множество; $\{-x\}$ - множество чисел, противоположных числам $x \in \{x\}$
+
+\emph{\textbf{а)}} Выразить $\inf\{-x\}$ через $\sup\{x\}$.
+
+\emph{\textbf{б)}} Выразить $\sup\{-x\}$ через $\inf\{x\}$
+
+\end{problem}
+
+\begin{solution}
+
+\emph{\textbf{а)}} Т.к. множество $\{x\}$ - огр. сверху, то $\{-x\}$ - огр. снизу $\rightarrow \exists \inf \{-x\}$
+
+$x\in \{x\} \rightarrow x \leq \sup \{x\}$ %звезда
+
+$\forall \epsilon >0 \exists x^{'} \in \{x\}: x^{'}>\sup\{x\}-\epsilon $. %звезда
+
+Домножим (*) и (**) на (-1), получим"
+
+$-x \geq -\sup\{x\}$, где -x - произвольный элемент из $\{-x\}$.
+
+$\exists -x^{'} \in \{-x\}: -x^{'} < -\sup\{x\}+\epsilon$, где $-x^{'}$ - число, противоположное элементу x.
+
+Из (*') и (**') вытекает, что $-\sup\{x\}=\inf\{-x\}$.
+
+\emph{\textbf{б)}} Аналогично пункту "а" доказывается, что $-\inf\{x\}=\sup\{-x\}$.
+
+\end{solution}
+
+
+
+\begin{problem}
+Пусть $\{x+y\}$ - множество всех сумм $x+y$, где $x \in \{x\},y\in\{y\}$.
+
+Доказать равенства:
+
+\emph{\textbf{а)}} $\inf\{x+y\}=\inf\{x\}+\inf\{y\}$.
+
+\emph{\textbf{б)}} $\sup \{x+y\}=\sup\{x\}+\sup\{y\}$.
+\end{problem}
+
+\begin{solution}
+
+\emph{\textbf{а)}} $\rightarrow \forall(x+y)\in\{x+y\} (x+y)\geq X_* + Y_* + \epsilon$
+
+$\rightarrow \exists(x'+y')\in\{x+y\}: (x'+y')< X_* + Y_*$
+
+$\rightarrow X_* + Y_* = \inf\{x+y\}$
+
+\emph{\textbf{б)}} Доказательство аналогично пункту "а", заменяя inf на sup и знаки на противоположные.
+
+\end{solution}
+
+
+
+\begin{problem}
+Пусть $\{xy\}$ - множество всех произведений xy, где $x \in \{x\},y \in \{y\};$ причем $x\leq 0,y\leq 0$ Доказать равенства:
+
+\emph{\textbf{а)}} $\inf\{xy\}=\inf\{x\}\cdot\inf\{y\}=X_*\cdot Y_*$.
+
+\emph{\textbf{б)}} $\sup\{xy\}=\sup\{x\}\cdot\sup\{y\}=X^*\cdot Y^*$.
+\end{problem}
+
+\begin{solution}
+\emph{\textbf{а)}} Аналогично задаче 5, доказываем для $\forall (xy)\in\{xy\} (xy)\geq X_*\cdot Y_*$.
+
+Остается доказать, что $\forall \epsilon >0 \exists (x'y')\in\{xy\}: x'y'<X_* Y_* + \epsilon$.
+
+$\forall \epsilon_1 >0 \exists x' \in \{x\}: x'<X_*+\epsilon_1$,
+
+$\forall \epsilon_2>0 \exists y' \in \{y\}: y'<Y_* + \epsilon_2$.
+
+$\epsilon_1 \epsilon_2$ - в нашей власти, по ним мы строим $\epsilon_3=(Y_*\epsilon_1 + X_*\epsilon_2 + \epsilon_1 \epsilon_2)$:
+
+$\forall \epsilon > 0$ выбираем $\epsilon_1 \epsilon_2 : \epsilon_3$ будет меньше $\epsilon$. По ним находим числа 
+
+$x',y' : xy<X_*Y_* + X_*\epsilon_2 + Y_*\epsilon_1 + \epsilon_1 \epsilon_2 < X_*Y_* + \epsilon$.
+
+
+\emph{\textbf{б)}}
+$\forall(xy) \in \{xy\} (xy)\leq X^* Y^*$
+
+$\forall \epsilon_1 >0 \exists x'' \in \{x\}: x''>X^*-\epsilon_1$,
+
+$\forall \epsilon_2 >0 \exists y'' \in \{x\}: y''>Y^*-\epsilon_2$,
+
+$\forall \epsilon >0 \exists x''\cdot y'' \in \{xy\} : x''\cdot y'' > X^*Y^* - X^* \epsilon_2 - Y^*\epsilon_1 + \epsilon_1 \epsilon_2 > X^*Y^*-\epsilon$.
+\end{solution}
+
+
+
+\begin{problem}
+Показать, что множество всех правильных рациональных дробей $m/n$, где $m,n\in\mathbb{N}$ и $m<n$, не имеет наименьшего и наибольшего элементов. Найти точные нижнюю и верхнюю грани этого множества
+\end{problem}
+
+\begin{solution}
+Т.к. $0<m<n$, то $0<m/n<1$, для $\forall m/n \in \{m/n\}$. Но 0 и 1 $\notin \{m/n\}$, следовательно, множество $\{m/n\}$ не имеет наименьшего и наибольшего элементов.
+
+По следствию из Аксиомы Архимеда для $\forall \epsilon >0$ и $\forall m'' \in \mathbb{N} \exists n'' \in \mathbb{N} , n''>m'': n''>m''/\epsilon \rightarrow m''/n''<\epsilon$.
+
+Кроме того, $m''/n'' \in \{m/n\}$. Это вместе с тем, что $\forall m/n \in \{m/n\} 0<m/n$ дает $\inf\{m/n\}=0$. 
+
+Далее, $\forall \epsilon >0, \forall l \in \mathbb{N} \exists m' \in \mathbb{N}: m'> \frac{l(1-\epsilon)}{\epsilon} \leftrightarrow m'/{l+m'} < 1 - \epsilon$. Т.е. при $n'=l+m'$ (Заметим, что $n'>m'$, а значит $m'/n' \in \{m/n\})$ имеем $ m'/n' > 1- \epsilon$. Это вместе с тем, что 
+$\forall m'/n' \in \{m/n\}  m/n<1$ дает $\sup\{m/n\}=1$
+\end{solution}
+
+
+\begin{problem}
+\emph{\textbf{а)}}Доказать теорему Архимеда:
+
+Каково бы ни было действительное число a, существует такое натуральное число n, что n>a, т.е. $\forall a \in \mathbb{R} \exists n \in \mathbb{N}: n>a$.
+
+\emph{\textbf{б)}}Доказать следствие из теоремы Архимеда:
+
+Каковы бы ни были числа a и b, 0<a<b, существует такое натуральное число k, что $(k-1)a\leq b<ka$
+\end{problem}
+
+\begin{solution}
+\emph{\textbf{а)}} Предположим, что существует такое число a, что $\forall n 'in \mathbb{N} \rightarrow n \leq a$. Это означает, что число a ограничивает сверху множество $\mathbb{N}$. Поэтому, множество $\mathbb{N}$, как всякое непустое огр. сверху числовое множество имеет конечный sup. Введем обозначение $\beta = sup\{\mathbb{N}\}$
+
+Пскольку $\beta-1 <\beta$, то согласно определению sup найдется такое $n\in\mathbb{N}$, что $n>\beta -1 \rightarrow n+1>\beta$ и $n+1 \in \mathbb{N}$, что противоречит тому, что $\beta = sup\{\mathbb{N}\}$. Полученное противоречие показывает, что указанног числа a не существует.
+
+\emph{\textbf{б)}}Докажем сначала, что $\exists n \in \mathbb{N}$, что b<na
+
+Действительно, согласно теореме Архимеда для числа $\frac{b}{a}$ существует такое натуральное число n, что$ n>\frac{b}{a}$. Данное число n и будет искомым, т.к., умножая неравенство $n>\frac{b}{a}$ на положительное число a, получаем na>b.
+
+Далее заметим, что сегмент [0,na] содержит точку b. Разделим его на части точками a,2a,...,(n-1)a. на n сегментов. Одному из них принадлежит точка b. Следовательно, $\exists k \in \mathbb{N}: (k-1)a\leq b <ka$.
+\end{solution}
+
+\begin{problem} Непрерывность множества действительных чисел в смысле Кантора
+
+Докажите, что для всякой системы вложенных отрезков существует хотя бы одно число, которое принадлежит всем отрезкам данной системы.
+
+
+\end{problem}
+
+\begin{solution}
+Пусть $\lambda=\{[a_n;b_n]\}$ - система вложенных отрезков. В силу неравенства (*) множество $\{a_n\}$ всех левых концов отрезков системы $\lambda$ огр. сверху, например, числом $b_1$. Поэтому согласно теореме о существовании супремума, у множества $\{a_n\}$  существует супремум. Обозначим его $\alpha$. Т.к. правый конец $ b_n$ любого отрезка системы $\lambda$ в силу неравенств (*) огр. сверху множество $\{a_n\}$, а $\alpha$ является наименьшим из всеъ чисел, ограничивающих $\{a_n\}$ сверъу, то $\forall n=1,2,...$ выполняется неравенство $\alpha \leq b_n$. Это означает, что множество $\{b_n\}$ всех правых концов отрезков системы $\lambda$ огр. снизу, и поэтому у множества $\{b_n\}$ существует инфимум. Обозначим его $\beta$. Т.к. $\alpha$ - огр снизу множество $\{b_n\}$, а     $\beta=inf\{b_n\}$, то $\alpha \leq \beta$. Итак, имеем, что для $\forall n=1,2,...$ справедливы неравенства $a_n \leq \alpha \leq \beta \leq b_n$. Т.е. отрезок $[\alpha,\beta]$ содержится во всех отрезках системы $\alpha$.
+\end{solution}
+
+
+\begin{problem} Лемма Кантора
+Для всякой системы $[a_n;b_n], n=1,2,...$ вложенных отрезков с длинами, стремятся к 0, существует единственная точка $\xi$, принадлежащая всем отрезкам данной системы, причем $\xi=\sup\{a_n\}=\inf\{b_n\}$
+\end{problem}
+
+\begin{solution}
+$\alpha=\sup\{a_n\},\beta=\inf\{b_n\}$. Из задачи 9 следует, что $\forall=1,2,... \rightarrow a_n \leq \alpha \leq \beta \leq b_n$
+
+Поэтому, $[\alpha;\beta]\subset .$ Обратно, если $\exists x \in$, то $\forall n =1,2,...$ имеем $a_n \leq x \leq b_n$.
+
+Т.к. x ограничивает сверху множество $\{a_n\}$, а $\alpha=\sup\{a_n\}$, то $\alpha \leq x$. Аналогично показываем, что $x\leq \beta$. Т.о. $x \in [\alpha;\beta]$, т.е. $\rightarrow$.
+
+Далее, $\exists \epsilon >0$ - произвольное, но фиксированное число. Т.к. $[a_n;b_n]\rightarrow \Rightarrow \exists N(\epsilon): \forall n \geq \mathbb{N} \Rightarrow b_n - a_n$.
+
+Из (**) $\Rightarrow \beta-\alpha \leq b_n-a_n \Rightarrow 0 \leq \beta-\alpha < \epsilon, \forall \epsilon>0$. Это возможно лишь при $\alpha=\beta$. Если бы $\beta>\alpha$, то, например при $\epsilon=\beta-\alpha>0$ указанное неравенство превратилось бы в неверное
+
+утверждение $\beta-\alpha<\beta-\alpha$. Т.е. отрезок $[\alpha;\beta]$ в этом члучае превращается в точку, которую обозначим через   $\xi=\alpha=\beta$ 
+
+В силу формулы (***) это и означает, что существует лишь единственная точка $\xi$, принадлежащая всем отрезкам $[a_n;b_n], n=1,2,...$
+\end{solution}
+
+
+\end{document}
