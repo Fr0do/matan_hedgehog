@@ -1,0 +1,479 @@
+\documentclass[10pt]{article}
+\pdfoutput=1
+\usepackage{Listo4ki}
+\usepackage{urait_book}
+
+\begin{document}
+
+\setcounter{footnote}{0}
+
+\setcounter{section}{0}
+
+\setcounter{part}{29}
+	%\maketitle
+	\flushbottom
+	\newpage
+	\pagestyle{fancynotes}
+	\part[Определённый интеграл. Основные понятия]{Определённый интеграл. \newline Основные понятия}
+	\begin{margintable}\vspace{.8in}\footnotesize
+		\begin{tabularx}{\marginparwidth}{|X}
+		Секция~\ref{sec:theory_30}. Теория\\
+		Секция~\ref{sec:problems_30}. Задачи\\
+		%Section~\ref{sec:license}. Margins\\
+		\end{tabularx}
+	\end{margintable}
+	\section[Теория]{Теория}\label{sec:theory_30}
+
+%\vmshbanner
+\papertitle{Определённый интеграл. Основные понятия}{30}{22 февраля}{12}
+\addcontentsline{toc}{section}{30. Определённый интеграл. Основные понятия}
+%\vspace{1ex}
+
+%Пусть функция $f(x)$ определена на отрезке $[a; b]$.
+
+\vspace{1ex}
+
+\begin{definition}
+Назовем \emph{разбиением $\textbf{\{T\}}$ отрезка $[a; b]$} множество точек $\{x_0; \, x_1; \, x_2; \, x_3; \ldots ;x_n\}$, таких, что $a = x_0 < x_1 < \ldots < x_n = b$.
+\index{Интегрируемость по Риману!Разбиение отрезка}
+\end{definition}
+
+\vspace{0ex}
+\begin{center}
+\includegraphics[width=0.46\textwidth]{ris_30bb.jpg}
+\end{center}
+\vspace{-3ex}
+
+\begin{definition} 
+Назовем \emph{диаметром разбиения} длину наибольшего интервала разбиения, т.е. $d = \max\limits_i \Delta x_i,$ где $\Delta x_i = x_{i+1} - x_i, \; i = \overline{0, n-1}$
+\index{Интегрируемость по Риману!диаметр разбиения}
+\end{definition}
+
+\begin{definition} 
+Функция $f$ \emph{интегрируема по Риману на отрезке $[a; b]$} (обозначение $f~\in~\mathfrak{R}[a;b]$), если
+\index{Интегрируемость по Риману}
+
+
+$$\exists \int\limits_a^b f(x) \, dx = \llim{d}{0} \sum\limits_{i=0}^{n-1} f(\xi_i) \Delta x_i,\;\; \text{где}\;\; \xi_i \in [x_i; x_{i+1}], \eqno (\ast)$$
+\end{definition}
+
+\hspace{-3.5ex}\underline{\textbf{Замечание:}} Значение предела $(\ast)$ не должно зависеть от выбора точек $x_i$ и  $\xi_i.$
+\vspace{1ex}
+
+\begin{definition} 
+Выражение $\displaystyle S_n = S_n(f) = \sum\limits_{i=0}^{n-1} f(\xi_i) \Delta x_i$ называется \emph{интегральной суммой функции $f$ на отрезке $[a; b],$ отвечающее разбиению $\{x_i\}$}.
+\index{Интегрируемость по Риману!интегральная сумма}
+\end{definition}
+
+\begin{definition} 
+$\displaystyle s(f) = \sum\limits_{i=0}^{n-1} m_i \Delta x_i$, где $m_i = \inf\limits_{[x_i; x_{i+1}]} f(x)$ -- \emph{нижняя сумма Дарбу}.
+\vspace{1ex}
+
+\hspace{12ex} $\displaystyle S(f) = \sum\limits_{i=0}^{n-1} M_i \Delta x_i$, где $M_i = \sup\limits_{[x_i; x_{i+1}]} f(x)$ -- \emph{верхняя сумма Дарбу}.
+
+\vspace{1ex}
+\hspace{12ex} $I_* = \sup\limits_{\{T\}} \{s(f)\} = \llim{d}{0} s(f) \, - $ \emph{нижний интеграл Дарбу}.
+
+\vspace{1ex}
+\hspace{12ex} $I^* = \inf\limits_{\{T\}} \{S(f)\} = \llim{d}{0} S(f) \, - $ \emph{верхний интеграл Дарбу}.
+\index{Интегральные суммы Дарбу}
+
+\end{definition}
+
+\begin{theorem}(\emph{критерий Римана интегрируемости функции на отрезке}):
+\vspace{1ex}
+
+Для $\forall \varepsilon > 0 \;\; \exists \{T\}: \; |S - s| < \varepsilon \; \Longleftrightarrow \; f$ интегрируема по Риману на $[a; b].$
+\vspace{2ex}
+\end{theorem}
+
+\hspace{-3.5ex}\underline{\textbf{Замечание 1:}} \; $\exists \llim{d}{0} s = \llim{d}{0} S \; \Longleftrightarrow \; f$ интегрируема по Риману на $[a; b].$
+\vspace{1ex}
+
+\hspace{-3.5ex}\underline{\textbf{Замечание 2:}} \; $\displaystyle \exists \llim{d}{0} \sum\limits_{i=0}^{n-1} w_i(f) \Delta x_i = 0 \; \Longleftrightarrow \; f$ интегрируема по Риману на $[a; b],$  где $w_i(f)~=~\left|\sup\limits_{[x_i; x_{i+1}]} \!\!\! f(x) - \!\!\! \inf\limits_{[x_i; x_{i+1}]} \!\!\! f(x)\right|.$  Напомним, что выражение $w_i(f)$ называется \emph{колебанием функции $f$ на отрезке $[x_i; x_{i+1}]$.}
+\index{Колебание функции на отрезке}
+
+\vspace{3ex}
+
+\begin{theorem} Пусть выполнено одно из условий:
+\begin{enumerate}
+
+\item $f$ непрерывна на отрезке $[a; b];$
+
+\item $f$ ограничена и монотонна на отрезке $[a; b];$
+
+\item $f$ ограничена и имеет на $[a; b]$ конечное число точек разрыва.
+\end{enumerate}
+Тогда функция $f$ интегрируема по Риману на отрезке $[a; b].$
+
+\vspace{3ex}
+\end{theorem}
+
+\begin{definition} 
+Множество $\textbf{X}$ называется \emph{множеством меры нуль (по Лебегу)}, если $\forall \varepsilon > 0$ существует конечная или счётная система интервалов, покрывающая все точки множества~$\textbf{X}$, причём сумма длин этих интервалов меньше $\varepsilon$.
+\index{Множество меры нуль (по Лебегу)}
+
+\end{definition}
+
+\begin{theorem} (\emph{критерий Лебега интегрируемости функции на отрезке}):
+
+$f$ интегрируема по Риману на отрезке $[a; b],$ тогда и только тогда, когда множество её точек разрыва имеет меру нуль.
+
+\end{theorem}
+
+\begin{proposition} (\emph{непрерывность интеграла}):
+
+%Если функция $f(x)$ интегрируема на $[a; b]$ и непрерывна в точке $x_0$, то функция $F(x)~=~\int\limits_a^x f(t) dt$ дифференцируема в точке $x_0$ и $F^{\prime}(x_0) = f(x_0)$.
+
+Если функция $f$ интегрируема на отрезке $[a; b],$ то функции
+$$
+F(x) = \int\limits_a^x f(t) \, dt \quad \text{и} \quad G(x) = \int\limits_x^b f(t) \, dt
+$$
+непрерывны на этом отрезке.
+\end{proposition}
+\hrule
+
+\section[Задачи]{Задачи}\label{sec:problems_30}
+
+\vspace{2ex}
+
+\task \dem{2181, 2182, 2186, 2191}
+
+Объясните интегрируемость функции $f$ и найдите интеграл $\displaystyle \int\limits_{\{x\}} f(x) \, dx$ с помощью интегральных сумм, если:
+\vspace{3ex}
+
+\newline\emph{(а)} \cw $f(x) = x^2, \qquad \textbf{\{x\}} = [-1; 2]; \;\;$
+
+\begin{solution}
+
+$x^2$ непрерывна на $[-1;2]$ и, следовательно, интегрируема на нём. Поэтому для вычисления предела интегральных сумм $S_n$ при  $d \rightarrow 0$ можно взять любую последовательность разбиений ${x_n}$ отрезка $[-1;2]$ с диаметром, стремящимся к нулю. Будем делить данный отрезок на n равных частей, а в качестве точек $\xi_i$ выбрать концевые точки разбиения $x_i$. Тогда:\newline
+
+\begin{multline*}
+\int\limits_{-1}^2 x^2\,dx=\llim{d}{0} \sum_{i=0}^{n-1} f(\xi_i)\Delta x_i=\Big\{\Delta x_i=\frac{3}{n}; \xi_i=x_i=-1+\frac{3}{n}i \Big\} = \\ = \llim{n}{\infty} \sum_{i=0}^{n-1} \Big(-1+\frac{3}{n}i \Big)^2\cdot\frac{3}{n}=\llim{n}{\infty}\Big[3\frac{n}{n}-\frac{18}{n^2}\cdot\frac{n(n-1)}{2}+\frac{27}{n^3}\cdot\frac{n(n-1)(2n-1)}{6} \Big]= \\ =3-9+9=3
+\end{multline*}
+
+\end{solution}
+
+\newline\emph{(б)} $f(x) = 1 + x, \qquad \textbf{\{x\}} = [-1; 4];$
+\vspace{3ex}
+\begin{solution}
+
+предварительные рассуждения аналогичны случаю а).
+
+$$
+\Delta x_i=\frac{5}{n}; x_i=-1+\frac{5}{n}, i=\overline{0, n-1}; \xi_i=-1+\frac{5}{n}\Big(i+\frac{1}{2}\Big);
+$$
+$$
+S_n=\sum_{i=0}^{n-1}\frac{5}{n}\Big(i+\frac{1}{2}\Big)\cdot\frac{5}{n}=\frac{25}{n^2}\cdot\Big(\frac{(n-1)n}{2}+\frac{n}{2}\Big)=\frac{25}{2}
+$$
+
+\end{solution}
+
+
+\emph{(в)} $f(x) = x^3, \qquad \textbf{\{x\}} = [1; 3];$ \hspace{15ex}
+\emph{(г)} $f(x) = \dfrac{1}{x}, \quad \textbf{\{x\}} = [a; b], \;\; (0 < a < b);$
+\vspace{3ex}
+\begin{solution}(в)
+$$
+\Delta x_i=\frac{2}{n}, \xi_i=x_i=1+\frac{2i}{n}, i=\overline{0, n-1}
+$$
+$$
+S_n=\sum_{i=0}^{n-1}\Big(1+\frac{2i}{n}\Big)^3\cdot\frac{2}{n}=\frac{(2n-1)(5n-4)}{n}\cdot\frac{2}{n}\xrightarrow[n\rightarrow\infty]\ 20
+$$
+\end{solution}
+
+\begin{solution}(г)
+$$
+\sqsupset q=\sqrt[n]{\frac{b}{a}};\, \xi_i=x_i=aq^i \; \; \;\; \Big( \llim{n}{\infty}(aq^{i+1}-aq^i)=\llim{n}{\infty}\Big[ a\cdot\Big(\frac{b}{a}\Big)^{\frac{i+1}{n}}-a\cdot\Big(\frac{b}{a}\Big)^{\frac{i}{n}}\Big]=0\Big) 
+$$
+\begin{multline*}
+S_n=\sum_{i=0}^{n-1}f(\xi_i)\Delta x_i =\sum_{i=0}^{n-1}\frac{x_{i+1}-x_i}{x_i}=\sum_{i=0}^{n-1}\Big(\frac{x_{i+1}}{x_i}-1\Big)= \\ =\sum_{i=0}^{n-1}\Big(\sqrt[n]{\frac{b}{a}}-1\Big)=
+\frac{\Big(\frac{b}{a}\Big)^{1/n}-1}{1/n}\xrightarrow[n\rightarrow\infty]\ \int\limits_a^b \frac{1}{x}dx=\llim{n}{\infty}S_n=\ln{\frac{b}{a}}
+\end{multline*}
+
+\end{solution}
+
+
+\emph{(д)} $f(x) = a^x, \qquad a > 0, \;\;\; \textbf{\{x\}} = [0; 1];$ \hspace{6.5ex}
+\emph{(е)} \st $f(x) = \ln{x},  \;\;\; \textbf{\{x\}} = [1; 2].$
+
+\begin{solution} (д)
+$$
+\Delta x_i=\frac{1}{n},\;\; \xi_i=x_i=\frac{i}{n},\;\; i=\overline{0,n-1}
+$$
+$$
+S_n=\sum_{i=0}^{n-1}f(\xi_i)\Delta x_i=\frac{1}{n}\sum_{k=0}^{n-1}a^{\frac{k}{n}}=\frac{1}{n}\cdot\frac{1-a}{1-a^{1/n}}\xrightarrow[n\rightarrow\infty] \ \frac{a-1}{\ln{a}}
+$$
+\end{solution}
+
+\begin{solution}(е)
+$$
+\xi_i=2^\Big{\frac{i}{n}}\;,\;\Delta x_i=2^\Big{\frac{i}{n}}-2^\Big{\frac{i-1}{n}}
+$$
+\end{solution}
+
+\task  Докажите следующее
+\vspace{1ex}
+
+\hspace{-3.5ex}\underline{\textbf{Утверждение}} (\emph{критерий Коши интегрируемости функции на отрезке}):
+\index{Критерий Коши!интегрируемости функции на отрезке}
+
+\hspace{-3.5ex}Функция $f$ интегрируема по Риману на отрезке $[a; b],$ тогда и только тогда, когда для $\forall \varepsilon~>~0$ $\; \exists \delta~>~0,$ что для любых разбиений $\{T_1\}, \{T_2\}$ отрезка  $[a; b]$ с диаметрами $d_1 < \delta$, $d_2 < \delta$ выполняется неравенство
+$$
+|S_{T_1}(f) - S_{T_2}(f)| < \varepsilon,
+$$
+где $S_{T_i}(f)$ - интегральная сумма функции $f$ на отрезке $[a; b],$ отвечающее разбиению $\{T_i\}$.
+\vspace{-1ex}
+\begin{solution}
+\fbox{=>} Пусть $f(x)$ интегрируема на $[a; b]$ и $I=\int\limits_a^b f(x)dx$ \newline
+Тогда для $\forall\varepsilon>0\; \exists\delta>0:$ для $\forall$ разбиения ${T}$ с диаметром меньшим $\delta$, выполняется неравенство $|S_{T}-I|<\frac{\big\varepsilon}{\Big2}:$ Поэтому , если $d_1<\delta,\; d_2<\delta$, то \newline
+$$
+|S_{T_1}-S_{T_2}|\leqslant|S_{T_2}-I|+|I-S_{T_1}|<\frac{\big\varepsilon}{\Big2}+\frac{\big\varepsilon}{\Big2}=\big\varepsilon.
+$$
+\fbox{<=} Если считать $S_T$ функцией, зависящей от разбиения ${T}$, то данное условие является переформулировкой условия Коши сходимости функций. Поэтому, $\exists\llim{d}{0}S_T$ , а следовательно, функция $f(x)$ интегрируема на $[a,b]$.
+\end{solution}
+
+\task
+\pnt \cw Пусть функции $f$ и $\varphi$ непрерывны на отрезке $[a; b].$ Докажите, что
+$$
+\llim{\max|\Delta x_i|}{0} \sum_{i=0}^{n-1} f(\xi_i) \, \varphi(\theta_i) \, \Delta x_i = \int\limits_a^b f(x) \, \varphi(x) \, dx,
+$$
+где $x_i \le \xi_i, \theta_i \le x_{i+1}, \;\; \Delta x_i = x_{i+1} - x_i, \;\; (i = \overline{0, n-1}).$
+\vspace{-1ex}
+\begin{solution}
+ Обозначим:$S_n= \sum\limits_{i=0}^{n-1} f(\xi_i)\varphi(\xi_i)\Delta x_i;\;\widetilde{S_n}=\sum\limits_{i=0}^{n-1} f(\xi_i)\varphi(\theta_i)\Delta x_i;\;$
+ \newline Докажем, что $|S_n-\widetilde{S_n}\xrightarrow[d\rightarrow0]\ 0|$
+$$
+\Big|\sum\limits_{i=0}^{n-1} f(\xi_i)\varphi(\xi_i)\Delta x_i-\sum\limits_{i=0}^{n-1} f(\xi_i)\varphi(\theta_i)\Delta x_i\Big|\leqslant\sum\limits_{i=0}^{n-1} |f(\xi_i)|\cdot|\varphi(\xi_i)-\varphi(\theta_i)|\Delta x_i
+$$
+\begin{multline*}
+|\varphi(\xi_i)-\varphi(\theta_i)|\leqslant\sup\limits_{x^{'},x^{''}\in[x_i;x_{i+1}]}|\varphi(x^{'})-\varphi(x^{''})|=\omega_i(\varphi)-\text{колебание функции на }\\\varphi(x)\text{ на }[x_i;x_{i+1}] 
+\end{multline*}
+ Т.к. $f(x)$ ограничена, $\omega_i(\varphi)\xrightarrow[d\rightarrow0]\ 0$, т.к $\varphi$ равн.непрерывна: на $[a;b]$, то
+ $$
+ \sum_{i=0}^{n-1}|f(\xi_i)|\cdot|\varphi(\xi_i)-\varphi(\theta_i)|\Delta x_i\xrightarrow[d\rightarrow0]\ 0=> \llim{d}{0}\widetilde{S_n}=\llim{d}{0}S_n=\int\limits_a^b f(x)\varphi(x)dx
+ $$
+\end{solution}
+
+
+\pnt \cw Пусть функция $f$ ограничена и монотонна на $[0; 1].$ Докажите, что
+$$
+\int\limits_0^1 f(x) \, dx - \dfrac{1}{n} \sum_{k=1}^n f\left(\dfrac{k}{n}\right) = \Large\underline{\textmd{O}}\left(\dfrac{1}{n}\right)\normalsize, \;\; \mbox{при} \;\; n \rightarrow \infty.
+$$
+\vspace{-5ex}
+\begin{solution}
+ Т.к. выражение $\frac{1}{n}\sum\limits_{k=1}^{n}f\Big(\frac{k}{n}\Big)$ можно рассматривать, как некторую интегральную сумму с $\Delta x_k=\frac{\Big 1}{\Big n}\;, \Delta \xi_k=\frac{\Big k}{\Big n}$, то выполнено: 
+ $$
+ \frac{1}{n}\sum_{k=1}^n f\Big(\frac{k}{n}\Big)\leqslant \underline{S}\; => \overline{S}\leqslant\int\limits_0^1 f(x)dx\leqslant \underline{S}\;
+ $$
+ $$
+ \int\limits_0^1 f(x)dx\, -\,\frac{1}{n}\sum_{k=1}^n f\Big(\frac{k}{n}\Big)\leqslant\underline{S}-\overline{S}=\sum_{k=1}^n (M_k-m_k)\frac{1}{n}
+$$
+ Пусть далее $f(x)\nearrow$, тогда
+ $$
+ M_k=f(x_k11)=f(0)+\frac{f(1)-f(0)}{n}(k+1),\;m_k=f(x_k)=f(0)+\frac{f(1)-f(0)}{n}\cdot k =>
+ $$
+\begin{multline*}
+ =>\underline{S}-\overline{S}=\frac{1}{n}\sum_{k=1}^{n}\frac{f(1)-f(0)}{n}\;\; \frac{f(1)-f(0)}{n}=>\int\limits_0^1f(x)dx-\frac{1}{n}\sum_{k=1}^nf\Big(\frac{k}{n}\Big)\leqslant\frac{1}{n}\cdot C \\\text{ ,где } c=f(1)-f(0).
+\end{multline*}
+\end{solution}
+
+\pnt Пусть функция $f$ имеет производную $f^{\prime}$ в некоторой окрестности точки $x$, причём $f^{\prime}$ непрерывна в точке $x$. Докажите, что
+$$
+\llim{n}{\infty} \sum\limits_{k=1}^n \left(f\Big(x + \frac{\scriptstyle k}{\scriptstyle k^2 + n^2}\Big) - f(x)\right) \, = \, f^{\prime}(x) \cdot  \logn{\sqrt{2}}.
+$$
+\vspace{-6ex}
+
+\task Докажите, что \emph{функция Римана}
+$
+R(x) = \begin{cases}
+\dfrac{1}{q},&\text{если $x$ - рациональное число} \; \dfrac{p}{q} \; ,\\
+0,&\text{если $x$ - иррациональное число.}
+\end{cases}
+$
+\index{Функция!Римана}
+интегрируема на любом конечном отрезке,
+\vspace{2ex}
+
+%\emph{(а)} \cw используя критерий Лебега; \hspace{15ex}
+%\emph{(б)} без использования критерия Лебега.
+\vspace{0ex}
+
+\hspace{-3.5ex} Вычислите интеграл от \emph{функции Римана} по произвольному отрезку.
+\vspace{-1ex}
+\begin{solution}
+ а) Используя критерий Лебега:
+ \newlineВ №12.12 было доказано, что $R(x)$ непрерывна во всех иррациональных точках. Покроем т.разрыва фукнкукции $R(x)$ счётным числом интервалов длины \newline$\ln<\frac{\Big\varepsilon}{\Big{2^n}}$, где $\varepsilon>0$-произвольно. Тогда суммарная длина $l=\sum\limits_{n=1}^{\infty}\ln<\sum\limits_{n=1}^{\infty}\frac{\Big\varepsilon}{\Big{2^n}}=$ $=\varepsilon$.Следовательно, мн-во точек разрыва функции $R(x)$ будет иметь меру нуль. Применив критерий Лебега, получим интегрируемость $R(x)$.
+ \newline\newline
+ б) Без использования критерия Лебега:
+ \newline Используя интегрируемость функции R(x), получим
+ $$
+ \int\limits_a^b R(x)dx=\llim{d}{\infty}\overline{S}=0
+ $$
+\end{solution}
+
+\task \cw Докажите, что \emph{функция Дирихле}
+\index{Функция!Дирихле}
+$
+D(x) = \begin{cases}
+1,&\text{если $x \in \mathds{Q}$,}\\
+0,&\text{если $x \in \mathds{R} \setminus \mathds{Q}$;}
+\end{cases}
+$
+не интегрируема на любом отрезке.
+
+\begin{solution}
+ На любом суоль угодно малом отрезке разбиения $[x_i;x_{i+1}]$ найдутся как иррациональные, так и рациональные точки. Поэтому, $\llim{d}{0}\underline{S}=b-a$ , а $\llim{d}{0}\overline{S}=0$. Поэтому, $\underline{S}\neq\overline{S}$ и функция $D(x)$ не интегрируема на любом отрезке. 
+\end{solution}
+
+\vspace{-2ex}
+\task Исследуйте следующие функции на интегрируемость на сегменте $[0; 1]:$
+\vspace{2ex}
+
+(а) $
+f(x) = \begin{cases}
+\frac{1}{x} - \left[\frac{1}{x}\right],&\text{если $x \neq 0$,}\\
+0,&\text{если $x = 0$;}
+\end{cases}
+$ 
+\begin{solution}
+ $f(x)$ терпит разрыв в точках $x=\frac{\Big 1}{\Big n}, n\in\mathds{Z}$ И т. $x=0$. Аналогично №4а) покажем, что это множество меры нуль. Следовательно, $f(x)$ интегрируема на $[0;1]$.
+\end{solution}
+\hspace{10ex}
+(б) $
+f(x) = \begin{cases}
+\textmd{sgn}\left(\sin\frac{\pi}{x}\right),&\text{если $x \neq 0$,}\\
+0,&\text{если $x = 0$;}
+\end{cases}
+$
+\begin{solution}
+ $f(x)$ ограничена на $[0;1]$ и имеет разрыв в т. $\{0\},\Big\{ \frac{\Big1}{\Big k},\;k\in\mathds{N}\Big\}$. Выберем произваольное $\varepsilon>0$. Тогда на $\Big[0;\frac{\Big2\Big\varepsilon}{\Big3}\Big)$ лежит счётное число точек рзрыва: $\{0\},\Big\{\frac{\Big1}{\Big k}|k>\frac{\Big4}{\Big\varepsilon};\;k\in\mathds{N}\Big\}$. А на $\Big[\frac{\Big{2\varepsilon}}{3};1\Big]$ - конечное число т.разрыва: $\Big\{1;\frac{1}{2};...;\frac{1}{m}\Big\}$, где $m=\Big[\frac{3}{2\varepsilon}\Big].$
+ \newline Каждую точку $\{x_k\}=\Big\{1;\frac{1}{2};...;\frac{1}{m}\Big\}$ покроем интервалом $\Big(x_k-\frac{\varepsilon}{6m};x_k+\frac{\varepsilon}{6m};\Big)$ Т.о., все т.разрыва функции $f(x)$ на сегменте $[0;1]$ можно покрыть конечным числом интервалов, сумма длин которых равна $\frac{2\varepsilon}{3}+m\cdot\frac{\varepsilon}{3}=\varepsilon$. Т.е. $f(x)$ интегрируема на $[0;1]$
+\end{solution}
+\task Следует ли из интегрируемости функции $|f|$ интегрируемость функции $f$?
+\begin{solution}
+ Нет, неследует.Например:
+ $$
+ f(x) = \begin{cases}
+-1,\;x\in\mathds{R}\textbackslash\mathds{Q};&f(x)\text{ не игтегрируема как функция Дирихле,}\\
+1,\;x\in\mathds{Q}&|f(x)|\equiv 1\text{ Интегрируема.}
+\end{cases}
+ $$
+\end{solution}
+
+\task Пусть функция $f$ интегрируема на отрезке $[a; b]$. Докажите, что
+$$
+\llim{\varepsilon}{0+0} \int\limits_{a + \varepsilon}^{b - \varepsilon} f(x) \, dx = \int\limits_a^b f(x) \, dx, \;\;\; 0 < \varepsilon < b - a.
+$$
+
+\begin{solution}
+ Выберем произвольно т.$c\in(a;b)$ и $\varepsilon: 0<\varepsilon<c-a$ и $0<\varepsilon<b-c$
+ \newline Имеем, $\int\limits_{a+\varepsilon}^{b-\varepsilon}f(x)dx=\int\limits_{a+\varepsilon}^c f(x)dx+\int\limits_{c}^{b-\varepsilon} f(x)dx$. Отсюда, используя утверждение о непрерывности интеграла, имеем:
+\begin{multline*}
+ \llim{\varepsilon}{a}\int\limits_{a+\varepsilon}^{b-\varepsilon}f(x)dx=\llim{\varepsilon}{0}[\int\limits_{a+\varepsilon}^c f(x)dx+\int\limits_c^{b-\varepsilon} f(x)dx]=\llim{\varepsilon}{0}\int\limits_{a+\varepsilon}^c f(x)dx+\llim{\varepsilon}{0}\int\limits_c^{b-\varepsilon} f(x)dx=\\=\int\limits_a^c f(x)dx+\int\limits_c^b f(x)dx=\int\limits_a^b f(x)dx.
+\end{multline*}
+\end{solution}
+
+\task Покажите некорректность определения интеграла, при котором
+\pnt \cw отрезок разбивается на равные части, а значения функции берутся в серединах отрезков разбиения;
+\begin{solution}
+  Решим $\int\limits_0^1 0(x)dx.$ Этот интеграл не существует(смотри №5)
+  \newline Будем разбивать $[0;1]$ на n равных частей и брать значения функции $D(x)$ в серединах полученных отрезков разбиения. Все полученные т.$x_i$ будут рациональными $=>D(x_i)=1=>\llim{n}{\infty}\sum\limits_{i=1}^{k=1} D(x_i)\Delta x_i=1=\int\limits_0^1 D(x)dx.$
+  \newline Заметим, что $\int\limits_0^{\sqrt{2}}D(x)dx$ по упрощёенному "определению" будет равен $0$, т.к. серединам отрезков будут отвечать иррациональные числа.
+  \newline Имеем, $[0;1]\subset[0;\sqrt{2}]$ и $D(x)\geqslant0$, но $\int\limits_0^1D(x)dx>\int\limits_0^{\sqrt{2}}D(x)dx.$ Противоречие.
+\end{solution}
+
+\pnt не требуется стремление максимума длин отрезков разбиения к нулю.
+\begin{solution}
+  $\sqsupset f(x)$ на $\forall$отрезке разбиения.
+  \newline $\beta=\underset{d\subset [a;b]}{min}(\underset{x\in d}{max}f(x)-\underset{x\in d}{minf}(x))>0$
+  \newline $S_n(T_1)-S_n(T_2)>\alpha \cdot \beta$, $S_n(T_1)$ и $S_n(T_2)$
+\end{solution}
+
+\vspace{-2ex}
+\task \cw Пусть функции $f$ и $\varphi$ интегрируемы. Обязательно ли будет интегрируема их суперпозиция $\varphi \bigl(f\bigr)$?
+\begin{solution}
+  Пусть $\varphi(x)=$
+  \begin{cases}
+  1,\;\;\; x\neq0;
+  \\0,\;\;\; x=0;
+  \end{cases}
+  $f(x)=R(x)=$
+  \begin{cases}
+  1,\;\;\;x=0;
+  \\\frac{1}{n},\;\;\;x=\frac{m}{n}\in\mathds{Q};\;\;=>
+  \\0,\;\;\;x\in\mathds{R}\setminus \mathds{Q};
+  \end{cases}
+  $=>\varphi(f(x))=D(x)=$
+  \begin{cases}
+  1,\;x\in\mathds{Q}
+  \\0,\;x\in\mathds{R}\setminus\mathds{Q}
+  \end{cases}
+\end{solution}
+
+\task (\emph{соотношение интегрируемости и существования первообразной на отрезке})
+\vspace{1ex}
+
+Установите, верны ли следующие утверждения:
+\vspace{-2ex}
+
+\pnt Любая интегрируемая на сегменте функция имеет первообразную на нём;
+\pnt Любая функция, имеющая первообразную на сегменте является интегрируемой на нём.
+
+
+\vspace{-1ex}
+\task Докажите, что для существования определённого интеграла функции $f$ на интервале $(a; b)$ необходимо и достаточно, чтобы по заданным числам $\varepsilon > 0, \; \sigma > 0$ можно было найти такое $\delta(\varepsilon, \sigma) > 0$, что при диаметре разбиения $d < \delta$,
+сумма $\sum\limits_{i^{\prime}} \Delta x_{i^{\prime}}$ длин тех интервалов, которым отвечают колебания функции $w_{i^{\prime}}(f) \ge \varepsilon$ сама меньше $\sigma$.
+\begin{solution}
+  \fbox{=>} $f(x)\in R=>\llim{d}{0}\sum\limits_{i=0}^{n-1}\omega_i(f)\Delta x_i=0$. Далее из неравенства $\sum\limits_i \omega_i\Delta x_i\geqslant\sum\limits_{i'} \omega_{i'}\Delta x_{i'}\geqslant\varepsilon\sum\limits_{i'}\Delta x_{i'}$, засчёт выбора $\delta$ можно сделать сумму $\sum\limits_i \omega\Delta x<\varepsilon\cdot\delta=>\sum\limits_{i'}\Delta x_{i'}<\delta$
+  
+  \newline\newline\fbox{<=} 
+  \newline$\sum\limits_i \omega_i \Delta x_i=\sum\limits_{i'}\omega_{i'}\Delta x_{i'}+\sum\limits_{i''}\omega_{i''}\Delta x_{i''}<\Omega\sum_{i'}\Delta x_{i`}+\varepsilon\sum\limits_{i''}\Delta x_{i''}<\Omega\omega+\varepsilon(b-a)$
+\end{solution}
+\vspace{-1ex}
+\task \dem{2200, 2202}
+\pnt Пусть $f$ интегрируема на отрезке $[a; b].$ Докажите, что $|f|$ интегрируема на $[a; b]$, причём
+$\;\; \displaystyle  \left|\int\limits_a^b f(x) \, dx\right| \le \int\limits_a^b |f(x)| \, dx.$
+\begin{solution}
+  \sqsupset $x', x''\in[x_{k-1};x_k].\; ||f(x')|-|f(x'')||\leqslant|f(x')-f(x'')|=>\underset{[x_{k-1};x_k]}{\sup}||f(x')|-|f(x'')||\leqslant\underset{[x_{k-1};x_k]}{\sup}|f(x')-f(x'')|$ А т.к. для функции $f(x)$ выполнен критерий Римана интегрируемости функций на отрезке $([x_{k-1};x_k])$ то он будет выполнен и для $|f(x)|$. Следовательно, $|f(x)|\in\mathds{R}[a;b]$.
+  \newline Далее, т.к. $-|f(x)|\leqslant f(x)\leqslant|f(x)|$ для $\forall x \in [a;b]$, 
+  \newlineто 
+  $
+  -\int\limits_a^b |f(x)|dx\leqslant\int\limits_a^b f(x)dx\leqslant\int\limits_a^b |f(x)|dx\;\;
+  $
+  т.е. $|\int\limits_a^b f(x)dx|\leqslant\int\limits_a^b |f(x)|dx.$
+\end{solution}
+
+\pnt Пусть функция $f(x)$ интегрируема на $[a; b]$ и $c \le f(x) \le d$ для $\forall x \in [a; b]$; пусть функция $\varphi(y)$ непрерывна на $[c; d].$ Докажите, что их суперпозиция $\varphi \bigl(f(x)\bigr)$ интегрируема на $[a; b]$.
+\begin{solution}
+  Выберем произвольные числа $\varepsilon>0$ и $\sigma>0$. Т.к. $\varphi(y)\in C[c;d]$ то по числу $\varepsilon\;\exists$ в любом интервале значение $y$  с длиной $<\eta \omega(\varphi)<\varepsilon$\newline
+   Далее, т.к. $f(x)\in\mathds{R}[a;b]$ по числам $\eta$ и $\sigma$ найдется число $\delta(\eta, \sigma)$, что при диаметре разбиения $<\delta$, сумма длин тех из них, для которых колебания функции $f\geqslant \eta$, сама меньше. Для прочих интервалов имеем $\omega_{i''}(f),\eta$, а следовательно, по самому выбору $\omega_{i''}(\varphi(f))<\varepsilon$. Т.о., для функции $\varphi(f(x))$ колебания могут оказаться $\geqslant\varepsilon$ лишь в некоторых из интервалов первой группы, сумма длины которых $\leqslant\delta$. По крит. из номера 12, $\varphi(f(x))\in\mathds{R}[a;b]$
+\end{solution}
+
+
+\vspace{-1ex}
+\task \st Определите все интегрируемые на отрезке $[0; 1]$ функции $f$, удовлетворяющие условиям:
+\vspace{-0ex}
+$$
+f(x) = \dfrac{1}{3} \left(f\left(\frac{x}{3}\right) + f\left(\frac{x+1}{3}\right) + f\left(\frac{x+2}{3}\right)\right), \quad x \in [0; 1];
+$$
+$$
+f\left(\frac{1}{\pi}\right) = 1.
+$$
+\vspace{-4ex}
+
+\task \st Функция $f : [a; b] \mapsto \mathbb{R}$ дифференцируема и $|f^{\prime}(x)| \le 1$ всюду на отрезке $[a; b].$ Докажите, что если $a = x_0 < x_1 < \ldots < x_n = b,$ $\; \max\limits_{1 \le i \le n} (x_i - x_{i-1}) \le \dfrac{1}{b-a},$ $\; \xi_i \in [x_{i-1}; x_i),$ то
+$$
+\left| \int\limits_a^b f(x) dx - \sum\limits_{i=1}^n f(\xi_i) (x_i - x_{i-1}) \right| \le \dfrac{1}{2},
+$$
+и покажите, что приведённая оценка \emph{неулучшаема}, т.е. найдётся функция, удовлетворяющая всем условиям задачи, на которой достигается равенство.
+\vspace{-2ex}
+
+\task \st Существует ли функция $f$, непрерывная на полуоси $(1; \, +\infty)$ и такая, что
+$$
+\int\limits_x^{x^2} f(t) dt = 1, \quad \forall x \in (1; +\infty) ?
+$$
+
+
+
+\end{document}
